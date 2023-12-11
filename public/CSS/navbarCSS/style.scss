@@ -1,3 +1,40 @@
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+
 nav{
-  background-color: black;
+  background-color: $color_green;
+  color: $color_cream;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logoImg{
+  width: 50px;
+  margin-left: 1rem;
+}
+
+.navLinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &>ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom:0;
+    margin-top:0;
+    margin-right: 1rem;
+    &>li{
+      margin: 0 1rem;
+      &>a{
+        text-decoration: none;
+        color: $color_cream;
+      }
+    }
+  }
 }
