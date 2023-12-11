@@ -31,6 +31,15 @@ class Meal
     #[ORM\Column(length: 255)]
     private ?string $rating = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $description = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $calories = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $type = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +113,42 @@ class Meal
     public function setRating(string $rating): static
     {
         $this->rating = $rating;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getCalories(): ?string
+    {
+        return $this->calories;
+    }
+
+    public function setCalories(string $calories): static
+    {
+        $this->calories = $calories;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): static
+    {
+        $this->type = $type;
 
         return $this;
     }
