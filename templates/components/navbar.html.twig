@@ -13,13 +13,13 @@
 				<a class="navLink" href="/">Home</a>
 			</li>
 			<li>
-				<a class="navLink" href="">Meals</a>
+				<a class="navLink" href="/meal/">Meals</a>
 			</li>
 			<li>
-				<a class="navLink" href="">About</a>
+				<a class="navLink" href="/about">About</a>
 			</li>
 			<li>
-				<a class="navLink" href="">Contact</a>
+				<a class="navLink" href="/contact">Contact</a>
 			</li>
 		</ul>
 	</div>
@@ -58,6 +58,13 @@ menuBtn.addEventListener("click", toggleMenu)
 navLink.forEach(function (link) {
 link.addEventListener("click", toggleMenu)
 })
+
+document.querySelectorAll(".navLink").forEach((link) => {
+if (link.href === window.location.href) {
+link.classList.add("activeLink");
+console.log(window.location.href);
+}
+});
 </script>
 
 {#
