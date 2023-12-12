@@ -9,8 +9,8 @@ footer{
   footer p {
     color:rgb(245, 228, 215);
     text-align:center;
-    margin-top: 4px;
-    padding: 10px 10px;
+    margin-top: 0px;
+    padding: 5px 10px;
   }
   
   
@@ -28,5 +28,7 @@ footer{
   }
   
   #links{
-   text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }

@@ -43,6 +43,7 @@ nav{
 .navLink{
   text-decoration: none;
   color: $color_cream;
+  text-transform: uppercase;
 }
 
 .menuBtn{
@@ -105,6 +106,7 @@ nav{
 
   .navLink{
     display: flex;
+    text-transform: uppercase;
   }
 
   .showMenu{

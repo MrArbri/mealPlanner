@@ -37,6 +37,7 @@ nav {
 .navLink {
   text-decoration: none;
   color: rgb(245, 228, 215);
+  text-transform: uppercase;
 }
 
 .menuBtn {
@@ -94,6 +95,7 @@ nav {
   }
   .navLink {
     display: flex;
+    text-transform: uppercase;
   }
   .showMenu {
     transform: translateY(0);
