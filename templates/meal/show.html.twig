@@ -3,56 +3,28 @@
 {% block title %}Meal{% endblock %}
 
 {% block body %}
-    <h1>Meal</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ meal.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ meal.name }}</td>
-            </tr>
-            <tr>
-                <th>Picture</th>
-                <td>{{ meal.picture }}</td>
-            </tr>
-            <tr>
-                <th>Ingredients</th>
-                <td>{{ meal.ingredients }}</td>
-            </tr>
-            <tr>
-                <th>Creator</th>
-                <td>{{ meal.creator }}</td>
-            </tr>
-            <tr>
-                <th>Preparation</th>
-                <td>{{ meal.preparation }}</td>
-            </tr>
-            <tr>
-                <th>Rating</th>
-                <td>{{ meal.rating }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ meal.description }}</td>
-            </tr>
-            <tr>
-                <th>Calories</th>
-                <td>{{ meal.calories }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>{{ meal.type }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_meal_index') }}">back to list</a>
-
-    <a href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
-
-    {{ include('meal/_delete_form.html.twig') }}
+<div class="container">
+    <h1 class="text-center m-2">Meal details</h1>
+   
+   <div class='p-2'>
+        <div class='card h-100'>
+            <img src={{ meal.picture }} class='card-img-top object-fit-cover' style='height:30rem;' alt={{ meal.name }}>
+            <div class='card-body'>
+              <h5 class='card-title'>Name: {{ meal.name }}</h5>
+              <p class='card-text'>Ingredients: {{ meal.ingredients }}</p>
+              <p class='card-text'>Description: {{ meal.description }}</p>
+              <p class='card-text'>preparation: {{ meal.preparation }}</p>
+              <p class='card-text'>Creator: {{ meal.creator }}</p>
+              <p class='card-text'>Calories: {{ meal.calories }}</p>
+              <p class='card-text'>Meal type: {{ meal.type }} seats</p>
+              <p class='card-text'>Rating: {{ meal.rating }}</p>
+              <div class='d-flex justify-content-start'>
+              <a href="{{ path('app_meal_index') }}">back to list</a>
+              <a href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+              {{ include('meal/_delete_form.html.twig') }}
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
