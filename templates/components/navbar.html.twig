@@ -1,5 +1,4 @@
-<link
-rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
+<link rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
 
 <nav>
 	<div class="imgHolder">
@@ -37,19 +36,19 @@ rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
 <script>
 	const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
-const navLinks = document.getElementById("navLinks");
+const navLinks = document.querySelector(".navLinks");
 const navLink = document.getElementById("navLink");
 const menuBtn = document.getElementById("menuBtn");
 
 menuBtn.addEventListener("click", () => {
 if (navLinks.classList.contains("showMenu")) {
 navLinks.classList.remove("showMenu")
-closeMenuBtn.style.display("none")
-openMenuBtn.style.display("block")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
 } else {
 navLinks.classList.add("showMenu")
-closeMenuBtn.style.display("block")
-openMenuBtn.style.display("none")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
 }
 });
 </script>
