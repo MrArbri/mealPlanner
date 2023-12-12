@@ -2,3 +2,21 @@
     object-fit: cover;
     border-radius: 20px;
 }
+.bi-star-fill, .bi-star-half {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% {
+      filter: drop-shadow(0 0 2px rgb(255,193,7));
+    }
+    50% {
+      filter: drop-shadow(0 0 5px rgb(255,193,7));
+    }
+    100% {
+      filter: drop-shadow(0 0 2px rgb(255,193,7));
+    }
+  }
+  .emptyStar{
+    color: #474F57;
+  }
