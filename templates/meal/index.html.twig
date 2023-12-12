@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Meal index{% endblock %}
-
+ {% block stylesheets %}
+ <link rel="stylesheet" href="{{asset("CSS/cardCSS/style.css")}}">
+  {% endblock %}
 {% block body %}
     <h1 class="text-center">Meal index</h1>
-    <div class="row row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-1 m-2">
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 m-2">
         {% for meal in meals %}
             <div class="col mb-3">
-                <div class="card">
+                <div class="card-1 text-center">
                     <div class="card-body">
                         <h5 class="card-title">{{ meal.name }}</h5>
                         <div class="ratio ratio-16x9 mb-3">
-                            <img src="{{ meal.picture }}" class="card-img-top" alt="meal Image">
+                            <img class="picture"src="{{ meal.picture }}" class="card-img-top" alt="meal Image">
                         </div>
                         <p class="card-text">{{ meal.rating }}</p>
                         <p class="card-text">{{ meal.creator }}</p>
