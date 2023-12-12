@@ -37,18 +37,57 @@
 	const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const navLinks = document.querySelector(".navLinks");
-const navLink = document.getElementById("navLink");
+const navLink = document.querySelectorAll(".navLink");
 const menuBtn = document.getElementById("menuBtn");
 
+function toggleMenu() {
+if (navLinks.classList.contains("showMenu")) {
+navLinks.classList.remove("showMenu")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
+} else {
+navLinks.classList.add("showMenu")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
+}
+}
+
+menuBtn.addEventListener("click", toggleMenu)
+navLink.forEach(function (link) {
+link.addEventListener("click", toggleMenu)
+})
+</script>
+
+{#
 menuBtn.addEventListener("click", () => {
 if (navLinks.classList.contains("showMenu")) {
 navLinks.classList.remove("showMenu")
 closeMenuBtn.style.display = "none"
 openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
 } else {
 navLinks.classList.add("showMenu")
 closeMenuBtn.style.display = "block"
 openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
 }
 });
-</script>
+
+navLink.forEach(function (link) {
+link.addEventListener("click", () => {
+if (navLinks.classList.contains("showMenu")) {
+navLinks.classList.remove("showMenu")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
+} else {
+navLinks.classList.add("showMenu")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
+}
+})
+})
+#}

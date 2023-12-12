@@ -54,10 +54,6 @@ nav{
 
 @media screen and (max-width:750px) { 
 
-  body{
-    overflow-y: hidden;
-  }
-
   .menuBtn{
     font-size: 35px;
     display: flex;
@@ -92,6 +88,8 @@ nav{
     background: $color_green;
     list-style: none;
     padding-top: 4rem;
+    width: 100%;
+    overflow-y: hidden;
   }
 
   .navLink{
