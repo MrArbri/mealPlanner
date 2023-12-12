@@ -23,8 +23,7 @@ class Meal
     #[ORM\Column(length: 255)]
     private ?string $ingredients = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $creator = null;
+
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $preparation = null;
@@ -43,6 +42,12 @@ class Meal
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
     private ?\DateTimeInterface $prep_time = null;
+
+    #[ORM\ManyToOne(inversedBy: 'meals')]
+    private ?User $creator = null;
+
+
+
 
     public function getId(): ?int
     {
@@ -85,17 +90,7 @@ class Meal
         return $this;
     }
 
-    public function getCreator(): ?string
-    {
-        return $this->creator;
-    }
 
-    public function setCreator(string $creator): static
-    {
-        $this->creator = $creator;
-
-        return $this;
-    }
 
     public function getPreparation(): ?string
     {
@@ -165,6 +160,18 @@ class Meal
     public function setPrepTime(\DateTimeInterface $prep_time): static
     {
         $this->prep_time = $prep_time;
+
+        return $this;
+    }
+
+    public function getCreator(): ?User
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?User $creator): static
+    {
+        $this->creator = $creator;
 
         return $this;
     }

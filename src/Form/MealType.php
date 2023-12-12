@@ -24,7 +24,7 @@ class MealType extends AbstractType
             ->add('ingredients', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the ingredients'],
             ])
-            ->add('creator', null, [
+            ->add('creator_id', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the your name'],
             ])
             ->add('preparation', null, [
