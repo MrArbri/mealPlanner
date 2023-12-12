@@ -1,14 +1,58 @@
-<link rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
+<link
+rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
+
+{# ADD IN BASE!!!! #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
 <nav>
 	<div class="imgHolder">
-		<img class="logoImg" src="https://cdn.pixabay.com/photo/2016/06/09/18/36/logo-1446293_1280.png" alt="">
+		<a class="logoImg" href="/">
+			<i class="fa-solid fa-bowl-food"></i>
+			MEAL TIME
+		</a>
 	</div>
-	<div class="navLinks">
-		<ul>
-			<li><a href="/meal">Home</a></li>
-			<li><a href="">Meals</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Contact</a></li>
+	<div>
+		<ul class="navLinks">
+			<li>
+				<a class="navLink" href="/">Home</a>
+			</li>
+			<li>
+				<a class="navLink" href="">Meals</a>
+			</li>
+			<li>
+				<a class="navLink" href="">About</a>
+			</li>
+			<li>
+				<a class="navLink" href="">Contact</a>
+			</li>
 		</ul>
 	</div>
+	<div class="menuBtn" id="menuBtn">
+		<span id="openMenuBtn">
+			<i class="bi bi-list"></i>
+		</span>
+		<span id="closeMenuBtn">
+			<i class="bi bi-x-lg"></i>
+		</span>
+	</div>
 </nav>
+
+<script>
+	const openMenuBtn = document.getElementById("openMenuBtn");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const navLinks = document.getElementById("navLinks");
+const navLink = document.getElementById("navLink");
+const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", () => {
+if (navLinks.classList.contains("showMenu")) {
+navLinks.classList.remove("showMenu")
+closeMenuBtn.style.display("none")
+openMenuBtn.style.display("block")
+} else {
+navLinks.classList.add("showMenu")
+closeMenuBtn.style.display("block")
+openMenuBtn.style.display("none")
+}
+});
+</script>
