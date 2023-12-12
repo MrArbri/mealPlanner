@@ -22,17 +22,21 @@
 				<a class="navLink" href="/contact">Contact</a>
 			</li>
 			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-			<li>
-				<a class="navLink" href="/logout">Log out</a>
-			</li>
+
+				<li>
+					<a class="navLink" href="/logout">Log out</a>
+				</li>
+				<li>
+					<img src="{{app.user.avatar}}" alt="" class="profilePic">
+				</li>
 			{% else %}
-			<li>
-				<a class="navLink" href="{{ path ('app_register') }}">Register</a>
-			</li>
-			<li>
-				<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
-			</li>
-			
+				<li>
+					<a class="navLink" href="{{ path ('app_register') }}">Register</a>
+				</li>
+				<li>
+					<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
+				</li>
+
 			{% endif %}
 		</ul>
 	</div>

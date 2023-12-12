@@ -2,4 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.teamCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.teamCardsHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamCard {
+  border: 1px solid rgb(189, 187, 182);
+}
+
+.teamCardContent {
+  margin: 1rem;
+}
+
+.contactBtn {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  background-color: rgb(229, 209, 208);
+  padding: 1rem 0;
 }/*# sourceMappingURL=style.css.map */
