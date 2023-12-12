@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Dez 2023 um 11:29
+-- Erstellungszeit: 12. Dez 2023 um 13:18
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.1.25
 
