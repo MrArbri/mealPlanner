@@ -1,6 +1,5 @@
 footer{
     width: 100%;
-    padding:10px 10px;
     background-color: rgb(131, 151, 136);
     margin-top: 10px;
     bottom: 0;
@@ -9,14 +8,9 @@ footer{
   footer p {
     color:rgb(245, 228, 215);
     text-align:center;
-    margin-top: 0px;
-    padding: 5px 10px;
+    padding: 0px 10px;
   }
-  
-  
-  .label{
-    color:rgb(245, 228, 215);
-  }
+
   
   
   footer a{
