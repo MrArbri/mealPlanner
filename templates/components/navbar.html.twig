@@ -22,7 +22,9 @@
 				<a class="navLink" href="/contact">Contact</a>
 			</li>
 			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
+				<li>
+					<a class="usernameDrpdown" href="">{{app.user.username}}</a>
+				</li>
 				<li>
 					<a class="navLink" href="/logout">Log out</a>
 				</li>

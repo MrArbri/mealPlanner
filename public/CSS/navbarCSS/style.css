@@ -58,6 +58,18 @@ nav {
   left: 0;
 }
 
+.usernameDrpdown {
+  text-decoration: none;
+  color: rgb(245, 228, 215);
+  text-transform: uppercase;
+}
+
+.profilePic {
+  width: 50px;
+  border-radius: 100%;
+  border: 2px rgb(245, 228, 215) solid;
+}
+
 @media screen and (max-width: 750px) {
   .menuBtn {
     font-size: 35px;
