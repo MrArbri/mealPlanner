@@ -3,9 +3,33 @@
 {% block title %}Meal index{% endblock %}
 
 {% block body %}
-    <h1>Meal index</h1>
+    <h1 class="text-center">Meal index</h1>
+    <div class="row row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-1 m-2">
+        {% for meal in meals %}
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ meal.name }}</h5>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <img src="{{ meal.picture }}" class="card-img-top" alt="meal Image">
+                        </div>
+                        <p class="card-text">{{ meal.rating }}</p>
+                        <p class="card-text">{{ meal.creator }}</p>
 
-    <table class="table">
+                        <a class="btn btn-outline-success btn-light w-100" href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
+                        <a class="btn btn-outline-primary btn-light w-100" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p>no records found</p>
+        {% endfor %}
+    </div>
+    <a class="btn btn-primary mt-4 m-4" href="{{ path('app_meal_new') }}">Create new</a>
+{% endblock %}
+
+
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -41,5 +65,4 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_meal_new') }}">Create new</a>
-{% endblock %}
+    <a href="{{ path('app_meal_new') }}">Create new</a> #}
