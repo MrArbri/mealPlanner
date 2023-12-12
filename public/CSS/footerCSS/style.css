@@ -1,3 +1,32 @@
-.footer1{
+footer{
+    width: 100%;
+    padding:10px 10px;
     background-color: rgb(131, 151, 136);
-}
+    margin-top: 10px;
+    bottom: 0;
+    }
+  
+  footer p {
+    color:rgb(245, 228, 215);
+    text-align:center;
+    margin-top: 4px;
+    padding: 10px 10px;
+  }
+  
+  
+  .label{
+    color:rgb(245, 228, 215);
+  }
+  
+  
+  footer a{
+    text-decoration: none;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgb(245, 228, 215);
+    color:rgb(245, 228, 215);
+  }
+  
+  #links{
+   text-align: center;
+  }
