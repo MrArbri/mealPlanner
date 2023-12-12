@@ -1,5 +1,4 @@
-<link
-rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
+<link rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
 
 <nav>
 	<div class="imgHolder">
@@ -14,13 +13,13 @@ rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
 				<a class="navLink" href="/">Home</a>
 			</li>
 			<li>
-				<a class="navLink" href="">Meals</a>
+				<a class="navLink" href="/meal/">Meals</a>
 			</li>
 			<li>
-				<a class="navLink" href="">About</a>
+				<a class="navLink" href="/about">About</a>
 			</li>
 			<li>
-				<a class="navLink" href="">Contact</a>
+				<a class="navLink" href="/contact">Contact</a>
 			</li>
 		</ul>
 	</div>
@@ -37,19 +36,65 @@ rel="stylesheet" href="{{asset("CSS/navbarCSS/style.css")}}">
 <script>
 	const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
-const navLinks = document.getElementById("navLinks");
-const navLink = document.getElementById("navLink");
+const navLinks = document.querySelector(".navLinks");
+const navLink = document.querySelectorAll(".navLink");
 const menuBtn = document.getElementById("menuBtn");
 
-menuBtn.addEventListener("click", () => {
+function toggleMenu() {
 if (navLinks.classList.contains("showMenu")) {
 navLinks.classList.remove("showMenu")
-closeMenuBtn.style.display("none")
-openMenuBtn.style.display("block")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
 } else {
 navLinks.classList.add("showMenu")
-closeMenuBtn.style.display("block")
-openMenuBtn.style.display("none")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
+}
+}
+
+menuBtn.addEventListener("click", toggleMenu)
+navLink.forEach(function (link) {
+link.addEventListener("click", toggleMenu)
+})
+
+document.querySelectorAll(".navLink").forEach((link) => {
+if (link.href === window.location.href) {
+link.classList.add("activeLink");
+console.log(window.location.href);
 }
 });
 </script>
+
+{#
+menuBtn.addEventListener("click", () => {
+if (navLinks.classList.contains("showMenu")) {
+navLinks.classList.remove("showMenu")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
+} else {
+navLinks.classList.add("showMenu")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
+}
+});
+
+navLink.forEach(function (link) {
+link.addEventListener("click", () => {
+if (navLinks.classList.contains("showMenu")) {
+navLinks.classList.remove("showMenu")
+closeMenuBtn.style.display = "none"
+openMenuBtn.style.display = "block"
+document.body.style.overflow = "visible"
+} else {
+navLinks.classList.add("showMenu")
+closeMenuBtn.style.display = "block"
+openMenuBtn.style.display = "none"
+document.body.style.overflow = "hidden"
+}
+})
+})
+#}

@@ -36,6 +36,7 @@ nav{
   margin-right: 1rem;
   &>li{
     margin: 0 1rem;
+    position: relative;
   }
 }
 
@@ -52,11 +53,17 @@ nav{
   position: absolute;
 }
 
-@media screen and (max-width:750px) { 
+.activeLink::after{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: $color_cream;
+  bottom: 0;
+  left: 0;
+}
 
-  body{
-    overflow-y: hidden;
-  }
+@media screen and (max-width:750px) { 
 
   .menuBtn{
     font-size: 35px;
@@ -83,7 +90,7 @@ nav{
     gap: 2rem;
     text-align: center;
     transform: translateY(-100%);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in;
     top: 0;
     left: 0;
     right: 0;
@@ -92,7 +99,8 @@ nav{
     background: $color_green;
     list-style: none;
     padding-top: 4rem;
-    width: 0%;
+    width: 100%;
+    overflow-y: hidden;
   }
 
   .navLink{
@@ -100,8 +108,6 @@ nav{
   }
 
   .showMenu{
-    // transform: translateY(0);
-    width: 100%;
     transform: translateY(0);
   }
   
