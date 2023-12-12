@@ -5,8 +5,10 @@ namespace App\Form;
 use App\Entity\Meal;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
 
 class MealType extends AbstractType
 {
@@ -28,6 +30,9 @@ class MealType extends AbstractType
             ->add('preparation', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the preparation steps'],
             ])
+            ->add('prep_time', null, [
+                'attr' => ['class' => 'form-control']
+            ])
             ->add('rating', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
                 'choices'  => [
@@ -41,16 +46,15 @@ class MealType extends AbstractType
             ->add('description', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the event'],
             ])
-            ->add('calories', ChoiceType::class, [
-                'attr' => ['class' => 'form-control'],
-                'choices'  => [
-                    'low 200-299' => '200-299',
-                    'medium 300-399' => '300-399',
-                    'medium 400-499' => '400-499',
-                    'high 500-599' => '500-599',
-                    'high 600-699' => '600-699',
-                    'high 700-850' => '700-850',
-                ],
+            ->add('calories', NumberType::class, [
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the event'],
+                "constraints" => [
+                    new Length([
+                        "min" => 100,
+                        'minMessage' => 'The calories must be between 100 and 900',
+                        "max" => 900,
+                    ])
+                ]
             ])
             ->add('type', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
