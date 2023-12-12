@@ -31,7 +31,8 @@ class MealType extends AbstractType
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the preparation steps'],
             ])
             ->add('prep_time', null, [
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
+                "widget" => "single_text"
             ])
             ->add('rating', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
