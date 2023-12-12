@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\MealRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MealRepository::class)]
@@ -25,13 +26,13 @@ class Meal
     #[ORM\Column(length: 255)]
     private ?string $creator = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $preparation = null;
 
     #[ORM\Column(length: 255)]
     private ?string $rating = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
@@ -39,6 +40,9 @@ class Meal
 
     #[ORM\Column(length: 255)]
     private ?string $type = null;
+
+    #[ORM\Column(type: Types::TIME_MUTABLE)]
+    private ?\DateTimeInterface $prep_time = null;
 
     public function getId(): ?int
     {
@@ -149,6 +153,18 @@ class Meal
     public function setType(string $type): static
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getPrepTime(): ?\DateTimeInterface
+    {
+        return $this->prep_time;
+    }
+
+    public function setPrepTime(\DateTimeInterface $prep_time): static
+    {
+        $this->prep_time = $prep_time;
 
         return $this;
     }
