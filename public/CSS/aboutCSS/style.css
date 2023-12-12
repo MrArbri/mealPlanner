@@ -26,6 +26,7 @@
 }
 
 .contactBtn {
+  border-radius: 10px;
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -33,5 +34,34 @@
   color: black;
   font-weight: 700;
   background-color: rgb(229, 209, 208);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  transition: all 0.25s ease-in;
+}
+.contactBtn:hover {
+  background-color: rgb(189, 187, 182);
+  color: rgb(245, 228, 215);
+}
+
+.teamImgHolder {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.teamImg {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .teamCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .teamCards {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

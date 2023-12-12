@@ -66,6 +66,11 @@ nav {
 
 .profilePic {
   width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 100%;
   border: 2px rgb(245, 228, 215) solid;
 }
