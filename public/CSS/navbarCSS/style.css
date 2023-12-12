@@ -72,7 +72,7 @@ nav {
     gap: 2rem;
     text-align: center;
     transform: translateY(-100%);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in;
     top: 0;
     left: 0;
     right: 0;
@@ -81,13 +81,11 @@ nav {
     background: rgb(131, 151, 136);
     list-style: none;
     padding-top: 4rem;
-    width: 0%;
   }
   .navLink {
     display: flex;
   }
   .showMenu {
-    width: 100%;
     transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

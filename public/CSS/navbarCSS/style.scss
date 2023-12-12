@@ -83,7 +83,7 @@ nav{
     gap: 2rem;
     text-align: center;
     transform: translateY(-100%);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in;
     top: 0;
     left: 0;
     right: 0;
@@ -92,7 +92,6 @@ nav{
     background: $color_green;
     list-style: none;
     padding-top: 4rem;
-    width: 0%;
   }
 
   .navLink{
@@ -100,8 +99,6 @@ nav{
   }
 
   .showMenu{
-    // transform: translateY(0);
-    width: 100%;
     transform: translateY(0);
   }
   
