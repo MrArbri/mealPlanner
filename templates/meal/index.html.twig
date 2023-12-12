@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{asset("CSS/cardCSS/style.css")}}">
 {% endblock %}
 {% block body %}
+<div class="container">
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 m-2">
         {% for meal in meals %}
             <div class="col mb-3">
@@ -41,6 +42,7 @@
         {% endfor %}
     </div>
     <a class="btn btn-primary mt-4 m-4" href="{{ path('app_meal_new') }}">Create new</a>
+    </div>
 {% endblock %}
 
 
