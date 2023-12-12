@@ -26,6 +26,9 @@
 					<a class="usernameDrpdown" href="">{{app.user.username}}</a>
 				</li>
 				<li>
+					<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Edit User</a>
+				</li>
+				<li>
 					<a class="navLink" href="/logout">Log out</a>
 				</li>
 				<li>
