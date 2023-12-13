@@ -72,7 +72,10 @@ nav{
 }
 
 .profilePic{
+  height: 50px;
   width: 50px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 100%;
   border: 2px $color_cream solid;
 }

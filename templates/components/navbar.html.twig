@@ -25,7 +25,7 @@
 					<a class="usernameDrpdown" href="">{{app.user.username}}</a>
 				</li>
 				<li>
-					<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Edit User</a>
+					<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
 				</li>
 				<li>
 					<a class="navLink" href="/logout">Log out</a>
@@ -82,33 +82,3 @@ console.log(window.location.href);
 }
 });
 </script>
-{#
-menuBtn.addEventListener("click", () => {
-if (navLinks.classList.contains("showMenu")) {
-navLinks.classList.remove("showMenu")
-closeMenuBtn.style.display = "none"
-openMenuBtn.style.display = "block"
-document.body.style.overflow = "visible"
-} else {
-navLinks.classList.add("showMenu")
-closeMenuBtn.style.display = "block"
-openMenuBtn.style.display = "none"
-document.body.style.overflow = "hidden"
-}
-});
-navLink.forEach(function (link) {
-link.addEventListener("click", () => {
-if (navLinks.classList.contains("showMenu")) {
-navLinks.classList.remove("showMenu")
-closeMenuBtn.style.display = "none"
-openMenuBtn.style.display = "block"
-document.body.style.overflow = "visible"
-} else {
-navLinks.classList.add("showMenu")
-closeMenuBtn.style.display = "block"
-openMenuBtn.style.display = "none"
-document.body.style.overflow = "hidden"
-}
-})
-})
-#}
