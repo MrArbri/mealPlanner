@@ -21,6 +21,7 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute("app_meal_index");
         } else {
             $user = new User();
+            $user->setIsBanned(false);
             $form = $this->createForm(RegistrationFormType::class, $user);
             $form->handleRequest($request);
 

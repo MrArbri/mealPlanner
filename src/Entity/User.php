@@ -49,6 +49,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'creator', targetEntity: Meal::class)]
     private Collection $meals;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isBanned = null;
+
     public function __construct()
     {
         $this->fk_user = new ArrayCollection();
@@ -229,6 +232,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $meal->setCreator(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isIsBanned(): ?bool
+    {
+        return $this->isBanned;
+    }
+
+    public function setIsBanned(?bool $isBanned): static
+    {
+        $this->isBanned = $isBanned;
 
         return $this;
     }
