@@ -14,7 +14,7 @@ $color_cream: rgb(245, 228, 215);
 .teamCards{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1rem; 
   margin: 0 1rem;
 }
 
@@ -25,6 +25,7 @@ $color_cream: rgb(245, 228, 215);
 }
 
 .teamCard{
+  border-radius: 20px;
   border: 1px solid $color_silver;
 }
 
@@ -40,6 +41,33 @@ $color_cream: rgb(245, 228, 215);
   color: black;
   font-weight: 700;
   background-color: $color_purple;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  transition: all 0.25s ease-in;
 
+  &:hover{
+    color: black;
+    background-color: rgb(191, 170, 169);
+  }
+
+}
+
+.teamImgHolder{
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.teamImg{
+  width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .teamCards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .teamCards{grid-template-columns: 1fr}
 }

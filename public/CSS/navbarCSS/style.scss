@@ -54,14 +54,21 @@ nav{
   position: absolute;
 }
 
-.activeLink::after{
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 100%;
+// .activeLink::after{
+//   content: "";
+//   position: absolute;
+//   height: 3px;
+//   width: 100%;
+//   background-color: $color_cream;
+//   bottom: 0;
+//   left: 0;
+// }
+
+.activeLink{
   background-color: $color_cream;
-  bottom: 0;
-  left: 0;
+  color: $color_green;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
 }
 
 .usernameDrpdown{
@@ -72,8 +79,8 @@ nav{
 }
 
 .profilePic{
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
   object-fit: cover;
   object-position: center;
   border-radius: 100%;
