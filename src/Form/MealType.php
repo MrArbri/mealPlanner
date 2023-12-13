@@ -63,7 +63,7 @@ class MealType extends AbstractType
                     new Range([
                         'min' => 100,
                         'max' => 1000,
-
+                        'notInRangeMessage' => "Hello world"
                     ]),
                 ]
             ])

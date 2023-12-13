@@ -2,6 +2,9 @@
 
 namespace App\Security;
 
+use App\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
+use Exception;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,21 +22,21 @@ use Symfony\Component\Security\Http\Util\TargetPathTrait;
 class LoginAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
-
+    private $entityManager;
     private $security;
 
     public const LOGIN_ROUTE = 'app_login';
 
-    public function __construct(private UrlGeneratorInterface $urlGenerator, Security $sec)
+    public function __construct(private UrlGeneratorInterface $urlGenerator, Security $sec, EntityManagerInterface $entityManager)
     {
         $this->security = $sec;
+        $this->entityManager = $entityManager;
     }
 
     public function authenticate(Request $request): Passport
     {
         $username = $request->request->get('username', '');
 
-        $request->getSession()->set(SecurityRequestAttributes::LAST_USERNAME, $username);
 
         return new Passport(
             new UserBadge($username),
