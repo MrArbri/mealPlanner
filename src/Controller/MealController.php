@@ -17,6 +17,7 @@ class MealController extends AbstractController
     #[Route('/', name: 'app_meal_index', methods: ['GET'])]
     public function index(MealRepository $mealRepository): Response
     {
+
         return $this->render('meal/index.html.twig', [
             'meals' => $mealRepository->findAll(),
         ]);
@@ -30,6 +31,7 @@ class MealController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $meal->setCreator($this->getUser());
             $entityManager->persist($meal);
             $entityManager->flush();
 
@@ -71,7 +73,7 @@ class MealController extends AbstractController
     #[Route('/{id}', name: 'app_meal_delete', methods: ['POST'])]
     public function delete(Request $request, Meal $meal, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$meal->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $meal->getId(), $request->request->get('_token'))) {
             $entityManager->remove($meal);
             $entityManager->flush();
         }

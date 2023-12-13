@@ -1,53 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Meal index{% endblock %}
+{% block title %}Meal index
+{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{asset("CSS/cardCSS/style.css")}}">
+	<link rel="stylesheet" href="{{asset("CSS/cardCSS/style.css")}}">
 {% endblock %}
 {% block body %}
-<div class="container">
-    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 m-2">
-        {% for meal in meals %}
-            <div class="col mb-3">
-                <div class="card-1 text-center">
-                    <div class="card-body">
-                        <div class="ratio ratio-16x9 mb-3">
-                            <img class="picture" src="{{ meal.picture }}" class="card-img-top" alt="meal Image">
-                        </div>
-                        <h5 class="card-title fs-2 mb-2">{{ meal.name }}</h5>
-                        {% set maximum_stars = 5 %}
-                        {% if meal.rating <= maximum_stars %}
-                            {% for star in 0..(meal.rating) %}
-                                {% if star != 0 %}
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                {% endif %}
-                            {% endfor %}
-                            {% if (meal.rating) - (meal.rating|round(0, 'floor')) != 0 %}
-                                <i class="bi bi-star-half text-warning"></i>
-                            {% endif %}
-                            {% for star in 0..(maximum_stars - meal.rating|round(0, 'ceil')) %}
-                                {% if star != 0 %}
-                                    <i class="bi bi-star emptyStar text-warning"></i>
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                        <p class="card-text fw-semibold mt-3">{{ meal.creator }}</p>
-                        <a class="btn btn-outline-success btn-light w-100" href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
-                        <a class="btn btn-outline-primary btn-light w-100" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
-                    </div>
-                </div>
-            </div>
-        {% else %}
-            <p>no records found</p>
-        {% endfor %}
-    </div>
-    <a class="btn btn-primary mt-4 m-4" href="{{ path('app_meal_new') }}">Create new</a>
-    </div>
+	<div class="container">
+		<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 m-2">
+			{% for meal in meals %}
+				<div class="col mb-3">
+					<div class="card-1 text-center">
+						<div class="card-body">
+							<div class="ratio ratio-16x9 mb-3">
+								<img class="picture" src="{{ meal.picture }}" class="card-img-top" alt="meal Image">
+							</div>
+							<h5 class="card-title fs-2 mb-2">{{ meal.name }}</h5>
+							{% set maximum_stars = 5 %}
+							{% if meal.rating <= maximum_stars %}
+								{% for star in 0..(meal.rating) %}
+									{% if star != 0 %}
+										<i class="bi bi-star-fill text-warning"></i>
+									{% endif %}
+								{% endfor %}
+								{% if (meal.rating) - (meal.rating|round(0, 'floor')) != 0 %}
+									<i class="bi bi-star-half text-warning"></i>
+								{% endif %}
+								{% for star in 0..(maximum_stars - meal.rating|round(0, 'ceil')) %}
+									{% if star != 0 %}
+										<i class="bi bi-star emptyStar text-warning"></i>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+							{% if meal.creator %}
+								<p class="card-text fw-semibold mt-3">{{ meal.creator.username }}</p>
+							{% endif %}
+
+							<a class="btn btn-outline-success btn-light w-100" href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
+							<a class="btn btn-outline-primary btn-light w-100" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+						</div>
+					</div>
+				</div>
+			{% else %}
+				<p>no records found</p>
+			{% endfor %}
+		</div>
+		<a class="btn btn-primary mt-4 m-4" href="{{ path('app_meal_new') }}">Create new</a>
+	</div>
 {% endblock %}
 
 
-
-    {# <table class="table">
+{# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>

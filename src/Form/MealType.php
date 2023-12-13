@@ -3,12 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Meal;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\Range;
 
 class MealType extends AbstractType
 {
@@ -24,9 +26,17 @@ class MealType extends AbstractType
             ->add('ingredients', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the ingredients'],
             ])
-            ->add('creator_id', null, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the your name'],
-            ])
+            // ->add('creator', EntityType::class, [
+            //     // looks for choices from this entity
+            //     'class' => User::class,
+
+            //     // uses the User.username property as the visible option string
+            //     'choice_label' => 'creator',
+
+            //     // used to render a select box, check boxes or radios
+            //     // 'multiple' => true,
+            //     // 'expanded' => true,
+            // ])
             ->add('preparation', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the preparation steps'],
             ])
@@ -48,13 +58,13 @@ class MealType extends AbstractType
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the event'],
             ])
             ->add('calories', NumberType::class, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the event'],
+                'attr' => ['class' => 'form-control', 'placeholder' => 'ex. 250'],
                 "constraints" => [
-                    new Length([
-                        "min" => 100,
-                        'minMessage' => 'The calories must be between 100 and 900',
-                        "max" => 900,
-                    ])
+                    new Range([
+                        'min' => 100,
+                        'max' => 1000,
+
+                    ]),
                 ]
             ])
             ->add('type', ChoiceType::class, [
