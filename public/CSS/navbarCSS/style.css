@@ -8,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .logoImg {
@@ -62,8 +62,8 @@ nav {
 }
 
 .profilePic {
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
