@@ -18,7 +18,7 @@ class MealType extends AbstractType
     {
         $builder
             ->add('name', null, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the event name'],
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter meal name'],
             ])
             ->add('picture', null, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Please enter the image URL'],
@@ -55,7 +55,7 @@ class MealType extends AbstractType
                 ],
             ])
             ->add('description', null, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the event'],
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Please describe the meal'],
             ])
             ->add('calories', NumberType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'ex. 250'],
@@ -72,6 +72,7 @@ class MealType extends AbstractType
                 'choices'  => [
                     'Vegan' => 'vegan',
                     'Vegetarian' => 'vegetarian',
+                    'Non Vegetarian' => 'non vegetarian',
                 ],
             ]);
     }
