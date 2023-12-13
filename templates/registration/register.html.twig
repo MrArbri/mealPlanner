@@ -1,34 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register {% endblock %}
+{% block title %}Register
+{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset("CSS/registerCSS/style.css") }}">
+	<link rel="stylesheet" href="{{ asset("CSS/registerCSS/style.css") }}">
 {% endblock %}
 {% block body %}
-<div class="container">
-    <h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.first_name, {'attr': {'placeholder': 'Enter your first name'}}) }}
-        <br>
-        {{ form_row(registrationForm.last_name, {'attr': {'placeholder': 'Enter your last name'}}) }}
-        <br>
-        {{ form_row(registrationForm.email, {'attr': {'placeholder': 'Enter your email'}}) }}
-        <br>
-        {{ form_row(registrationForm.username, {'attr': {'placeholder': 'Enter your username'}}) }}
-        <br>
-        {{ form_row(registrationForm.plainPassword, {
+	<div class="container">
+		<h1>Register</h1>
+
+		{{ form_errors(registrationForm) }}
+
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.first_name, {'attr': {'placeholder': 'Enter your first name'}}) }}
+		<br>
+		{{ form_row(registrationForm.last_name, {'attr': {'placeholder': 'Enter your last name'}}) }}
+		<br>
+		{{ form_row(registrationForm.email, {'attr': {'placeholder': 'Enter your email'}}) }}
+		<br>
+		{{ form_row(registrationForm.username, {'attr': {'placeholder': 'Enter your username'}}) }}
+		<br>
+		{{ form_row(registrationForm.plainPassword, {
             'label': 'Password',
             'attr': {'placeholder': 'Enter your password'}
         }) }}
-        <br>
-        {{ form_row(registrationForm.avatar, {'attr': {'placeholder': 'Enter URL for your avatar'}}) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+		<br>
+		{{ form_row(registrationForm.avatar, {'attr': {'placeholder': 'Enter URL for your avatar'}}) }}
+		{{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn btn-primary">Register</button>
-    {{ form_end(registrationForm) }}
-    </div>
+		<button type="submit" class="btn btn-primary">Register</button>
+		{{ form_end(registrationForm) }}
+	</div>
+
 {% endblock %}
-
