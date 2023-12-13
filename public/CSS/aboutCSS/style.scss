@@ -3,6 +3,7 @@ $color_green: rgb(131, 151, 136);
 $color_silver: rgb(189, 187, 182);
 $color_purple: rgb(229, 209, 208);
 $color_cream: rgb(245, 228, 215);
+$color_purpleHover:rgb(191, 170, 169);
 
 
 *, *::before, *::after{
@@ -48,7 +49,7 @@ $color_cream: rgb(245, 228, 215);
 
   &:hover{
     color: black;
-    background-color: rgb(191, 170, 169);
+    background-color: $color_purpleHover;
   }
 
 }

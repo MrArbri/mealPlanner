@@ -1,5 +1,50 @@
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+$color_purpleHover:rgb(191, 170, 169);
+
+
 *, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// MAIN TITLE
+.mainTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+// SUBMIT BUTTON
+.submitBtn{
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  background-color: $color_purple;
+  padding: 0.5rem 2.5rem;
+  border-radius: 10px;
+  transition: all ease-in 0.25s;
+  margin: 0.5rem;
+
+  &:hover{
+    background-color: $color_purpleHover;
+    color: black;
+  }
+}
+
+.submitBtnHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
 }

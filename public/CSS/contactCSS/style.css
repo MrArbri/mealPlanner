@@ -2,4 +2,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.submitBtn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  background-color: rgb(229, 209, 208);
+  padding: 0.5rem 2.5rem;
+  border-radius: 10px;
+  transition: all ease-in 0.25s;
+  margin: 0.5rem;
+}
+.submitBtn:hover {
+  background-color: rgb(191, 170, 169);
+  color: black;
+}
+
+.submitBtnHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
 }/*# sourceMappingURL=style.css.map */
