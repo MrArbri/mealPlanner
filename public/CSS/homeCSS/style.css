@@ -1,0 +1,30 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heroSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("https://cdn.pixabay.com/photo/2016/09/12/08/22/breakfast-1663295_1280.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 80vh;
+  color: white;
+  cursor: default;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 228, 215);
+}
+
+.heroTitle {
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(245, 228, 215);
+}/*# sourceMappingURL=style.css.map */

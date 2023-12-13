@@ -12,8 +12,8 @@ class HomeController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(MealRepository $mealRepository): Response
     {
-        return $this->render('meal/index.html.twig', [
-            'meals' => $mealRepository->findAll(),
+        return $this->render('home/index.html.twig', [
+            // 'meals' => $mealRepository->findAll(),
         ]);
     }
 

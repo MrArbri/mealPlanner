@@ -11,9 +11,11 @@
 			<li>
 				<a class="navLink" href="/">Home</a>
 			</li>
-			<li>
-				<a class="navLink" href="/meal/">Meals</a>
-			</li>
+			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+				<li>
+					<a class="navLink" href="/meal/">Meals</a>
+				</li>
+			{% endif %}
 			<li>
 				<a class="navLink" href="/about">About</a>
 			</li>
@@ -35,7 +37,7 @@
 				</li>
 			{% else %}
 				<li>
-					<a class="navLink" href="{{ path ('app_register') }}">Register</a>
+					<a class="navLink" href="{{ path ('app_register') }}">Sign up</a>
 				</li>
 				<li>
 					<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
