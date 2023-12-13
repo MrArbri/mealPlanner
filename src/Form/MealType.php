@@ -70,9 +70,9 @@ class MealType extends AbstractType
             ->add('type', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
                 'choices'  => [
-                    'Vegan' => 'vegan',
-                    'Vegetarian' => 'vegetarian',
-                    'Non Vegetarian' => 'non vegetarian',
+                    'Vegan' => 'Vegan',
+                    'Vegetarian' => 'Vegetarian',
+                    'Non Vegetarian/Vegan' => 'Non Vegetarian/Vegan',
                 ],
             ]);
     }
