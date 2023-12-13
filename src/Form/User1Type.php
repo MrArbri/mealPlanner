@@ -18,8 +18,7 @@ class User1Type extends AbstractType
             ->add('first_name')
             ->add('last_name')
             ->add('email')
-            ->add('avatar')
-        ;
+            ->add('avatar');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
