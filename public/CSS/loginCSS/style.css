@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form1{
+    width: 600px;
+    padding: 25px 35px 45px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+input{
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    .form1{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .form1{
+        width: 100%;
+    }
+}
