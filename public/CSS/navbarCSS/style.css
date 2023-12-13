@@ -79,7 +79,7 @@ nav {
     position: absolute;
     z-index: 100;
     right: 1rem;
-    padding: 4px;
+    padding: 0 0.5rem;
     border: rgb(115, 135, 123) solid 1px;
     background-color: transparent;
     border-radius: 2px;

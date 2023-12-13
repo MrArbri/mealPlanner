@@ -27,4 +27,33 @@
   font-weight: 700;
   font-size: 4rem;
   color: rgb(245, 228, 215);
+}
+
+.registerText {
+  display: block;
+  margin-top: 5rem;
+}
+
+.heroBtn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid rgb(131, 151, 136);
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(245, 228, 215);
+  transition: all 0.25s ease-in;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+.heroBtn:hover {
+  background-color: rgb(115, 135, 123);
+  color: rgb(245, 228, 215);
+  border: none;
+}
+
+.loginBtnHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

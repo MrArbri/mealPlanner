@@ -35,3 +35,33 @@ $color_purpleHover:rgb(191, 170, 169);
   font-size: 4rem;
   color: $color_cream;
 }
+
+.registerText{
+  display: block;
+  margin-top: 5rem;
+}
+
+.heroBtn{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid $color_green;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color_cream;
+  transition: all 0.25s ease-in;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  &:hover{
+    background-color: $color_darkGreen;
+    color: $color_cream;
+    border: none;
+  }
+}
+
+.loginBtnHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
