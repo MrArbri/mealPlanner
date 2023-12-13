@@ -17,8 +17,10 @@
 						{{ meal.ingredients }}</p>
 					<p class='card-text'>Description:
 						{{ meal.description }}</p>
-					<p class='card-text'>preparation:
+					<p class='card-text'>Preparation:
 						{{ meal.preparation }}</p>
+					<p class='card-text'>Prep time:
+						{{ meal.prepTime ? meal.prepTime|date('H:i:s') : '' }}</p>
 					{% if meal.creator %}
 						<p class="card-text fw-semibold mt-3">{{ meal.creator.username }}</p>
 					{% endif %}
@@ -26,7 +28,7 @@
 						{{ meal.calories }}</p>
 					<p class='card-text'>Meal type:
 						{{ meal.type }}
-						seats</p>
+					</p>
 					<p class='card-text'>Rating:
 						{{ meal.rating }}</p>
 					<div class='d-flex justify-content-start'>
