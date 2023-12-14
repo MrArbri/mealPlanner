@@ -35,7 +35,7 @@
 						{{ meal.description }}</p>
 					<p class='card-text'>Preparation:
 						{{ meal.preparation }}</p>
-					<p class='card-text'>Prep time:
+					<p class='card-text'><i class="fa-solid fa-clock"></i> Prep:
 						{{ meal.prepTime ? meal.prepTime|date('H:i') : '' }} h/min</p>
 					{% if meal.creator %}
 						<p class="card-text fw-semibold mt-3">Recipe by: {{ meal.creator.username }}</p>

@@ -1,4 +1,54 @@
 
-.table{
-    border: 1px solid black;
+.container1{
+    margin: 10px 30px;
+
 }
+
+.tableUsers {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid rgb(245, 228, 215);
+    background-color: rgb(229, 209, 208);
+  }
+
+img{
+    border-radius: 100%;
+  }
+  
+@media screen and (max-width: 768px) {
+    .tableUsers, thead, tbody, th, td, tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr { 
+        margin: 0 0 1rem 0; 
+    }
+    td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+    td:before {
+      position: absolute;
+      top: 0;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+    
+  }
+  
+
