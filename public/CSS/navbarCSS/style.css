@@ -72,6 +72,67 @@ nav {
   border: 2px rgb(245, 228, 215) solid;
 }
 
+/* DROPDOWN MENU */
+.dropbtn {
+  border: 1px solid rgb(115, 135, 123);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(245, 228, 215);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.dropbtn:hover {
+  background-color: rgb(245, 228, 215);
+  color: rgb(131, 151, 136);
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.dropbtn.activeDropDown {
+  background-color: rgb(245, 228, 215);
+  color: rgb(131, 151, 136);
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown .fa-solid.fa-caret-down {
+  pointer-events: none;
+}
+
+.dropdownContent {
+  display: none;
+  left: 0;
+  color: rgb(245, 228, 215);
+  position: absolute;
+  background-color: rgb(131, 151, 136);
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdownContent > a {
+  color: rgb(245, 228, 215);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownContent > a:hover {
+  background-color: rgb(245, 228, 215);
+  color: rgb(131, 151, 136);
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.showDropDown {
+  display: block;
+}
+
 @media screen and (max-width: 750px) {
   .menuBtn {
     font-size: 35px;

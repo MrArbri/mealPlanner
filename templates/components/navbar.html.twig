@@ -8,6 +8,11 @@
 	</div>
 	<div>
 		<ul class="navLinks">
+			{% if is_granted('ROLE_ADMIN') %}
+				<li>
+					<a class="navLink" href="{{ path ('app_admin_index')}}">ADMIN INDEX</a>
+				</li>
+			{% endif %}
 			<li>
 				<a class="navLink" href="/">Home</a>
 			</li>
@@ -24,38 +29,37 @@
 			</li>
 			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 				<li>
-					<a class="usernameDrpdown" href="">{{app.user.username}}</a>
+					<div class="dropdown">
+						<a onclick="myFunction()" id="dropbtn" class="dropbtn">{{app.user.username}}
+							<i class="fa-solid fa-caret-down"></i>
+						</a>
+						<div id="dropdownMenu" class="dropdownContent">
+							<a class="navLink" href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
+							<a class="navLink" href="/logout">Log out</a>
+						</div>
+					</div>
 				</li>
-				<li>
-					<a class="navLink" href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
-				</li>
-				<li>
-					<a class="navLink" href="/logout">Log out</a>
-				</li>
-				<li>
-					<img src="{{app.user.avatar}}" alt="" class="profilePic">
-				</li>
-			{% else %}
-				<li>
-					<a class="navLink" href="{{ path ('app_register') }}">Sign up</a>
-				</li>
-				<li>
-					<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
-				</li>
-			{% endif %}
-		</ul>
-	</div>
-	<div class="menuBtn" id="menuBtn">
-		<span id="openMenuBtn">
-			<i class="bi bi-list"></i>
-		</span>
-		<span id="closeMenuBtn">
-			<i class="bi bi-x-lg"></i>
-		</span>
-	</div>
-</nav>
-<script>
-	const openMenuBtn = document.getElementById("openMenuBtn");
+				<img src="{{app.user.avatar}}" alt="" class="profilePic">
+			</li>
+		{% else %}
+			<li>
+				<a class="navLink" href="{{ path ('app_register') }}">Sign up</a>
+			</li>
+			<li>
+				<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
+			</li>
+		{% endif %}
+	</ul>
+</div>
+<div class="menuBtn" id="menuBtn">
+	<span id="openMenuBtn">
+		<i class="bi bi-list"></i>
+	</span>
+	<span id="closeMenuBtn">
+		<i class="bi bi-x-lg"></i>
+	</span>
+</div></nav><script>
+const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const navLinks = document.querySelector(".navLinks");
 const navLink = document.querySelectorAll(".navLink");
@@ -83,4 +87,22 @@ link.classList.add("activeLink");
 console.log(window.location.href);
 }
 });
-</script>
+
+
+function myFunction() {
+document.getElementById("dropdownMenu").classList.toggle("showDropDown");
+document.getElementById("dropbtn").classList.add("activeDropDown")
+}
+
+window.onclick = function (event) {
+if (! event.target.matches('.dropbtn')) {
+const dropdowns = document.getElementsByClassName("dropdownContent");
+document.getElementById("dropbtn").classList.remove("activeDropDown");
+for (let i = 0; i < dropdowns.length; i++) {
+const openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('showDropDown')) {
+openDropdown.classList.remove('showDropDown');
+}
+}
+}
+}</script>

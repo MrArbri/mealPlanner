@@ -87,6 +87,70 @@ nav{
   border: 2px $color_cream solid;
 }
 
+/* DROPDOWN MENU */
+.dropbtn {
+  border: 1px solid $color_darkGreen;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color_cream;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.dropbtn:hover{
+  background-color: $color_cream;
+  color: $color_green;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.dropbtn.activeDropDown{
+  background-color: $color_cream;
+  color: $color_green;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  .fa-solid.fa-caret-down{
+    pointer-events: none;
+  }
+}
+
+
+.dropdownContent {
+  display: none;
+  left: 0;
+  color: $color_cream;
+  position: absolute;
+  background-color: $color_green;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+  &>a{
+    color: $color_cream;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    &:hover{
+      background-color: $color_cream;
+      color: $color_green;
+      border-radius: 10px;
+      padding: 0.5rem 0.6rem;
+    }
+  }
+}
+
+.showDropDown {display:block;}
+
+
+// MEDIA QUERY
 @media screen and (max-width:750px) { 
 
   .menuBtn{
