@@ -20,14 +20,14 @@ class PlannerController extends AbstractController
         ]);
     }
 
-    public function form(Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $plan = new Planner();
-        $plan->setFkUser();
-        $plan->setFkMeal();
+//     public function form(Request $request, EntityManagerInterface $entityManager): Response
+//     {
+//         $plan = new Planner();
+//         $plan->setFkUser();
+//         $plan->setFkMeal();
 
-        $form = $this->createFormBuilder($plan)
-            ->add()
+//         $form = $this->createFormBuilder($plan)
+//             ->add();
 
-    }
-}
+//     }
+ }
