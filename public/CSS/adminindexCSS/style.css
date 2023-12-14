@@ -1,8 +1,21 @@
 
 .container1{
     margin: 10px 30px;
-
 }
+
+.container2{
+    margin:10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableUser {
+    width: 60%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 
 .tableUsers {
     width: 100%;
@@ -11,7 +24,7 @@
     overflow: hidden;
   }
 
-  th, td {
+th, td {
     padding: 10px;
     text-align: center;
     border-bottom: 3px solid rgb(245, 228, 215);
@@ -20,12 +33,18 @@
 
 img{
     border-radius: 100%;
+    object-fit: cover;
   }
   
 @media screen and (max-width: 768px) {
     .tableUsers, thead, tbody, th, td, tr {
       display: block;
     }
+
+    .tableUser, thead, tbody, th, td, tr {
+        display: block;
+      }
+
     thead tr {
       position: absolute;
       top: -9999px;
