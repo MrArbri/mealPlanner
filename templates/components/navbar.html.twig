@@ -10,7 +10,7 @@
 		<ul class="navLinks">
 			{% if is_granted('ROLE_ADMIN') %}
 				<li>
-					<a class="navLink" href="{{ path ('app_admin_index')}}">ADMIN INDEX</a>
+					<a class="navLink" href="{{ path ('app_admin_index')}}">Users</a>
 				</li>
 			{% endif %}
 			<li>
@@ -34,8 +34,14 @@
 							<i class="fa-solid fa-caret-down"></i>
 						</a>
 						<div id="dropdownMenu" class="dropdownContent">
-							<a class="navLink" href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
-							<a class="navLink" href="/logout">Log out</a>
+							{% if is_granted('ROLE_ADMIN') %}
+								<a href="/">Planners</a>
+							{% else %}
+								<a href="/">My planner</a>
+							{% endif %}
+							<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
+							<a href="/logout">Log out</a>
+
 						</div>
 					</div>
 				</li>

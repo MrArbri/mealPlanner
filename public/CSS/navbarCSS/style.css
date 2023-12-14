@@ -106,6 +106,7 @@ nav {
 }
 
 .dropdownContent {
+  margin-top: 0.5rem;
   display: none;
   left: 0;
   color: rgb(245, 228, 215);
@@ -118,15 +119,16 @@ nav {
 }
 .dropdownContent > a {
   color: rgb(245, 228, 215);
-  padding: 12px 16px;
+  padding: 1rem;
   text-decoration: none;
   display: block;
+  transition: all 0.15s ease-in;
 }
 .dropdownContent > a:hover {
   background-color: rgb(245, 228, 215);
   color: rgb(131, 151, 136);
   border-radius: 10px;
-  padding: 0.5rem 0.6rem;
+  padding: 1rem;
 }
 
 .showDropDown {
@@ -164,7 +166,6 @@ nav {
     z-index: 99;
     background: rgb(131, 151, 136);
     list-style: none;
-    padding-top: 4rem;
     width: 100%;
     overflow-y: hidden;
   }
