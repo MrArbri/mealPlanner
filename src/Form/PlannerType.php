@@ -12,7 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Range;
 
-class MealType extends AbstractType
+class PlannerType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
