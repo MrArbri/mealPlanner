@@ -61,9 +61,9 @@ class MealType extends AbstractType
                 'attr' => ['class' => 'form-control', 'placeholder' => 'ex. 250'],
                 "constraints" => [
                     new Range([
-                        'min' => 100,
+                        'min' => 1,
                         'max' => 1000,
-                        'notInRangeMessage' => "Hello world"
+                        'notInRangeMessage' => "The calories can not be higher than 1000"
                     ]),
                 ]
             ])
