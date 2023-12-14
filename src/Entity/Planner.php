@@ -21,6 +21,12 @@ class Planner
     #[ORM\JoinColumn(nullable: false)]
     private ?Meal $fk_meal = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $time = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $day = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,6 +52,30 @@ class Planner
     public function setFkMeal(?Meal $fk_meal): static
     {
         $this->fk_meal = $fk_meal;
+
+        return $this;
+    }
+
+    public function getTime(): ?string
+    {
+        return $this->time;
+    }
+
+    public function setTime(string $time): static
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    public function getDay(): ?string
+    {
+        return $this->day;
+    }
+
+    public function setDay(string $day): static
+    {
+        $this->day = $day;
 
         return $this;
     }
