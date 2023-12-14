@@ -1,0 +1,97 @@
+.picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 250px;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.bi-star-fill, .bi-star-half {
+  filter: drop-shadow(0 0 2px rgb(255, 193, 7));
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 2px rgb(255, 193, 7));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgb(255, 193, 7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgb(255, 193, 7));
+  }
+}
+.emptyStar {
+  color: #474F57;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.btnHolder {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.showBtn {
+  display: inline-block;
+  color: rgb(131, 151, 136);
+  border: 2px solid rgb(131, 151, 136);
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  margin-right: 1rem;
+  transition: all 0.15s ease-in;
+}
+.showBtn:hover {
+  border: 2px solid rgb(131, 151, 136);
+  background-color: rgb(131, 151, 136);
+  border: none;
+  color: rgb(245, 228, 215);
+}
+
+.editBtn {
+  display: inline-block;
+  color: black;
+  border: 2px solid rgb(229, 209, 208);
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.15s ease-in;
+}
+.editBtn:hover {
+  background-color: rgb(191, 170, 169);
+  border: none;
+  color: black;
+  border: 2px solid rgb(191, 170, 169);
+}
+
+.createBtn {
+  display: inline-block;
+  color: white;
+  background-color: #1e94c2;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+}
+.createBtn:hover {
+  background-color: #65b1cf;
+  border: none;
+  color: whitesmoke;
+}/*# sourceMappingURL=style.css.map */

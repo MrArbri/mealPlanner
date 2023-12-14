@@ -56,4 +56,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  background-color: rgb(245, 228, 215);
 }/*# sourceMappingURL=style.css.map */

@@ -6,57 +6,55 @@
 			MEAL TIME
 		</a>
 	</div>
-	<div>
-		<ul class="navLinks">
-			{% if is_granted('ROLE_ADMIN') %}
-				<li>
-					<a class="navLink" href="{{ path ('app_admin_index')}}">Users</a>
-				</li>
-			{% endif %}
-			<li>
-				<a class="navLink" href="/">Home</a>
-			</li>
-			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-				<li>
-					<a class="navLink" href="/meal/">Meals</a>
-				</li>
-			{% endif %}
-			<li>
-				<a class="navLink" href="/about">About</a>
-			</li>
-			<li>
-				<a class="navLink" href="/contact">Contact</a>
-			</li>
-			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-				<li>
-					<div class="dropdown">
-						<a onclick="myFunction()" id="dropbtn" class="dropbtn">{{app.user.username}}
-							<i class="fa-solid fa-caret-down"></i>
-						</a>
-						<div id="dropdownMenu" class="dropdownContent">
-							{% if is_granted('ROLE_ADMIN') %}
-								<a href="/">Planners</a>
-							{% else %}
-								<a href="/">My planner</a>
-							{% endif %}
-							<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
-							<a href="/logout">Log out</a>
 
-						</div>
-					</div>
-				</li>
-				<img src="{{app.user.avatar}}" alt="" class="profilePic">
-			</li>
-		{% else %}
+
+	<ul class="navLinks">
+		<li>
+			<a class="navLink" href="/">Home</a>
+		</li>
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 			<li>
-				<a class="navLink" href="{{ path ('app_register') }}">Sign up</a>
-			</li>
-			<li>
-				<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
+				<a class="navLink" href="/meal/">Meals</a>
 			</li>
 		{% endif %}
-	</ul>
-</div>
+		<li>
+			<a class="navLink" href="/about">About</a>
+		</li>
+		<li>
+			<a class="navLink" href="/contact">Contact</a>
+		</li>
+		<li class="long"></li>
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<li>
+				<div class="dropdown">
+					<a onclick="myFunction()" id="dropbtn" class="dropbtn">{{app.user.username}}
+						<i class="fa-solid fa-caret-down"></i>
+					</a>
+					<div id="dropdownMenu" class="dropdownContent">
+						{% if is_granted('ROLE_ADMIN') %}
+							<a href="/">Planners</a>
+							<a href="{{ path ('app_admin_index')}}">Users</a>
+						{% else %}
+							<a href="/">My planner</a>
+						{% endif %}
+						<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
+						<a href="/logout">Log out</a>
+					</div>
+				</div>
+			</li>
+			<img src="{{app.user.avatar}}" alt="" class="profilePic">
+		</li>
+	{% else %}
+		<li>
+			<a class="navLink" href="{{ path ('app_register') }}">Sign up</a>
+		</li>
+		<li>
+			<a class="navLink" href="{{ path ('app_login') }}">Log in</a>
+		</li>
+	{% endif %}
+</ul>
+
+
 <div class="menuBtn" id="menuBtn">
 	<span id="openMenuBtn">
 		<i class="bi bi-list"></i>

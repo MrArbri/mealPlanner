@@ -1,0 +1,104 @@
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+$color_purpleHover:rgb(191, 170, 169);
+
+.picture{
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 250px;
+  object-position: center;
+
+}
+.bi-star-fill, .bi-star-half {
+  filter: drop-shadow(0 0 2px rgb(255,193,7));
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgb(255,193,7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+}
+.emptyStar{
+  color: #474F57;
+}
+
+
+body{
+background-color: whitesmoke;
+}
+
+.container{
+  margin-top: 2rem;
+}
+
+// BUTTONS
+
+.btnHolder{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.showBtn{
+  display: inline-block;
+  color: $color_green;
+  border: 2px solid $color_green;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  margin-right: 1rem;
+  transition: all 0.15s ease-in;
+  &:hover{
+    border: 2px solid $color_green;
+    background-color: $color_green;
+    border:none;
+    color: $color_cream;
+  }
+}
+
+.editBtn{
+  display: inline-block;
+  color: black;
+  border: 2px solid $color_purple;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.15s ease-in;
+  &:hover{
+    background-color: $color_purpleHover;
+    border:none;
+    color: black;
+    border: 2px solid $color_purpleHover;
+  }
+}
+
+.createBtn{
+  display: inline-block;
+  color: white;
+  background-color: #1e94c2;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color: #65b1cf;
+    border:none;
+    color: whitesmoke;
+  }
+}
