@@ -52,10 +52,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(nullable: true)]
     private ?bool $isBanned = null;
 
+    #[ORM\OneToMany(mappedBy: 'fk_user', targetEntity: Planner::class, orphanRemoval: true)]
+    private Collection $fk_plan;
+
     public function __construct()
     {
         $this->fk_user = new ArrayCollection();
         $this->meals = new ArrayCollection();
+        $this->fk_plan = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -244,6 +248,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsBanned(?bool $isBanned): static
     {
         $this->isBanned = $isBanned;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Planner>
+     */
+    public function getFkMeal(): Collection
+    {
+        return $this->fk_plan;
+    }
+
+    public function addFkMeal(Planner $fk_plan): static
+    {
+        if (!$this->fk_plan->contains($fk_plan)) {
+            $this->fk_plan->add($fk_plan);
+            $fk_plan->setFkUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFkMeal(Planner $fk_plan): static
+    {
+        if ($this->fk_plan->removeElement($fk_plan)) {
+            // set the owning side to null (unless already changed)
+            if ($fk_plan->getFkUser() === $this) {
+                $fk_plan->setFkUser(null);
+            }
+        }
 
         return $this;
     }

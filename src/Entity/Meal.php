@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MealRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -45,6 +47,14 @@ class Meal
 
     #[ORM\ManyToOne(inversedBy: 'meals')]
     private ?User $creator = null;
+
+    #[ORM\OneToMany(mappedBy: 'fk_meal', targetEntity: Planner::class, orphanRemoval: true)]
+    private Collection $fk_meal;
+
+    public function __construct()
+    {
+        $this->fk_meal = new ArrayCollection();
+    }
 
 
 
@@ -172,6 +182,36 @@ class Meal
     public function setCreator(?User $creator): static
     {
         $this->creator = $creator;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Planner>
+     */
+    public function getFkMeal(): Collection
+    {
+        return $this->fk_meal;
+    }
+
+    public function addFkMeal(Planner $fkMeal): static
+    {
+        if (!$this->fk_meal->contains($fkMeal)) {
+            $this->fk_meal->add($fkMeal);
+            $fkMeal->setFkMeal($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFkMeal(Planner $fkMeal): static
+    {
+        if ($this->fk_meal->removeElement($fkMeal)) {
+            // set the owning side to null (unless already changed)
+            if ($fkMeal->getFkMeal() === $this) {
+                $fkMeal->setFkMeal(null);
+            }
+        }
 
         return $this;
     }
