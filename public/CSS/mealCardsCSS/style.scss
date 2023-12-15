@@ -62,10 +62,9 @@ background-color: whitesmoke;
   margin-right: 1rem;
   transition: all 0.15s ease-in;
   &:hover{
-    border: 2px solid $color_green;
     background-color: $color_green;
-    border:none;
     color: $color_cream;
+    border: 2px solid $color_green;
   }
 }
 

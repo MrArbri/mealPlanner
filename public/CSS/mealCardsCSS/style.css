@@ -56,10 +56,9 @@ body {
   transition: all 0.15s ease-in;
 }
 .showBtn:hover {
-  border: 2px solid rgb(131, 151, 136);
   background-color: rgb(131, 151, 136);
-  border: none;
   color: rgb(245, 228, 215);
+  border: 2px solid rgb(131, 151, 136);
 }
 
 .editBtn {
