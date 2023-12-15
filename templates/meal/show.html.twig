@@ -29,24 +29,7 @@
 									{% endif %}
 								{% endfor %}
 							{% endif %}
-							<form method="POST" name="plannerForm">
-								<select name="time">
-									<option value="Breakfast">Breakfast</option>
-									<option value="Lunch">Lunch</option>
-									<option value="Dinner">Dinner</option>
-								</select>
-								<select name="day">
-									<option value="Today" selected>Today</option>
-									<option value="Monday">Monday</option>
-									<option value="Tuesday">Tuesday</option>
-									<option value="Wednesday">Wednesday</option>
-									<option value="Thursday">Thursday</option>
-									<option value="Friday">Friday</option>
-									<option value="Saturday">Saturday</option>
-									<option value="Sunday">Sunday</option>
-								</select>
-								<input type="submit" value="Add to Planner">
-							</form>
+							{{ include('meal/_plan.html.twig') }}
 					<p class='card-text mt-2'>Ingredients:
 						{{ meal.ingredients }}</p>
 					<p class='card-text'>Description:

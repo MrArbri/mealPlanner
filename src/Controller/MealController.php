@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Planner;
+use App\Form\Planner1Type;
+
+
 use App\Entity\Meal;
 use App\Form\MealType;
 use App\Repository\MealRepository;
@@ -44,11 +48,27 @@ class MealController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_meal_show', methods: ['GET'])]
-    public function show(Meal $meal): Response
+    #[Route('/{id}', name: 'app_meal_show', methods: ['GET', 'POST'])]
+    public function show(Meal $meal, Request $request, EntityManagerInterface $entityManager): Response
     {
+        // This is for the planner
+        $planner = new Planner();
+        $plan = $this->createForm(Planner1Type::class, $planner);
+        $plan->handleRequest($request);
+
+        if ($plan->isSubmitted() && $plan->isValid()) {
+            $planner->setFkUser($this->getUser());
+            $entityManager->persist($planner);
+            $entityManager->flush();
+           
+
+            return $this->redirectToRoute('app_planner1_index', [], Response::HTTP_SEE_OTHER);
+        }
+        
         return $this->render('meal/show.html.twig', [
             'meal' => $meal,
+            'planner' => $planner,
+            'plan' => $plan,
         ]);
     }
 
@@ -80,4 +100,9 @@ class MealController extends AbstractController
 
         return $this->redirectToRoute('app_meal_index', [], Response::HTTP_SEE_OTHER);
     }
+// This is for the Planner
+    // public function planner(Request $request, EntityManagerInterface $entityManager): Response
+    // {
+        
+    // }
 }

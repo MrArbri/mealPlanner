@@ -13,7 +13,7 @@ class Planner
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'fk_meal')]
+    #[ORM\ManyToOne(inversedBy: 'fk_user')]
     #[ORM\JoinColumn(nullable: false)]
     private ?User $fk_user = null;
 

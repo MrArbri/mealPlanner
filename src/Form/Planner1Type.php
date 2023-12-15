@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PlannerType extends AbstractType
+class Planner1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -35,13 +35,13 @@ class PlannerType extends AbstractType
                     'Sunday' => 'Sunday', 
                 ]
             ])
-            ->add('fk_user', EntityType::class, [
-                'class' => User::class,
-'choice_label' => 'id',
-            ])
+//             ->add('fk_user', EntityType::class, [
+//                 'class' => User::class,
+// 'choice_label' => 'username',
+//             ])
             ->add('fk_meal', EntityType::class, [
                 'class' => Meal::class,
-'choice_label' => 'id',
+'choice_label' => 'name',
             ])
         ;
     }
