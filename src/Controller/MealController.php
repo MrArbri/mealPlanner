@@ -8,22 +8,34 @@ use App\Form\Planner1Type;
 
 use App\Entity\Meal;
 use App\Form\MealType;
+use App\Message\MealCreatedNotification;
 use App\Repository\MealRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/meal')]
 class MealController extends AbstractController
 {
+
+    private $messageBus;
+
+    public function __construct(MessageBusInterface $messageBus)
+    {
+        $this->messageBus = $messageBus;
+    }
+
     #[Route('/', name: 'app_meal_index', methods: ['GET'])]
     public function index(MealRepository $mealRepository): Response
     {
+        // Fetch only approved meals
+        $approvedMeals = $mealRepository->findApprovedMeals();
 
         return $this->render('meal/index.html.twig', [
-            'meals' => $mealRepository->findAll(),
+            'meals' => $approvedMeals,
         ]);
     }
 
@@ -39,6 +51,9 @@ class MealController extends AbstractController
             $entityManager->persist($meal);
             $entityManager->flush();
 
+            // Send notification to admin
+            $this->sendNotificationToAdmin($meal);
+
             return $this->redirectToRoute('app_meal_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -46,6 +61,12 @@ class MealController extends AbstractController
             'meal' => $meal,
             'form' => $form,
         ]);
+    }
+
+    private function sendNotificationToAdmin(Meal $meal)
+    {
+        // Send a message to notify the admin
+        $this->messageBus->dispatch(new MealCreatedNotification($meal));
     }
 
     #[Route('/{id}', name: 'app_meal_show', methods: ['GET', 'POST'])]
@@ -60,11 +81,11 @@ class MealController extends AbstractController
             $planner->setFkUser($this->getUser());
             $entityManager->persist($planner);
             $entityManager->flush();
-           
+
 
             return $this->redirectToRoute('app_planner1_index', [], Response::HTTP_SEE_OTHER);
         }
-        
+
         return $this->render('meal/show.html.twig', [
             'meal' => $meal,
             'planner' => $planner,
@@ -100,9 +121,28 @@ class MealController extends AbstractController
 
         return $this->redirectToRoute('app_meal_index', [], Response::HTTP_SEE_OTHER);
     }
-// This is for the Planner
+    // This is for the Planner
     // public function planner(Request $request, EntityManagerInterface $entityManager): Response
     // {
-        
+
     // }
+
+    public function approveMeal(Meal $meal, EntityManagerInterface $entityManager)
+    {
+        // Handle approval logic
+        $meal->setIsVerified(true);
+        $entityManager->persist($meal);
+        $entityManager->flush();
+
+        // Redirect or return a response
+    }
+
+    public function removeMeal(Meal $meal, EntityManagerInterface $entityManager)
+    {
+        // Handle removal logic
+        $entityManager->remove($meal);
+        $entityManager->flush();
+
+        // Redirect or return a response
+    }
 }

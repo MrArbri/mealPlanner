@@ -50,7 +50,7 @@ class Meal
     private Collection $fk_meal;
 
     #[ORM\Column]
-    private ?bool $is_verified = null;
+    private ?bool $is_verified = false;
 
 
 
