@@ -25,8 +25,6 @@ class Meal
     #[ORM\Column(length: 255)]
     private ?string $ingredients = null;
 
-
-
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $preparation = null;
 
@@ -51,13 +49,15 @@ class Meal
     #[ORM\OneToMany(mappedBy: 'fk_meal', targetEntity: Planner::class, orphanRemoval: true)]
     private Collection $fk_meal;
 
+    #[ORM\Column]
+    private ?bool $is_verified = null;
+
+
+
     public function __construct()
     {
         $this->fk_meal = new ArrayCollection();
     }
-
-
-
 
     public function getId(): ?int
     {
@@ -99,8 +99,6 @@ class Meal
 
         return $this;
     }
-
-
 
     public function getPreparation(): ?string
     {
@@ -212,6 +210,18 @@ class Meal
                 $fkMeal->setFkMeal(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isIsVerified(): ?bool
+    {
+        return $this->is_verified;
+    }
+
+    public function setIsVerified(bool $is_verified): static
+    {
+        $this->is_verified = $is_verified;
 
         return $this;
     }
