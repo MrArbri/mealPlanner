@@ -39,10 +39,10 @@ class Planner1Type extends AbstractType
 //                 'class' => User::class,
 // 'choice_label' => 'username',
 //             ])
-            ->add('fk_meal', EntityType::class, [
-                'class' => Meal::class,
-'choice_label' => 'name',
-            ])
+//             ->add('fk_meal', EntityType::class, [
+//                 'class' => Meal::class,
+// 'choice_label' => 'name',
+//             ])
         ;
     }
 

@@ -79,6 +79,7 @@ class MealController extends AbstractController
 
         if ($plan->isSubmitted() && $plan->isValid()) {
             $planner->setFkUser($this->getUser());
+            $planner->setFkMeal($meal);
             $entityManager->persist($planner);
             $entityManager->flush();
 
