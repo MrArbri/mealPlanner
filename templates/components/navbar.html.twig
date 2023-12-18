@@ -12,7 +12,11 @@
 		<li>
 			<a class="navLink" href="/">Home</a>
 		</li>
-		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+		{% if is_granted('ROLE_ADMIN') %}
+		<li>
+			<a class="navLink" href="{{ path ('app_mealDashboard_index')}}">Meals Dashboard</a>
+		</li>
+		{% elseif is_granted('ROLE_USER') %}
 			<li>
 				<a class="navLink" href="/meal/">Meals</a>
 			</li>
