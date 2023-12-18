@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Meal;
 use App\Entity\User;
 use App\Form\AdminType;
+use App\Form\MealType;
+use App\Repository\MealRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Entity;
@@ -20,6 +23,17 @@ class AdminController extends AbstractController
     {
         return $this->render('admin/index.html.twig', [
             'users' => $userRepository->findAll(),
+        ]);
+    }
+
+    #[Route('/mealDashboard', name: 'app_mealDashboard_index', methods: ['GET'])]
+    public function mealDashboard(MealRepository $mealRepository): Response
+    {
+        // Fetch only approved meals
+        // $approvedMeals = $mealRepository->findApprovedMeals();
+
+        return $this->render('admin/meal_dashboard.html.twig', [
+            'meals' => $mealRepository->findAll(),
         ]);
     }
 
@@ -66,6 +80,24 @@ class AdminController extends AbstractController
         return $this->render('admin/edit.html.twig', [
             'user' => $user,
             'form' => $form,
+        ]);
+    }
+
+    #[Route('/{id}/MealDbEdit', name: 'app_mealDashboard_edit', methods: ['GET', 'POST'])]
+    public function MealDbEdit(Request $request, Meal $meal, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(MealType::class, $meal);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_mealDashboard_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->render('admin/edit.html.twig', [
+            'meal' => $meal,
+            'DbForm' => $form,
         ]);
     }
 
