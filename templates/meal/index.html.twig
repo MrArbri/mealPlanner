@@ -10,6 +10,10 @@
 		<a class="createBtn" href="{{ path('app_meal_new') }}">
 			<i class="bi bi-plus-circle"></i>
 			Create new</a>
+		<a href="{{ path('app_filter', {'type':'Vegan'}) }}" class="btn btn-secondary">Vegan</a>
+        <a href="{{ path('app_filter', {'type':'Vegetarian'}) }}" class="btn btn-secondary">Vegetarian</a>
+        <a href="{{ path('app_filter', {'type':'Non-Vegetarian'}) }}" class="btn btn-secondary">Non-Vegetarian</a>
+		
 		<div class=" row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
 			{% for meal in meals %}
 				<div class="col mb-3">
@@ -51,42 +55,3 @@
 		</div>
 	</div>
 {% endblock %}
-
-
-{# <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Picture</th>
-                <th>Ingredients</th>
-                <th>Creator</th>
-                <th>Preparation</th>
-                <th>Rating</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for meal in meals %}
-            <tr>
-                <td>{{ meal.id }}</td>
-                <td>{{ meal.name }}</td>
-                <td>{{ meal.picture }}</td>
-                <td>{{ meal.ingredients }}</td>
-                <td>{{ meal.creator }}</td>
-                <td>{{ meal.preparation }}</td>
-                <td>{{ meal.rating }}</td>
-                <td>
-                    <a href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
-                    <a href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_meal_new') }}">Create new</a> #}

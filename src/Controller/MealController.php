@@ -17,6 +17,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+
 #[Route('/meal')]
 class MealController extends AbstractController
 {
@@ -38,7 +40,17 @@ class MealController extends AbstractController
             'meals' => $approvedMeals,
         ]);
     }
-
+    #[Route('/filter', name: 'app_filter', methods: ['GET'])]
+    public function filter(Request $request, mealRepository $mealRepository): Response
+    {
+        $filterName = $request->query->get('type');
+    
+        $filteredMeals = $mealRepository->findBy(['type' => $filterName]);
+    
+        return $this->render('meal/index.html.twig', [
+            'meals' => $filteredMeals,
+        ]);
+    }
     #[Route('/new', name: 'app_meal_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
