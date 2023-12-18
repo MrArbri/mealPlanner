@@ -14,7 +14,7 @@
 		</li>
 		{% if is_granted('ROLE_ADMIN') %}
 		<li>
-			<a class="navLink" href="{{ path ('app_mealDashboard_index')}}">Meals Dashboard</a>
+			<a class="navLink" href="{{ path ('app_mealDashboard_index')}}">Meals Board</a>
 		</li>
 		{% elseif is_granted('ROLE_USER') %}
 			<li>
