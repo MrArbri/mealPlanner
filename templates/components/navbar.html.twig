@@ -35,7 +35,7 @@
 							<a href="/">Planners</a>
 							<a href="{{ path ('app_admin_index')}}">Users</a>
 						{% else %}
-							<a href="/">My planner</a>
+							<a href="{{ path ('app_planner1_index')}}">My planner</a>
 						{% endif %}
 						<a href="{{ path ('app_user_edit', {'id': app.user.id}) }}">Update profile</a>
 						<a href="/logout">Log out</a>
