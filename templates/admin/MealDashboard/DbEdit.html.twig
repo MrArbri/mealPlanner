@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset("CSS/editCSS/style.css")}}">
+{% endblock %}
+{% block body %}
+	<div class="container1">
+		<div class="form1">
+			<h1>Update Meal</h1>
+
+			{{ include('admin/MealDashboard/_DbForm.html.twig', {'button_label': 'Update'}) }}
+
+			<a class="btn btn-primary" href="{{ path('app_mealDashboard_index') }}">Back to list</a>
+
+			{{ include('admin/MealDashboard/_DbDelete.html.twig') }}
+		</div>
+	</div>
+{% endblock %}

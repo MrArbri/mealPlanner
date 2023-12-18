@@ -12,7 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Range;
 
-class MealType extends AbstractType
+class DbMealType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -75,7 +75,7 @@ class MealType extends AbstractType
                     'Non Vegetarian/Vegan' => 'Non Vegetarian/Vegan',
                 ],
             ])
-            ->add('type', ChoiceType::class, [
+            ->add('is_verified', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
                 'choices'  => [
                     'Approved' => '1',

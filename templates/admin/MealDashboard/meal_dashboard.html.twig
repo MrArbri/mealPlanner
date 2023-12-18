@@ -39,8 +39,8 @@
 								<p class="card-text fw-semibold mt-3">{{ meal.creator.username }}</p>
 							{% endif %}
 							<div class="btnHolder">
-								<a class="showBtn" href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
-								<a class="editBtn" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+								<a class="showBtn" href="{{ path('app_mealDashboard_show', {'id': meal.id}) }}">show</a>
+								<a class="editBtn" href="{{ path('app_mealDashboard_edit', {'id': meal.id}) }}">edit</a>
 							</div>
 						</div>
 					</div>

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset("CSS/adminindexCSS/style.css")}}">
+{% endblock %}
+
+{% block body %}
+	<div class="mainContainer">
+		<div class="container1">
+			<h1 class="text-center m-2">Users</h1>
+			<table class="tableUsers">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Username</th>
+						<th>Roles</th>
+						<th>First name</th>
+						<th>Last name</th>
+						<th>Email</th>
+						<th>Avatar</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in users %}
+						<tr>
+							<td>{{ user.id }}</td>
+							<td>{{ user.username }}</td>
+							<td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+							<td>{{ user.firstName }}</td>
+							<td>{{ user.lastName }}</td>
+							<td>{{ user.email }}</td>
+							<td><img src="{{ user.avatar }}" alt="{{ user.firstName }}" style="height:50px; width:50px;"></td>
+							<td>
+								<a href="{{ path('app_admin_show', {'id': user.id}) }}">show</a>
+								<a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+								{% if user.isBanned %}
+									<a href="{{ path('app_admin_ban', {'id': user.id}) }}">UnBan</a>
+								{% else %}
+									<a href="{{ path('app_admin_ban', {'id': user.id}) }}">Ban</a>
+								{% endif %}
+
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="9">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+{% endblock %}
