@@ -32,7 +32,7 @@
 					</a>
 					<div id="dropdownMenu" class="dropdownContent">
 						{% if is_granted('ROLE_ADMIN') %}
-							<a href="/">Planners</a>
+							<a href="{{ path ('app_planner1_index')}}">Planners</a>
 							<a href="{{ path ('app_admin_index')}}">Users</a>
 						{% else %}
 							<a href="{{ path ('app_planner1_index')}}">My planner</a>
