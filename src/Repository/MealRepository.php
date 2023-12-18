@@ -32,8 +32,14 @@ class MealRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
-
-
+    public function findMealsWithCaloriesUnder500()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 500)
+            ->getQuery()
+            ->getResult();
+    }
     //    /**
     //     * @return Meal[] Returns an array of Meal objects
     //     */

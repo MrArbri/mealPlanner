@@ -13,6 +13,9 @@
 		<a href="{{ path('app_filter', {'type':'Vegan'}) }}" class="createBtn"><i class="bi bi-plus-circle"></i> Vegan</a>
         <a href="{{ path('app_filter', {'type':'Vegetarian'}) }}" class="createBtn"><i class="bi bi-plus-circle"></i> Vegetarian</a>
         <a href="{{ path('app_filter', {'type':'Non-Vegetarian'}) }}" class="createBtn"><i class="bi bi-plus-circle"></i> Non-Vegetarian</a>
+		 <a href="{{ path('app_filter_by_calories') }}" class="createBtn">
+        <i class="bi bi-plus-circle"></i> Calories Under 500</a>
+		
 
 		<div class=" row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
 			{% for meal in meals %}

@@ -51,6 +51,16 @@ class MealController extends AbstractController
             'meals' => $filteredMeals,
         ]);
     }
+    #[Route('/filter_by_calories', name: 'app_filter_by_calories', methods: ['GET'])]
+    public function filterByCalories(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder500();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
     #[Route('/new', name: 'app_meal_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
