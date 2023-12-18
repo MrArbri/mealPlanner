@@ -36,7 +36,7 @@
 							<td><img src="{{ user.avatar }}" alt="{{ user.firstName }}" style="height:50px; width:50px;"></td>
 							<td>
 								<a href="{{ path('app_admin_show', {'id': user.id}) }}">show</a>
-								<a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+								<a href="{{ path('app_admin_edit', {'id': user.id}) }}">edit</a>
 								{% if user.isBanned %}
 									<a href="{{ path('app_admin_ban', {'id': user.id}) }}">UnBan</a>
 								{% else %}

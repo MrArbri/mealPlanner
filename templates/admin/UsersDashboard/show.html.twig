@@ -46,7 +46,7 @@
 			<div class="d-flex justify-center">
 				<a href="{{ path('app_admin_index') }}">Back to list</a>
 
-				<a href="{{ path('app_user_edit', {'id': user.id}) }}">Edit</a>
+				<a href="{{ path('app_admin_edit', {'id': user.id}) }}">Edit</a>
 
 				{{ include('admin/UsersDashboard/_delete_form.html.twig') }}
 			</div>

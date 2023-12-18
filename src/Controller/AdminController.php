@@ -73,10 +73,11 @@ class AdminController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_admin_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, User $user, EntityManagerInterface $entityManager): Response
+    public function edit($id, UserRepository $userRepo, Request $request, User $user, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(AdminType::class, $user);
         $form->handleRequest($request);
+        $specUser = $userRepo->find($id);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
@@ -85,7 +86,7 @@ class AdminController extends AbstractController
         }
 
         return $this->render('admin/UsersDashboard/edit.html.twig', [
-            'user' => $user,
+            'user' => $specUser,
             'form' => $form,
         ]);
     }
