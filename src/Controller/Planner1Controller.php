@@ -65,7 +65,7 @@ class Planner1Controller extends AbstractController
 
         return $this->render('planner1/edit.html.twig', [
             'planner' => $planner,
-            'form' => $form,
+            'plan' => $form,
         ]);
     }
 
