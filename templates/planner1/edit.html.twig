@@ -2,12 +2,19 @@
 
 {% block title %}Edit Planner{% endblock %}
 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset("CSS/plannerindexCSS/style.css")}}">
+{% endblock %}
+
 {% block body %}
+<div class="mainContainer">
     <h1>Edit Planner</h1>
 
     {{ include('meal/_plan.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_planner1_index') }}">back to list</a>
+    <a class="backBtn" href="{{ path('app_planner1_index') }}">back to list</a>
 
     {{ include('planner1/_delete_form.html.twig') }}
+
+</div>
 {% endblock %}

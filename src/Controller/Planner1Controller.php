@@ -65,6 +65,7 @@ class Planner1Controller extends AbstractController
     #[Route('/{id}', name: 'app_planner1_show', methods: ['GET'])]
     public function show(Planner $planner): Response
     {
+        
         return $this->render('planner1/show.html.twig', [
             'planner' => $planner,
         ]);

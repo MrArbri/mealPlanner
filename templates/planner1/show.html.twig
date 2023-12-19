@@ -1,30 +1,103 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}
 
 {% block title %}Planner{% endblock %}
 
-{% block body %}
-    <h1>Planner</h1>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset("CSS/plannerindexCSS/style.css")}}">
+{% endblock %}
 
-    <table class="table">
+{% block body %}
+ <div class="mainContainer">
+  <div class="container">
+    <h1 class="text-center m-4" >Planner</h1>
+
+    <table class="tablePlanner">
         <tbody>
-            <tr>
+             <tr>
                 <th>Id</th>
                 <td>{{ planner.id }}</td>
-            </tr>
+            </tr> 
             <tr>
                 <th>Time</th>
-                <td>{{ planner.time }}</td>
+                <td class="text-center">{{ planner.time }}</td>
             </tr>
             <tr>
                 <th>Day</th>
-                <td>{{ planner.day }}</td>
+                <td class="text-center">{{ planner.day }}</td>
+            </tr>
+            <tr>
+            <th>Image</th>
+            <td class="text-center"><img width="100px;" height="100px;" src="{{ planner.fkMeal.picture }}" alt="{{ planner.fkMeal.name }}">
+            </td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_planner1_index') }}">back to list</a>
+    <a class="backBtn" href="{{ path('app_planner1_index') }}">Back to list</a>
 
-    <a href="{{ path('app_planner1_edit', {'id': planner.id}) }}">edit</a>
+    <a class="editBtn" href="{{ path('app_planner1_edit', {'id': planner.id}) }}">Edit</a>
 
     {{ include('planner1/_delete_form.html.twig') }}
+    </div>
+  </div>
+{% endblock %} #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Meal
+{% endblock %}
+
+{% block body %}
+	<div class="container" style="max-width:900px; min-height:100vh;">
+		<h1 class="text-center m-2">Meal details</h1>
+
+		<div class='p-2'>
+			<div class='card1 h-100'>
+				<img src={{ planner.fkMeal.picture }} class='card-img-top object-fit-cover' style='height:30rem;' alt={{ planner.fkMeal.name }}>
+				<div class='card-body'>
+					<h2 class='card-title my-2'>
+						{{ planner.fkMeal.name }}</h2>
+					{% set maximum_stars = 5 %}
+							{% if planner.fkMeal.rating <= maximum_stars %}
+								{% for star in 0..(planner.fkMeal.rating) %}
+									{% if star != 0 %}
+										<i class="bi bi-star-fill text-warning"></i>
+									{% endif %}
+								{% endfor %}
+								{% if (planner.fkMeal.rating) - (planner.fkMeal.rating|round(0, 'floor')) != 0 %}
+									<i class="bi bi-star-half text-warning"></i>
+								{% endif %}
+								{% for star in 0..(maximum_stars - planner.fkMeal.rating|round(0, 'ceil')) %}
+									{% if star != 0 %}
+										<i class="bi bi-star emptyStar text-warning"></i>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+			
+					<p class='card-text mt-2'>Ingredients:
+						{{ planner.fkMeal.ingredients }}</p>
+					<p class='card-text'>Description:
+						{{ planner.fkMeal.description }}</p>
+					<p class='card-text'>Preparation:
+						{{ planner.fkMeal.preparation }}</p>
+					<p class='card-text'><i class="fa-solid fa-clock"></i> Prep:
+						{{ planner.fkMeal.prepTime ? planner.fkMeal.prepTime|date('H:i') : '' }} h/min</p>
+					{% if planner.fkMeal.creator %}
+						<p class="card-text fw-semibold mt-3">Recipe by: {{ planner.fkMeal.creator.username }}</p>
+					{% endif %}
+					<p class='card-text'>Calories:
+						{{ planner.fkMeal.calories }}</p>
+					<p class='card-text'>Meal type:
+						{{ planner.fkMeal.type }}
+					</p>
+					<div class='d-flex justify-content-start'>
+						<a class="backBtn" href="{{ path('app_planner1_index') }}">Back to list</a>
+			
+
+						 {{ include('planner1/_delete_form.html.twig') }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
