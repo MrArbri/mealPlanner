@@ -18,6 +18,7 @@ security:
       provider: app_user_provider
       user_checker: App\Security\UserChecker
       custom_authenticator: App\Security\LoginAuthenticator
+      access_denied_url: app_home
 
       logout:
         path: app_logout
