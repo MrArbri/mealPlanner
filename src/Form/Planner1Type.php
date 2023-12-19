@@ -17,6 +17,8 @@ class Planner1Type extends AbstractType
     {
         $builder
             ->add('time', ChoiceType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Change Time',
                 'choices' => [
                     'Breakfast' => 'Breakfast',
                     'Lunch' => 'Lunch',
@@ -24,8 +26,9 @@ class Planner1Type extends AbstractType
                 ]
             ])
             ->add('day', ChoiceType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Change Day',
                 'choices' => [
-                    'Today' => 'Today',
                     'Monday' => 'Monday', 
                     'Tuesday' => 'Tuesday', 
                     'Wednesday' => 'Wednesday', 

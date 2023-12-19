@@ -6,11 +6,17 @@
     align-items: center;
 }
 
+.editContainer{
+    margin:10px 140px;
+    
+}
+
 .tablePlanner {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 20px;
   }
  
   .details{
