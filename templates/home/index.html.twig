@@ -11,16 +11,16 @@
 	<div class="mainContainer">
 
 		<div class="heroSection">
-			<div class="heroImgContainer">
+		<div class="heroImgContainer">
 				<img class="heroImg" src="{{asset("images/heroImg.jpg")}}" alt="Image of food">
 			</div>
 			<div class="heroContent">
 				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-					<div>
-						<img class="" src="{{asset("images/Vegan.png")}}" alt="logo image">
-						<img class="" src="{{asset("images/Vegetarian.png")}}" alt="logo image">
-						<img class="" src="{{asset("images/Non-Vegetarian.png")}}" alt="logo image">
-					</div>
+				<div class="welcomeContainer">
+				<span class="welcomeText">Welcome home </span><img src="{{app.user.avatar}}" alt="" class="heroLoginProfilePic">
+				</div>
+				
+					
 				{% else %}
 					<h1 class="heroTitle">Meal time</h1>
 					<p>plan your next meal with meal time right now</p>
@@ -105,6 +105,21 @@
 				</div>
 			</div>
 
+		</div>
+
+		<div class="foodDisplayCards">
+		<div>
+		<img src="" alt="">
+		<h2></h2>
+		</div>
+		<div>
+		<img src="" alt="">
+		<h2></h2>
+		</div>
+		<div>
+		<img src="" alt="">
+		<h2></h2>
+		</div>
 		</div>
 
 	</div>

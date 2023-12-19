@@ -67,6 +67,38 @@
   align-items: center;
 }
 
+.loginHeroSection {
+  display: flex;
+  align-items: center;
+}
+
+.welcomeText {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  margin-right: 1rem;
+}
+
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroLoginProfilePic {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 100%;
+  border: 2px rgb(245, 228, 215) solid;
+}
+
+.displayFoodImg {
+  display: block;
+}
+
 body {
   background-color: rgb(245, 228, 215);
 }

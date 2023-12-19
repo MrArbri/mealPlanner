@@ -85,6 +85,38 @@ $color_purpleHover:rgb(191, 170, 169);
   align-items: center;
 }
 
+// LOGIN HERO SECTION
+.loginHeroSection{
+  display: flex;
+  align-items: center;
+}
+
+.welcomeText{
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  margin-right: 1rem;
+}
+
+.welcomeContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroLoginProfilePic{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+  border: 2px $color_cream solid;
+}
+
+.displayFoodImg{
+  display: block
+
+}
+
 body{
   background-color: $color_cream;
 }
