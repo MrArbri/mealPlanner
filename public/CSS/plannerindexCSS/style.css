@@ -1,0 +1,22 @@
+
+.container1{
+    margin:10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablePlanner {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid rgb(229, 209, 208);
+    background-color: rgb(245, 228, 215);
+  }

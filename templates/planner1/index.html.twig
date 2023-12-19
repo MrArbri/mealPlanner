@@ -2,10 +2,17 @@
 
 {% block title %}Planner index{% endblock %}
 
-{% block body %}
-    <h1>Planner index</h1>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset("CSS/plannerindexCSS/style.css")}}">
+{% endblock %}
 
-    <table class="table">
+{% block body %}
+
+<div class="mainContainer">
+  <div class="container1">
+    <h1 class="text-center m-2">Weekly planner</h1>
+
+    <table class="tablePlanner">
         <thead>
             <tr>
                 <th>Id</th>
@@ -32,5 +39,6 @@
         {% endfor %}
         </tbody>
     </table>
-
+  </div>
+</div>
 {% endblock %}
