@@ -15,6 +15,7 @@
 				<img class="heroImg" src="{{asset("images/heroImg.jpg")}}" alt="Image of food">
 			</div>
 			<div class="heroContent">
+					<h1 class="heroTitle">Meal time</h1>
 				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 				<div class="welcomeContainer">
 				<span class="welcomeText">Welcome home </span><img src="{{app.user.avatar}}" alt="" class="heroLoginProfilePic">
@@ -22,7 +23,6 @@
 				
 					
 				{% else %}
-					<h1 class="heroTitle">Meal time</h1>
 					<p>plan your next meal with meal time right now</p>
 					<div class="loginBtnHolder">
 						<a class="loginBtn heroBtn" href="/login">Log in</a>
