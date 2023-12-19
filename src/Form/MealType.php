@@ -72,7 +72,7 @@ class MealType extends AbstractType
                 'choices'  => [
                     'Vegan' => 'Vegan',
                     'Vegetarian' => 'Vegetarian',
-                    'Non Vegetarian' => 'Non Vegetarian',
+                    'Non-Vegetarian' => 'Non-Vegetarian',
                 ],
             ]);
     }
