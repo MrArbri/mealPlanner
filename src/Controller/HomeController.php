@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     public function index(MealRepository $mealRepository): Response
     {
         return $this->render('home/index.html.twig', [
-            // 'meals' => $mealRepository->findAll(),
+             'meals' => $mealRepository->findAll(),
         ]);
     }
 

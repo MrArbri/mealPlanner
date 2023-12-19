@@ -15,11 +15,22 @@ use Symfony\Component\Routing\Annotation\Route;
 class Planner1Controller extends AbstractController
 {
     #[Route('/', name: 'app_planner1_index', methods: ['GET'])]
-    public function index(PlannerRepository $plannerRepository): Response
+    public function index( Request $request, PlannerRepository $plannerRepository): Response
     {
+            $monday = $plannerRepository->findBy(['day' => "Monday"]);
+            $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
+            $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+            
         return $this->render('planner1/index.html.twig', [
-            'planners' => $plannerRepository->findAll(),
-        ]);
+            'monday' => $monday,
+            'tuesday' => $tuesday,
+            'sunday' => $sunday,
+            
+
+        ]
+            // 'planners' => $plannerRepository->findAll(),
+            
+        );
     }
 
 // This section is not needed but is kept just in case
