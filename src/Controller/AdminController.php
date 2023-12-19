@@ -237,7 +237,7 @@ class AdminController extends AbstractController
     #[Route('/planner/{id}', name: 'app_adminplanner_show', methods: ['GET'])]
     public function adminPlannerShow(Planner $planner): Response
     {
-        return $this->render('planner1/show.html.twig', [
+        return $this->render('admin/admin_plan/show.html.twig', [
             'planner' => $planner,
         ]);
     }
@@ -254,7 +254,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('app_adminplanner_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('planner1/edit.html.twig', [
+        return $this->render('admin/admin_plan/edit.html.twig', [
             'planner' => $planner,
             'plan' => $form,
         ]);
