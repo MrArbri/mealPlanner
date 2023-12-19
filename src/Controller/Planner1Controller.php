@@ -19,11 +19,19 @@ class Planner1Controller extends AbstractController
     {
             $monday = $plannerRepository->findBy(['day' => "Monday"]);
             $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
+            $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
+            $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
+            $friday = $plannerRepository->findBy(['day' => "Friday"]);
+            $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
             $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
             
         return $this->render('planner1/index.html.twig', [
             'monday' => $monday,
             'tuesday' => $tuesday,
+            'wednesday' => $wednesday,
+            'thursday' => $thursday,
+            'friday' => $friday,
+            'saturday' => $saturday,
             'sunday' => $sunday,
             
 
