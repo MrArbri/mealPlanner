@@ -15,7 +15,7 @@
 		{% if is_granted('ROLE_ADMIN') %}
 			<li>
 				<a id="recipe" class="navLink position-relative" href="{{ path ('app_mealDashboard_index')}}">Meals Board <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    99+
+    1000000+
     <span class="visually-hidden">unread messages</span>
   </span>
 	</a>
@@ -40,7 +40,7 @@
 					</a>
 					<div id="dropdownMenu" class="dropdownContent">
 						{% if is_granted('ROLE_ADMIN') %}
-							<a href="{{ path ('app_planner1_index')}}">Planners</a>
+							<a href="{{ path ('app_adminplanner_index')}}">Planners</a>
 							<a href="{{ path ('app_admin_index')}}">Users</a>
 						{% else %}
 							<a href="{{ path ('app_planner1_index')}}">My planner</a>
