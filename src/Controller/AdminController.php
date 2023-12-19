@@ -25,6 +25,13 @@ class AdminController extends AbstractController
 
     // ======= Admin controller for Users ======
 
+    // (Getting notified for new recipes.)
+
+    // #[Route('/', name: 'NavbarNumber', methods: ['GET'])]
+    // public function verifyNumberOnNavbar(): Response
+    // {
+    //     return new Response("2");
+    // }
 
     #[Route('/', name: 'app_admin_index', methods: ['GET'])]
     public function index(UserRepository $userRepository): Response
@@ -192,14 +199,14 @@ class AdminController extends AbstractController
     #[Route('/find/planners', name: 'app_adminplanner_index', methods: ['GET'])]
     public function adminPlannerIndex(PlannerRepository $plannerRepository): Response
     {
-            $monday = $plannerRepository->findBy(['day' => "Monday"]);
-            $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
-            $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
-            $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
-            $friday = $plannerRepository->findBy(['day' => "Friday"]);
-            $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
-            $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
-            
+        $monday = $plannerRepository->findBy(['day' => "Monday"]);
+        $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
+        $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
+        $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
+        $friday = $plannerRepository->findBy(['day' => "Friday"]);
+        $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
+        $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+
         return $this->render('admin/admin_plan/index.html.twig', [
             'monday' => $monday,
             'tuesday' => $tuesday,
@@ -208,7 +215,7 @@ class AdminController extends AbstractController
             'friday' => $friday,
             'saturday' => $saturday,
             'sunday' => $sunday,
-            
+
 
         ]);
     }
@@ -242,7 +249,7 @@ class AdminController extends AbstractController
     #[Route('/planner/{id}', name: 'app_adminplanner_delete', methods: ['POST'])]
     public function adminPlannerDelete(Request $request, Planner $planner, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$planner->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $planner->getId(), $request->request->get('_token'))) {
             $entityManager->remove($planner);
             $entityManager->flush();
         }
