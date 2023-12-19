@@ -11,6 +11,7 @@ use App\Form\MealType;
 use App\Form\Planner1Type;
 use App\Repository\MealRepository;
 use App\Repository\UserRepository;
+use App\Repository\PlannerRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -166,11 +167,6 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('app_mealDashboard_index', [], Response::HTTP_SEE_OTHER);
     }
-    // This is for the Planner
-    // public function planner(Request $request, EntityManagerInterface $entityManager): Response
-    // {
-
-    // }
 
     public function approveMeal(Meal $meal, EntityManagerInterface $entityManager)
     {
@@ -189,5 +185,68 @@ class AdminController extends AbstractController
         $entityManager->flush();
 
         // Redirect or return a response
+    }
+
+    // ======= Admin controller for the Planner ======
+
+    #[Route('/find/planners', name: 'app_adminplanner_index', methods: ['GET'])]
+    public function adminPlannerIndex(PlannerRepository $plannerRepository): Response
+    {
+            $monday = $plannerRepository->findBy(['day' => "Monday"]);
+            $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
+            $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
+            $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
+            $friday = $plannerRepository->findBy(['day' => "Friday"]);
+            $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
+            $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+            
+        return $this->render('admin/admin_plan/index.html.twig', [
+            'monday' => $monday,
+            'tuesday' => $tuesday,
+            'wednesday' => $wednesday,
+            'thursday' => $thursday,
+            'friday' => $friday,
+            'saturday' => $saturday,
+            'sunday' => $sunday,
+            
+
+        ]);
+    }
+
+    #[Route('/planner/{id}', name: 'app_adminplanner_show', methods: ['GET'])]
+    public function adminPlannerShow(Planner $planner): Response
+    {
+        return $this->render('planner1/show.html.twig', [
+            'planner' => $planner,
+        ]);
+    }
+
+    #[Route('/planner/{id}/edit', name: 'app_adminplanner_edit', methods: ['GET', 'POST'])]
+    public function adminPlannerEdit(Request $request, Planner $planner, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(Planner1Type::class, $planner);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_adminplanner_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->render('planner1/edit.html.twig', [
+            'planner' => $planner,
+            'plan' => $form,
+        ]);
+    }
+
+    #[Route('/planner/{id}', name: 'app_adminplanner_delete', methods: ['POST'])]
+    public function adminPlannerDelete(Request $request, Planner $planner, EntityManagerInterface $entityManager): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$planner->getId(), $request->request->get('_token'))) {
+            $entityManager->remove($planner);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('app_adminplanner_index', [], Response::HTTP_SEE_OTHER);
     }
 }

@@ -16,14 +16,14 @@ class Planner1Controller extends AbstractController
 {
     #[Route('/', name: 'app_planner1_index', methods: ['GET'])]
     public function index( Request $request, PlannerRepository $plannerRepository): Response
-    {
-            $monday = $plannerRepository->findBy(['day' => "Monday"]);
-            $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
-            $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
-            $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
-            $friday = $plannerRepository->findBy(['day' => "Friday"]);
-            $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
-            $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+    { 
+            $monday = $plannerRepository->findBy(['day' => "Monday", 'fk_user' => $this->getUser()->getId()]);
+            $tuesday = $plannerRepository->findBy(['day' => "Tuesday", 'fk_user' => $this->getUser()->getId()]);
+            $wednesday = $plannerRepository->findBy(['day' => "Wednesday", 'fk_user' => $this->getUser()->getId()]);
+            $thursday = $plannerRepository->findBy(['day' => "Thursday", 'fk_user' => $this->getUser()->getId()]);
+            $friday = $plannerRepository->findBy(['day' => "Friday", 'fk_user' => $this->getUser()->getId()]);
+            $saturday = $plannerRepository->findBy(['day' => "Saturday", 'fk_user' => $this->getUser()->getId()]);
+            $sunday = $plannerRepository->findBy(['day' => "Sunday", 'fk_user' => $this->getUser()->getId()]);
             
         return $this->render('planner1/index.html.twig', [
             'monday' => $monday,
