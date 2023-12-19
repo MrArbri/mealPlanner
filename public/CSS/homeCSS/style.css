@@ -74,7 +74,34 @@ body {
 .purpleLogo {
   position: absolute;
   bottom: -100px;
-  rotate: 45deg;
+  rotate: 30deg;
   left: 50px;
   width: 300px;
+}
+
+.tImgHolder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.tProfilePic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.testimonialSection {
+  margin: 0 auto;
+  padding: 0 30%;
+}
+
+.tText {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
