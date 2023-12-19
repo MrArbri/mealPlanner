@@ -12,11 +12,15 @@
     border-radius: 10px;
     overflow: hidden;
   }
-
+ 
+  .details{
+    background-color: rgb(245, 228, 215);
+    color: black;
+  }
 
    td {
-    padding: 10px;
-    text-align: center;
+    padding: 5px;
+    text-align: start;
     border: 3px solid rgb(229, 209, 208); 
     background-color: rgb(245, 228, 215);
   }
@@ -28,3 +32,29 @@
     background-color: rgb(31, 29, 27);
     color: rgb(229, 209, 208) ;
   }
+
+
+  .showBtn {
+    display: inline-block;
+    color: black;
+    border: 2px solid rgb(154, 190, 217);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.15s ease-in;
+  }
+
+
+  .editBtn {
+    display: inline-block;
+    color: black;
+    border: 2px solid rgb(206, 237, 104);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.15s ease-in;
+  }
+
+ 
