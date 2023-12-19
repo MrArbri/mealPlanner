@@ -39,7 +39,7 @@
 			<script src="{{ asset('JS/script.js') }}"></script>
 			{% if is_granted("ROLE_ADMIN") %}
 				<script>
-					setInterval(FetchUnaprovedMeals, 1000)
+					FetchUnaprovedMeals();
 				</script>
 			{% endif %}
 
