@@ -15,6 +15,7 @@ use App\Repository\PlannerRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -49,6 +50,19 @@ class AdminController extends AbstractController
 
         return $this->render('admin/MealDashboard/meal_dashboard.html.twig', [
             'meals' => $mealRepository->findAll(),
+        ]);
+    }
+
+    #[Route('/mealDashboard/ajax/newRecipe', name: 'app_mealDashboard_ajax', methods: ['GET', "POST"])]
+    public function ajaxMealDashboard(MealRepository $mealRepository): Response
+    {
+        // Fetch only approved meals
+        $unapprovedMeals = $mealRepository->findUnapprovedMeals();
+        $length = count($unapprovedMeals);
+
+
+        return new JsonResponse([
+            'length' => $length,
         ]);
     }
 

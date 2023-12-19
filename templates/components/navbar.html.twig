@@ -14,11 +14,12 @@
 		</li>
 		{% if is_granted('ROLE_ADMIN') %}
 			<li>
-				<a id="recipe" class="navLink position-relative" href="{{ path ('app_mealDashboard_index')}}">Meals Board <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    1000000+
-    <span class="visually-hidden">unread messages</span>
-  </span>
-	</a>
+				<a id="recipe" class="navLink position-relative" href="{{ path ('app_mealDashboard_index')}}">Meals Board
+					<span class="numberOfUnapprovedMeals position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+						<span class="visually-hidden">unread messages</span>
+					</span>
+				</a>
 			</li>
 		{% elseif is_granted('ROLE_USER') %}
 			<li>

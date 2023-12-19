@@ -32,6 +32,14 @@ class MealRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+    public function findUnapprovedMeals()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.is_verified = :is_verified')
+            ->setParameter('is_verified', false)
+            ->getQuery()
+            ->getResult();
+    }
     public function findMealsWithCaloriesUnder500()
     {
         return $this->createQueryBuilder('m')
