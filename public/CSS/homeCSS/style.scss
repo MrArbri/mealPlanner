@@ -88,3 +88,12 @@ $color_purpleHover:rgb(191, 170, 169);
 body{
   background-color: $color_cream;
 }
+
+.purpleLogo{
+  position: absolute;
+  bottom: -100px;
+  rotate: 45deg;
+  left: 50px;
+  width: 300px;
+
+}

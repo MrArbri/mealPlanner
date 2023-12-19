@@ -14,7 +14,11 @@
 		</li>
 		{% if is_granted('ROLE_ADMIN') %}
 			<li>
-				<a class="navLink" href="{{ path ('app_mealDashboard_index')}}">Meals Board</a>
+				<a id="recipe" class="navLink position-relative" href="{{ path ('app_mealDashboard_index')}}">Meals Board <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+	</a>
 			</li>
 		{% elseif is_granted('ROLE_USER') %}
 			<li>
