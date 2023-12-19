@@ -9,7 +9,11 @@
 
 {% block body %}
 	<div class="mainContainer">
+
 		<div class="heroSection">
+			<div class="heroImgContainer">
+				<img class="heroImg" src="{{asset("images/heroImg.jpg")}}" alt="Image of food">
+			</div>
 			<div class="heroContent">
 				<h1 class="heroTitle">Meal time</h1>
 				<p>plan your meal with meal time right now</p>
@@ -21,5 +25,59 @@
 				</span>
 			</div>
 		</div>
+		<img class="purpleLogo" src="{{asset("images/foodPurple.png")}}" alt="Logo image">
+		<div class="testimonialSection">
+			<div class="testimonial">
+				<div class="tImgHolder">
+					<img class="tProfilePic" src="https://cdn.pixabay.com/photo/2016/11/23/00/57/adult-1851571_1280.jpg" alt="profile Picture">
+				</div>
+				<div class="testimonialContent">
+					<span>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+					</span>
+					<p>
+						I've been using Meal Time for a few months now and I'm so glad I found it! It's helped me plan my meals in a fun and efficient way, and the recipes are great.</p>
+					<span>
+						<b>#itsmealtime</b>
+					</span>
+				</div>
+			</div>
+			<div class="testimonial">
+				<div class="tImgHolder">
+					<img class="tProfilePic" src="https://cdn.pixabay.com/photo/2016/11/23/00/57/adult-1851571_1280.jpg" alt="profile Picture">
+				</div>
+				<div class="testimonialContent">
+					<span>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+					</span>
+					<p>
+						Meal Time has not only become one of my favorite web apps to use but also one of the most useful apps that I use on a daily basis. This meal planner helped me to get helthier and become fit 💪.</p>
+				</div>
+			</div>
+			<div class="testimonial">
+				<div class="tImgHolder">
+					<img class="tProfilePic" src="https://cdn.pixabay.com/photo/2016/11/23/00/57/adult-1851571_1280.jpg" alt="Profile Picture">
+				</div>
+				<div class="testimonialContent">
+					<span>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star" style="color: #ffd700;"></i>
+						<i class="fa-solid fa-star-half-stroke" style="color: #ffd700;"></i>
+					</span>
+					<p>I found Meal Time really useful for dieting, as it helps me keep track of what I'm eating. In my opinion, Meal Time is the best app for planning what you eat!</p>
+				</div>
+			</div>
+		</div>
+
 	</div>
 {% endblock %}
