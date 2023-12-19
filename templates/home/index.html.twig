@@ -15,11 +15,11 @@
 				<img class="heroImg" src="{{asset("images/heroImg.jpg")}}" alt="Image of food">
 			</div>
 			<div class="heroContent">
-				{% if is_granted("IS_AUTHENTIFICATED_FULLY") %}
+				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 					<div>
-						<img class="purpleLogo" src="{{asset("images/Veagan.png")}}" alt="logo image">
-						<img class="purpleLogo" src="{{asset("images/Vegetarian.png")}}" alt="logo image">
-						<img class="purpleLogo" src="{{asset("images/Non-Vegetarian.png")}}" alt="logo image">
+						<img class="" src="{{asset("images/Vegan.png")}}" alt="logo image">
+						<img class="" src="{{asset("images/Vegetarian.png")}}" alt="logo image">
+						<img class="" src="{{asset("images/Non-Vegetarian.png")}}" alt="logo image">
 					</div>
 				{% else %}
 					<h1 class="heroTitle">Meal time</h1>
@@ -100,7 +100,7 @@
 						<b>Daniel</b>
 					</h1>
 					<p class="tText">Huge thanks to Meal Time, I perform amazingly every time my friends and I play tennis now. This web app has been a game-changer, helping me eat the right food at the right time, giving me the energy boost I need. Highly recommend for anyone looking to up their game!
-								I just wish they had a mobile application for Meal Time.
+																										I just wish they had a mobile application for Meal Time.
 					</p>
 				</div>
 			</div>
