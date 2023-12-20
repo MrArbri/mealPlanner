@@ -1,0 +1,36 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+
+
+body{
+  background-color: whitesmoke;
+}
+
+.bi-star-fill, .bi-star-half {
+  filter: drop-shadow(0 0 2px rgb(255,193,7));
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgb(255,193,7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+}
+.emptyStar{
+  color: #474F57;
+}
+

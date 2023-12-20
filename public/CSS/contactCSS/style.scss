@@ -48,3 +48,21 @@ $color_purpleHover:rgb(191, 170, 169);
   align-items: center;
   margin: 2rem 0;
 }
+
+.sendButton{
+  display: block;
+  color: white;
+  background-color: #62b0cf;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  border: none;
+  &:hover{
+    background-color:#1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
+}

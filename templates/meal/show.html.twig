@@ -3,9 +3,14 @@
 {% block title %}Meal
 {% endblock %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset("CSS/mealShowCSS/style.css")}}">
+{% endblock %}
+
+
 {% block body %}
 	<div class="container" style="max-width:900px; min-height:100vh;">
-		<h1 class="text-center m-2">Meal details</h1>
+		<h1 class="text-center mainTitle">Meal details</h1>
 
 		<div class='p-2'>
 			<div class='card1 h-100'>
@@ -14,32 +19,36 @@
 					<h2 class='card-title my-2'>
 						{{ meal.name }}</h2>
 					{% set maximum_stars = 5 %}
-							{% if meal.rating <= maximum_stars %}
-								{% for star in 0..(meal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (meal.rating) - (meal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - meal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
+					{% if meal.rating <= maximum_stars %}
+						{% for star in 0..(meal.rating) %}
+							{% if star != 0 %}
+								<i class="bi bi-star-fill text-warning"></i>
 							{% endif %}
-							{{ include('meal/_plan.html.twig') }}
+						{% endfor %}
+						{% if (meal.rating) - (meal.rating|round(0, 'floor')) != 0 %}
+							<i class="bi bi-star-half text-warning"></i>
+						{% endif %}
+						{% for star in 0..(maximum_stars - meal.rating|round(0, 'ceil')) %}
+							{% if star != 0 %}
+								<i class="bi bi-star emptyStar text-warning"></i>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+					{{ include('meal/_plan.html.twig') }}
 					<p class='card-text mt-2'>Ingredients:
 						{{ meal.ingredients }}</p>
 					<p class='card-text'>Description:
 						{{ meal.description }}</p>
 					<p class='card-text'>Preparation:
 						{{ meal.preparation }}</p>
-					<p class='card-text'><i class="fa-solid fa-clock"></i> Prep:
-						{{ meal.prepTime ? meal.prepTime|date('H:i') : '' }} h/min</p>
+					<p class='card-text'>
+						<i class="fa-solid fa-clock"></i>
+						Prep:
+						{{ meal.prepTime ? meal.prepTime|date('H:i') : '' }}
+						h/min</p>
 					{% if meal.creator %}
-						<p class="card-text fw-semibold mt-3">Recipe by: {{ meal.creator.username }}</p>
+						<p class="card-text fw-semibold mt-3">Recipe by:
+							{{ meal.creator.username }}</p>
 					{% endif %}
 					<p class='card-text'>Calories:
 						{{ meal.calories }}</p>

@@ -9,12 +9,16 @@
 
 {% block body %}
 	<div class="mainContainer">
-		<h1 class="mainTitle">Contact us:</h1>
+		<p class="mainTitle">Contact us</p>
 		<div class="container">
 
 			{{ form_start(form) }}
 			{{ form_widget(form) }}
-			<button class="btn">{{ button_label|default('send') }}</button>
+			<div class="submitBtnHolder">
+				<button class="sendButton">
+					<i class="fa-solid fa-paper-plane"></i>
+					{{ button_label|default('Send') }}</button>
+			</div>
 			{{ form_end(form) }}
 
 		</div>

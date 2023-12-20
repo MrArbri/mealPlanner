@@ -118,7 +118,7 @@ $color_purpleHover:rgb(191, 170, 169);
 }
 
 body{
-  background-color: $color_cream;
+  background-color: whitesmoke;
 }
 
 .purpleLogo{
@@ -229,7 +229,7 @@ body{
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 1rem;
   transition: all 0.15s ease-in;
   margin-bottom: 1rem;
   &:hover{
