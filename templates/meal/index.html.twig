@@ -11,13 +11,21 @@
 		<a class="createBtn" href="{{ path('app_meal_new') }}">
 			<i class="bi bi-plus-circle"></i>
 			Create new</a>
-<div class="container text-center">
-		<a href="{{ path('app_filter', {'type':'Vegan'}) }}" class="btn btn-info mb-4"> Vegan</a>
-        <a href="{{ path('app_filter', {'type':'Vegetarian'}) }}" class="btn btn-info mb-4"> Vegetarian</a>
-        <a href="{{ path('app_filter', {'type':'Non-Vegetarian'}) }}" class="btn btn-info mb-4"> Non-Vegetarian</a>
+
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Dropdown button
+				</button>
+				<ul class="dropdown-menu">
+				  <li><a href="{{ path('app_filter', {'type':'Vegan'}) }}" class="btn btn-info mb-4"> Vegan</a></li>
+				  <li><a href="{{ path('app_filter', {'type':'Vegetarian'}) }}" class="btn btn-info mb-4"> Vegetarian</a></li>
+				  <li><a href="{{ path('app_filter', {'type':'Non-Vegetarian'}) }}" class="btn btn-info mb-4"> Non-Vegetarian</a></li>
+				</ul>
+			  </div>
+
 		 <a href="{{ path('app_filter_by_calories') }}" class="btn btn-info mb-4">
        Calories Under 500</a>
-</div>
+
 		<div class=" row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
 			{% for meal in meals %}
 				<div class="col mb-3">
