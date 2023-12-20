@@ -146,7 +146,7 @@ body{
 
 .testimonialSection{
   margin: 0 auto;
-  padding: 0 25%;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
 }
@@ -174,4 +174,84 @@ body{
   &>h1{
     
   }
+}
+
+// FOOD DISPLAY SECTION
+
+.foodCardsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodDisplayCards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.foodDisplayCard{
+  width: 300px;
+
+  &>h2{
+    margin: 0;
+  }
+}
+
+.foodDisplayImg{
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 300px;
+  object-position: center;
+}
+
+.bi-star-fill{
+  filter: drop-shadow(0 0 2px rgb(255,193,7));
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgb(255,193,7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgb(255,193,7));
+  }
+}
+
+.mealButton{
+  display: block;
+  color: white;
+  background-color: #62b0cf;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color:#1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
+}
+
+.mealButtonHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+// MEDIA QUERY
+
+@media only screen and (max-width: 980px) {
+  .foodDisplayCards{ grid-template-columns: repeat(2, 1fr);}
+}
+
+@media only screen and (max-width: 650px) {
+  .foodDisplayCards{ grid-template-columns: 1fr;}
 }

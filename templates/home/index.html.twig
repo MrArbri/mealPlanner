@@ -11,17 +11,18 @@
 	<div class="mainContainer">
 
 		<div class="heroSection">
-		<div class="heroImgContainer">
+			<div class="heroImgContainer">
 				<img class="heroImg" src="{{asset("images/heroImg.jpg")}}" alt="Image of food">
 			</div>
 			<div class="heroContent">
-					<h1 class="heroTitle">Meal time</h1>
+				<h1 class="heroTitle">Meal time</h1>
 				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-				<div class="welcomeContainer">
-				<span class="welcomeText">Welcome home </span><img src="{{app.user.avatar}}" alt="" class="heroLoginProfilePic">
-				</div>
-				
-					
+					<div class="welcomeContainer">
+						<span class="welcomeText">Welcome home
+						</span><img src="{{app.user.avatar}}" alt="" class="heroLoginProfilePic">
+					</div>
+
+
 				{% else %}
 					<p>plan your next meal with meal time right now</p>
 					<div class="loginBtnHolder">
@@ -34,8 +35,10 @@
 			</div>
 		</div>
 		<img class="purpleLogo" src="{{asset("images/foodPurple.png")}}" alt="logo image">
-		<div class="testimonialSection">
 
+		<h1 class="mainTitle">testimonials:</h1>
+
+		<div class="testimonialSection">
 
 			<div class="testimonial">
 				<div class="testimonialProfile">
@@ -54,7 +57,7 @@
 					<h1>
 						<b>Marie</b>
 					</h1>
-					<p class="tText">I have been using Meal Time for the past few months and I can honestly say that it has changed my life. Not only has it helped me to plan my meals efficiently, but I am also much healthier now. Easily the best meal planner I used. LOVEEE IT!!</p>
+					<p class="tText">I have been using Meal Time for the past few months and I can honestly say that it has changed my life. Not only has it helped me to plan my meals efficiently, but I am also much healthier now. Easily the best meal planner I have ever used. LOVEEE IT!!</p>
 				</div>
 			</div>
 
@@ -99,28 +102,61 @@
 					<h1>
 						<b>Daniel</b>
 					</h1>
-					<p class="tText">Huge thanks to Meal Time, I perform amazingly every time my friends and I play tennis now. This web app has been a game-changer, helping me eat the right food at the right time, giving me the energy boost I need. Highly recommend for anyone looking to up their game!
-																										I just wish they had a mobile application for Meal Time.
+					<p class="tText">
+						Huge thanks to Meal Time, I perform amazingly every time my friends and I play tennis now. This web app has been a game-changer, helping me eat the right food at the right time, giving me the energy boost I need. Highly recommend for anyone looking to up their game! I just wish they had a mobile application for Meal Time.
 					</p>
 				</div>
 			</div>
 
 		</div>
 
-		<div class="foodDisplayCards">
-		<div>
-		<img src="" alt="">
-		<h2></h2>
+		<h1 class="mainTitle">Add delecious and healthy meals:</h1>
+
+		<div class="foodCardsContainer">
+			<div class="foodDisplayCards">
+				<div class="foodDisplayCard">
+					<img class="foodDisplayImg" src="https://www.healthygffamily.com/wp-content/uploads/2018/10/2BB25CB0-4E42-433D-AA93-A0FB91828784.jpg" alt="Teriyaki Tofu Bowl">
+					<h2>Teriyaki Tofu Bowl</h2>
+					<p class="text-muted">Vegan</p>
+					<p>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+					</p>
+				</div>
+				<div class="foodDisplayCard">
+					<img class="foodDisplayImg" src="https://www.platingsandpairings.com/wp-content/uploads/2018/08/ginger-veggie-stir-fry-16-scaled.jpg" alt="Vegetable Stir Fry">
+					<h2>Vegetable Stir Fry</h2>
+					<p class="text-muted">Vegitarian</p>
+					<p>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+					</p>
+				</div>
+				<div class="foodDisplayCard">
+					<img class="foodDisplayImg" src="https://assets.farmison.com/images/recipe-detail-1380/66754-red-wine-sauce.jpg" alt="Beef Fillet with Red Wine Sauce">
+					<h2>Beef Fillet with Red Wine Sauce</h2>
+					<p class="text-muted">Non-Vegitarian</p>
+					<p>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+						<i class="bi bi-star-fill text-warning"></i>
+					</p>
+				</div>
+			</div>
 		</div>
-		<div>
-		<img src="" alt="">
-		<h2></h2>
-		</div>
-		<div>
-		<img src="" alt="">
-		<h2></h2>
-		</div>
-		</div>
+		{% if is_granted('ROLE_USER') %}
+			<div class="mealButtonHolder">
+				<a class="mealButton" href="/meal/">Our Meals</a>
+			</div>
+		{% endif %}
 
 	</div>
 

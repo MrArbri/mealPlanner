@@ -81,7 +81,7 @@ body {
 .createBtn {
   display: inline-block;
   color: white;
-  background-color: #1e94c2;
+  background-color: #62b0cf;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
@@ -90,7 +90,7 @@ body {
   margin-bottom: 1rem;
 }
 .createBtn:hover {
-  background-color: #65b1cf;
+  background-color: #1e94c2;
   border: none;
   color: whitesmoke;
 }/*# sourceMappingURL=style.css.map */
