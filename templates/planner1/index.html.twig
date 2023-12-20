@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}
 
 {% block title %}Planner index{% endblock %}
 
@@ -24,7 +24,7 @@
             <tr>
                 <th rowspan="{% if monday|length > 0 %}{{ monday|length }}{% else %}1{% endif %}">Monday</th>
                 {% for day in monday %}
-            <td>{{ day.time }}</td>
+             <td>{{ day.time }}</td> 
             <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
             </td>
             <td>
@@ -184,34 +184,251 @@
             </tr>
                
                 
-        
-        
-         
-
-       
-            {# <tr>
-                <td>{{ planner.id }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-                <td>{{ planner.time }}</td>
-
-                <td>
-                    <a href="{{ path('app_planner1_show', {'id': planner.id}) }}">show</a>
-                    <a href="{{ path('app_planner1_edit', {'id': planner.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %} #}
         </tbody>
     </table>
   </div>
 </div>
+{% endblock %}   #}
+
+
+ {% extends 'base.html.twig' %}
+
+{% block title %}Planner index{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset("CSS/plannerCSS/style.css")}}">
 {% endblock %}
+
+{% block body %}
+
+<div class="mainContainer">
+  <div class="container1">
+    <h1 class="text-center m-4">My weekly planner</h1>
+
+    <table class="tablePlanner">
+            <tr>
+                <th class="details">Days/Details</th>
+                
+                <th>Time</th>
+                <th>Meal</th>
+                <th>Actions</th>    
+            </tr>
+            
+            {% for day in monday %}
+            <tr>
+            
+                <th rowspan="3">Monday</th>
+              <td>{{ day.time }}</td>
+              <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"><br> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+              </tr>
+              <tr>
+             <td>Lunch</td>
+             <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"><br> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+             </tr> 
+              <tr>
+             <td>Dinner</td>
+             <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"><br> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+             </tr>  
+                {% else %}
+            
+                 <td class="text-center" colspan="3">No records found for Monday</td>
+            
+                {% endfor %}
+                
+                </tr> 
+
+
+
+            
+            <tr>
+            
+                <th rowspan="3">Tuesday</th>
+                {% for day in tuesday %}
+            <td>Breakfast</td>
+            <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+              </tr>
+              <tr>
+             <td>Lunch</td>
+             <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"><br> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+             </tr> 
+              <tr>
+             <td>Dinner</td>
+             <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+             </tr>
+            <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td>
+            <td>
+				</td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+                </tr>
+                
+                {% else %}
+            
+                <td class="text-center" colspan="4" rowspan="3">No records found for Tuesday</td>
+            
+                {% endfor %} 
+                 
+            </tr>
+
+            <tr>
+                <th rowspan="{% if wednesday|length > 0 %}{{ wednesday|length }}{% else %}1{% endif %}">Wednesday</th>
+                {% for day in wednesday %}
+            <td>{{ day.time }}</td>
+            <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td>
+            <td>
+				</td> 
+                
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+                </tr>
+                {% else %}
+            
+                <td class="text-center" colspan="4">No records found for Wednesday</td>
+            
+                {% endfor %}
+                
+            </tr>
+
+
+            <tr>
+                <th rowspan="{% if thursday|length > 0 %}{{ thursday|length }}{% else %}1{% endif %}">Thursday</th>
+                {% for day in thursday %}
+            <td>{{ day.time }}</td>
+            <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td>
+            <td>
+    
+				</td> 
+                 <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td>
+                </tr>
+                    
+                {% else %}
+            
+                <td class="text-center" colspan="4">No records found for Thursday</td>
+            
+                {% endfor %}
+                
+            </tr>
+
+
+            <tr>
+                <th rowspan="{% if friday|length > 0 %}{{ friday|length }}{% else %}1{% endif %}">Friday</th>
+                {% for day in friday %}
+            <td>{{ day.time }}</td>
+            <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td>
+            <td>
+    
+				</td> 
+                <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                    </td> 
+                    
+                </tr>
+                
+                {% else %}
+            
+                <td class="text-center" colspan="4">No records found for Friday</td>
+            
+                {% endfor %}
+                  
+            </tr>
+
+
+    <tr>
+    <th rowspan="{% if saturday|length > 0 %}{{ saturday|length }}{% else %}1{% endif %}">Saturday</th>
+    {% for day in saturday %}
+            <td>{{ day.time }}</td>
+            <td><img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name }}</td>
+            <td></td>
+            <td>
+                <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+            </td>
+            </tr>
+    
+    {% else %}
+        
+            <td class="text-center" colspan="4">No records found for Saturday</td>
+        
+    {% endfor %}
+</tr>   
+        
+        
+         <tr>
+         <th rowspan="{% if sunday|length > 0 %}{{ sunday|length }}{% else %}1{% endif %}">Sunday</th>
+          {% for day in sunday %}
+
+            <td>{{ day.time }}</td>
+            <td>
+            <img width="100px;" height="100px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"> {{ day.fkMeal.name}}
+            </td>
+            <td>
+                </td> 
+                 <td>
+                 <a class="showBtn" href="{{ path('app_planner1_show', {'id': day.id}) }}">Show</a>
+                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': day.id}) }}">Edit</a>
+                </td> 
+                </tr>
+                 
+            
+                {% else %}
+                
+                <td class="text-center" colspan="4">No records found for Sunday</td>
+                
+                {% endfor %}
+               
+            </tr>
+               
+                
+        </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}   

@@ -8,11 +8,14 @@
 
 .editContainer{
     margin:20px 140px;
-    padding: 10px;
-    background-color: beige;  
+    padding: 30px;
+    background-color: #f4f4f4;  
 }
 
+.editContainer>input{
+    background-color: #fff;
 
+}
 
 .tablePlanner {
     width: 100%;
@@ -23,8 +26,8 @@
   }
  
   .details{
-    background-color: rgb(245, 228, 215);
-    color: black;
+    background-color: rgb(31, 29, 27);
+    color: grey;
   }
 
    td {
@@ -84,4 +87,4 @@
     margin:5px 0;
   }
 
- 
+  

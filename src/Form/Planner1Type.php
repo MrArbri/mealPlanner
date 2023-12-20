@@ -18,7 +18,7 @@ class Planner1Type extends AbstractType
         $builder
             ->add('time', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Change Time',
+                'label' => 'Time',
                 'choices' => [
                     'Breakfast' => 'Breakfast',
                     'Lunch' => 'Lunch',
@@ -27,7 +27,7 @@ class Planner1Type extends AbstractType
             ])
             ->add('day', ChoiceType::class, [
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Change Day',
+                'label' => 'Day',
                 'choices' => [
                     'Monday' => 'Monday', 
                     'Tuesday' => 'Tuesday', 
@@ -42,10 +42,12 @@ class Planner1Type extends AbstractType
 //                 'class' => User::class,
 // 'choice_label' => 'username',
 //             ])
-//             ->add('fk_meal', EntityType::class, [
-//                 'class' => Meal::class,
-// 'choice_label' => 'name',
-//             ])
+            //  ->add('fk_meal', EntityType::class, [
+            //     'class' => Meal::class,
+            //     'attr' => ['class' => 'form-control'],
+            //     'label' => 'Change Meal',
+            //     'choice_label' => 'name',
+            //  ])
         ;
     }
 
