@@ -10,7 +10,14 @@
 {% block body %}
 	<div class="mainContainer">
 		<h1 class="mainTitle">Contact us:</h1>
-		<div class="container">
+		<div
+			class="container">
+
+			{# {{ form_start(form) }}
+						{{ form_widget(form) }}
+						<button class="btn">{{ button_label|default('send') }}</button>
+						{{ form_end(form) }} #}
+
 			<form action="">
 
 				<label class="form-label" for="fname">First Name:</label>

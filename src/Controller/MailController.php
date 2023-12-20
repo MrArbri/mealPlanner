@@ -2,10 +2,15 @@
 
 namespace App\Controller;
 
+use App\Form\ContactType;
+use App\Repository\UserRepository;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -39,8 +44,123 @@ class MailController extends AbstractController
     }
 
     // #[Route('/contact', name: 'app_contact')]
-    // public function contact(): Response
+    // public function contact(MailerInterface $mailer): Response
     // {
-    //     return new Response("Contact works");
+    //     $email = (new Email())
+    //         ->from('')
+    //         ->to('group.project.planner@gmail.com')
+    //         ->subject('New email from contact form!')
+    //         ->text('');
+
+    //     try {
+    //         $mailer->send($email);
+    //         return new Response("Email sent!");
+    //     } catch (TransportExceptionInterface $error) {
+    //         return new Response("Error: " . $error->getMessage());
+    //     }
     // }
+
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(
+        Request $request,
+        UserRepository $userRepository,
+        MailerInterface $mailer
+    ): Response {
+        if ($this->getUser()) {
+            $connected = $this->getUser();
+            $useremail = $connected->getUserIdentifier();
+
+            $user = $userRepository->findOneBy(['username' => $useremail]);
+
+            $form = $this->createForm(ContactType::class);
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $userEmail = $this->getUser();
+                $contactFormData = $form->getData();
+                $firstName = $form->get("first_name")->getData();
+                $lastName = $form->get("last_name")->getData();
+
+                $userEmail = $form->get("email")->getData();
+                $message = $form->get("message")->getData();
+
+                $email = (new TemplatedEmail())
+                    ->from('fabien@example.com')
+                    ->to(new Address('group.project.planner@gmail.com'))
+                    ->subject('Thanks for signing up!')
+
+                    // path of the Twig template to render
+                    ->htmlTemplate('mail/index.html.twig')
+
+                    // change locale used in the template, e.g. to match user's locale
+                    ->locale('de')
+
+                    // pass variables (name => value) to the template
+                    ->context([
+                        'expiration_date' => new \DateTime('+7 days'),
+                        'username' => $user->getFirstName(),
+                        'fname' => $firstName,
+                        'lname' => $lastName,
+                        'userEmail' => $userEmail,
+                        'msg' => $message,
+
+
+                    ]);
+                $mailer->send($email);
+
+                $this->addFlash('success', 'Thank you, an employee will contact you soon!');
+
+                return $this->redirectToRoute('app_contact');
+            }
+
+            return $this->render('mail/index.html.twig', [
+                'form' => $form->createView()
+            ]);
+        } else {
+
+            $connected = $this->getUser();
+            $form = $this->createForm(ContactType::class);
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $firstName = $form->get("first_name")->getData();
+                $lastName = $form->get("last_name")->getData();
+                $userEmail = "not Registered User";
+                $userEmail = $form->get("email")->getData();
+                $message = $form->get("message")->getData();
+                $username = "guest";
+                $email = (new TemplatedEmail())
+                    ->from('fabien@example.com')
+                    ->to(new Address('group.project.planner@gmail.com'))
+                    ->subject('Thanks for signing up!')
+
+                    // path of the Twig template to render
+                    ->htmlTemplate('mail/index.html.twig')
+
+                    // change locale used in the template, e.g. to match user's locale
+                    ->locale('de')
+
+                    // pass variables (name => value) to the template
+                    ->context([
+                        'expiration_date' => new \DateTime('+7 days'),
+                        'username' => $username,
+                        'fname' => $firstName,
+                        'lname' => $lastName,
+                        'userEmail' => $userEmail,
+                        'msg' => $message,
+
+
+                    ]);
+                $mailer->send($email);
+
+                $this->addFlash('success', 'Thank you, an employee will contact you soon!');
+
+                return $this->redirectToRoute('app_contact');
+            }
+
+            return $this->render('mail/index.html.twig', [
+                'form' => $form->createView()
+            ]);
+        }
+    }
 }
