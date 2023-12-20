@@ -77,7 +77,6 @@ class MailController extends AbstractController
 
             if ($form->isSubmitted() && $form->isValid()) {
                 $userEmail = $this->getUser();
-                $contactFormData = $form->getData();
                 $firstName = $form->get("first_name")->getData();
                 $lastName = $form->get("last_name")->getData();
 
@@ -103,9 +102,8 @@ class MailController extends AbstractController
                         'lname' => $lastName,
                         'userEmail' => $userEmail,
                         'msg' => $message,
-
-
                     ]);
+
                 $mailer->send($email);
 
                 $this->addFlash('success', 'Thank you, an employee will contact you soon!');
@@ -113,7 +111,7 @@ class MailController extends AbstractController
                 return $this->redirectToRoute('app_contact');
             }
 
-            return $this->render('mail/index.html.twig', [
+            return $this->render('home/contact.html.twig', [
                 'form' => $form->createView()
             ]);
         } else {
@@ -158,7 +156,7 @@ class MailController extends AbstractController
                 return $this->redirectToRoute('app_contact');
             }
 
-            return $this->render('mail/index.html.twig', [
+            return $this->render('home/contact.html.twig', [
                 'form' => $form->createView()
             ]);
         }
