@@ -331,8 +331,7 @@ class AdminController extends AbstractController
             $friday = $plannerRepository->findBy(['day' => "Friday", 'fk_user' => $this->getUser()->getId()]);
             $saturday = $plannerRepository->findBy(['day' => "Saturday", 'fk_user' => $this->getUser()->getId()]);
             $sunday = $plannerRepository->findBy(['day' => "Sunday", 'fk_user' => $this->getUser()->getId()]);
-       
-        return $this->render('planner1/index.html.twig', [
+        return $this->render('admin/admin_plan/index.html.twig', [
             'monday' => $monday,
             'tuesday' => $tuesday,
             'wednesday' => $wednesday,

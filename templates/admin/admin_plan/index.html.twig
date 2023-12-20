@@ -374,8 +374,8 @@
                 <th class="details">Days/Details</th>
                 
                 <th>Time</th>
-				<th>User</th>
-                <th colspan="6">Meal</th>   
+				<th colspan="6">User meals</th>
+				   
             </tr>
             
         
@@ -386,12 +386,12 @@
             {% if mondayBreakfast|length > 0 %}
             {% for val in mondayBreakfast %}
               <td>
-			  
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name }}<br>
+			{# <img width="100px;" height="60px;" src="{{ val.fkUser.avatar }}" ><br>  #}
+			{{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
-			<td>
-			{{ val.fkUser.username }}
-			</td>
+		
+			
+			
             
             
             {% endfor %}
@@ -407,7 +407,7 @@
             {% if mondayLunch|length > 0 %}
             {% for val in mondayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
 			<td >
            {{ val.fkUser.username }}
@@ -426,11 +426,9 @@
             {% if mondayDinner|length > 0 %}
             {% for val in mondayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
-             <td >
-           {{ val.fkUser.username }}
-           </td>
+           
             {% endfor %}
             {% else %}
             <td colspan="5">
@@ -451,9 +449,7 @@
             {% if tuesdayBreakfast|length > 0 %}
             {% for val in tuesdayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -469,9 +465,7 @@
             {% if tuesdayLunch|length > 0 %}
             {% for val in tuesdayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -486,9 +480,7 @@
             {% if tuesdayDinner|length > 0 %}
             {% for val in tuesdayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
               
             {% endfor %}
@@ -507,9 +499,7 @@
             {% if wednesdayBreakfast|length > 0 %}
             {% for val in wednesdayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -525,9 +515,7 @@
             {% if wednesdayLunch|length > 0 %}
             {% for val in wednesdayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+           {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -542,9 +530,7 @@
             {% if wednesdayDinner|length > 0 %}
             {% for val in wednesdayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
              
             {% endfor %}
@@ -563,9 +549,7 @@
             {% if thursdayBreakfast|length > 0 %}
             {% for val in thursdayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -581,9 +565,7 @@
             {% if thursdayLunch|length > 0 %}
             {% for val in thursdayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -598,9 +580,7 @@
             {% if thursdayDinner|length > 0 %}
             {% for val in thursdayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             <td>
                
@@ -623,9 +603,7 @@
             {% if fridayBreakfast|length > 0 %}
             {% for val in fridayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+          {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -641,9 +619,7 @@
             {% if fridayLunch|length > 0 %}
             {% for val in fridayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -658,9 +634,7 @@
             {% if fridayDinner|length > 0 %}
             {% for val in fridayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
           
             {% endfor %}
@@ -680,9 +654,7 @@
             {% if saturdayBreakfast|length > 0 %}
             {% for val in saturdayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -698,9 +670,7 @@
             {% if saturdayLunch|length > 0 %}
             {% for val in saturdayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -715,9 +685,7 @@
             {% if saturdayDinner|length > 0 %}
             {% for val in saturdayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
               
             {% endfor %}
@@ -737,9 +705,7 @@
             {% if sundayBreakfast|length > 0 %}
             {% for val in sundayBreakfast %}
               <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-                <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -755,9 +721,7 @@
             {% if sundayLunch|length > 0 %}
             {% for val in sundayLunch %}
             <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+           {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
             
             {% endfor %}
@@ -772,9 +736,7 @@
             {% if sundayDinner|length > 0 %}
             {% for val in sundayDinner %}
              <td>
-            <img width="100px;" height="60px;" src="{{ val.fkMeal.picture }}" alt="{{ val.fkMeal.name }}"><br> {{ val.fkMeal.name}}<br>
-            <a class="showBtn" href="{{ path('app_planner1_show', {'id': val.id}) }}">Show</a>
-            <a class="editBtn" href="{{ path('app_planner1_edit', {'id': val.id}) }}">Edit</a>
+            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
             </td> 
               
             {% endfor %}
