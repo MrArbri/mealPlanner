@@ -18,10 +18,7 @@ class AdminType extends AbstractType
             ->add('last_name')
             ->add('email')
             ->add('avatar')
-            ->add('password', PasswordType::class, [
-                'hash_property_path' => 'password',
-                'mapped' => false,
-            ]);
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
