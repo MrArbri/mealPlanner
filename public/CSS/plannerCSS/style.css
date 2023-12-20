@@ -32,7 +32,7 @@
 
    td {
     padding: 5px;
-    text-align: start;
+    text-align: center;
     border: 3px solid rgb(229, 209, 208); 
     background-color: rgb(245, 228, 215);
   }
@@ -48,6 +48,8 @@
   img{
     object-fit: cover;
     border-radius: 10px;
+    filter: drop-shadow(5px 5px rgb(164, 161, 161));
+
   }
 
 
@@ -75,16 +77,6 @@
     margin:5px 0;
   }
 
-  .backBtn{
-    display: inline-block;
-    color: black;
-    border: 2px solid rgb(74, 69, 217);
-    border-radius: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0.2rem 0.5rem;
-    transition: all 0.15s ease-in;
-    margin:5px 0;
-  }
+  
 
   
