@@ -35,12 +35,12 @@
 							<td>{{ user.email }}</td>
 							<td><img src="{{ user.avatar }}" alt="{{ user.firstName }}" style="height:50px; width:50px;"></td>
 							<td>
-								<a href="{{ path('app_admin_show', {'id': user.id}) }}">show</a>
-								<a href="{{ path('app_admin_edit', {'id': user.id}) }}">edit</a>
+								<a class="btn btn-primary" href="{{ path('app_admin_show', {'id': user.id}) }}">Show</a>
+								<a class="btn btn-warning" href="{{ path('app_admin_edit', {'id': user.id}) }}">Edit</a>
 								{% if user.isBanned %}
-									<a href="{{ path('app_admin_ban', {'id': user.id}) }}">UnBan</a>
+									<a class="btn btn-outline-danger" href="{{ path('app_admin_ban', {'id': user.id}) }}">UnBan</a>
 								{% else %}
-									<a href="{{ path('app_admin_ban', {'id': user.id}) }}">Ban</a>
+									<a class="btn btn-danger" href="{{ path('app_admin_ban', {'id': user.id}) }}">Ban</a>
 								{% endif %}
 
 							</td>

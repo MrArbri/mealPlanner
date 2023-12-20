@@ -24,6 +24,7 @@
     overflow: hidden;
     margin-bottom: 20px;
     background-color: rgb(245, 228, 215);
+    border: 3px solid rgb(229, 209, 208);
   }
  
   .details{
@@ -34,7 +35,7 @@
    td {
     padding: 5px;
     text-align: center;
-    border: 3px solid rgb(229, 209, 208); 
+    border: 3px solid rgb(229, 209, 208);
     background-color: rgb(245, 228, 215);
   }
 

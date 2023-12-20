@@ -20,8 +20,8 @@ class Planner1Controller extends AbstractController
         $MondayBreakfast = [];
         $MondayLunch = [];
         $MondayDinner= [];
-            $monday = $plannerRepository->findBy(['day' => "Monday", 'fk_user' => $this->getUser()->getId()]);
-         
+            
+        $monday = $plannerRepository->findBy(['day' => "Monday", 'fk_user' => $this->getUser()->getId()]);
             foreach($monday as $time){
                 
                 if($time->getTime() == "Breakfast"){
@@ -128,7 +128,7 @@ class Planner1Controller extends AbstractController
                                 
                                             };
 
-        
+            
             $tuesday = $plannerRepository->findBy(['day' => "Tuesday", 'fk_user' => $this->getUser()->getId()]);
             $wednesday = $plannerRepository->findBy(['day' => "Wednesday", 'fk_user' => $this->getUser()->getId()]);
             $thursday = $plannerRepository->findBy(['day' => "Thursday", 'fk_user' => $this->getUser()->getId()]);

@@ -35,6 +35,18 @@ img{
     border-radius: 100%;
     object-fit: cover;
   }
+
+
+  .showBtn {
+    display: inline-block;
+    color: black;
+    border: 2px solid rgb(154, 190, 217);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.15s ease-in;
+  }
   
 @media screen and (max-width: 768px) {
     .tableUsers, thead, tbody, th, td, tr {

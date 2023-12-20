@@ -212,16 +212,127 @@ class AdminController extends AbstractController
 
     #[Route('/find/planners', name: 'app_adminplanner_index', methods: ['GET'])]
     public function adminPlannerIndex(PlannerRepository $plannerRepository): Response
-    {
+    { 
+        $MondayBreakfast = [];
+        $MondayLunch = [];
+        $MondayDinner= [];
+            
         $monday = $plannerRepository->findBy(['day' => "Monday"]);
-        $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
-        $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
-        $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
-        $friday = $plannerRepository->findBy(['day' => "Friday"]);
-        $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
-        $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+            foreach($monday as $time){
+                
+                if($time->getTime() == "Breakfast"){
+                    array_push($MondayBreakfast, $time);
+                }else if ($time->getTime() == "Lunch"){
+                    array_push($MondayLunch, $time);}
+                    else if ($time->getTime() == "Dinner"){
+                        array_push($MondayDinner, $time);}
 
-        return $this->render('admin/admin_plan/index.html.twig', [
+            };
+
+        $TuesdayBreakfast = [];
+        $TuesdayLunch = [];
+        $TuesdayDinner= [];
+            $tuesday = $plannerRepository->findBy(['day' => "Tuesday"]);
+         
+            foreach($tuesday as $time){
+                
+                if($time->getTime() == "Breakfast"){
+                    array_push($TuesdayBreakfast, $time);
+                }else if ($time->getTime() == "Lunch"){
+                    array_push($TuesdayLunch, $time);}
+                    else if ($time->getTime() == "Dinner"){
+                        array_push($TuesdayDinner, $time);}
+
+            };
+
+        $WednesdayBreakfast = [];
+        $WednesdayLunch = [];
+        $WednesdayDinner= [];
+            $wednesday = $plannerRepository->findBy(['day' => "Wednesday"]);
+             
+            foreach($wednesday as $time){
+                    
+                    if($time->getTime() == "Breakfast"){
+                        array_push($WednesdayBreakfast, $time);
+                    }else if ($time->getTime() == "Lunch"){
+                        array_push($WednesdayLunch, $time);}
+                        else if ($time->getTime() == "Dinner"){
+                            array_push($WednesdayDinner, $time);}
+    
+                };
+
+                $ThursdayBreakfast = [];
+                $ThursdayLunch = [];
+                $ThursdayDinner= [];
+                    $thursday = $plannerRepository->findBy(['day' => "Thursday"]);
+                     
+                    foreach($thursday as $time){
+                            
+                            if($time->getTime() == "Breakfast"){
+                                array_push($ThursdayBreakfast, $time);
+                            }else if ($time->getTime() == "Lunch"){
+                                array_push($ThursdayLunch, $time);}
+                                else if ($time->getTime() == "Dinner"){
+                                    array_push($ThursdayDinner, $time);}
+            
+                        };
+
+        $FridayBreakfast = [];
+        $FridayLunch = [];
+        $FridayDinner= [];
+            $friday = $plannerRepository->findBy(['day' => "Friday"]);
+                 
+            foreach($friday as $time){
+                        
+                if($time->getTime() == "Breakfast"){
+                        array_push($FridayBreakfast, $time);
+                    }else if ($time->getTime() == "Lunch"){
+                        array_push($FridayLunch, $time);}
+                    else if ($time->getTime() == "Dinner"){
+                        array_push($FridayDinner, $time);}
+        
+                    };
+
+                    $SaturdayBreakfast = [];
+                    $SaturdayLunch = [];
+                    $SaturdayDinner= [];
+                        $saturday = $plannerRepository->findBy(['day' => "Saturday"]);
+                             
+                        foreach($saturday as $time){
+                                    
+                            if($time->getTime() == "Breakfast"){
+                                    array_push($SaturdayBreakfast, $time);
+                                }else if ($time->getTime() == "Lunch"){
+                                    array_push($SaturdayLunch, $time);}
+                                else if ($time->getTime() == "Dinner"){
+                                    array_push($SaturdayDinner, $time);}
+                    
+                                };
+                                $SundayBreakfast = [];
+                                $SundayLunch = [];
+                                $SundayDinner= [];
+                                    $sunday = $plannerRepository->findBy(['day' => "Sunday"]);
+                                         
+                                    foreach($sunday as $time){
+                                                
+                                        if($time->getTime() == "Breakfast"){
+                                                array_push($SundayBreakfast, $time);
+                                            }else if ($time->getTime() == "Lunch"){
+                                                array_push($SundayLunch, $time);}
+                                            else if ($time->getTime() == "Dinner"){
+                                                array_push($SundayDinner, $time);}
+                                
+                                            };
+
+            
+            $tuesday = $plannerRepository->findBy(['day' => "Tuesday", 'fk_user' => $this->getUser()->getId()]);
+            $wednesday = $plannerRepository->findBy(['day' => "Wednesday", 'fk_user' => $this->getUser()->getId()]);
+            $thursday = $plannerRepository->findBy(['day' => "Thursday", 'fk_user' => $this->getUser()->getId()]);
+            $friday = $plannerRepository->findBy(['day' => "Friday", 'fk_user' => $this->getUser()->getId()]);
+            $saturday = $plannerRepository->findBy(['day' => "Saturday", 'fk_user' => $this->getUser()->getId()]);
+            $sunday = $plannerRepository->findBy(['day' => "Sunday", 'fk_user' => $this->getUser()->getId()]);
+       
+        return $this->render('planner1/index.html.twig', [
             'monday' => $monday,
             'tuesday' => $tuesday,
             'wednesday' => $wednesday,
@@ -229,9 +340,34 @@ class AdminController extends AbstractController
             'friday' => $friday,
             'saturday' => $saturday,
             'sunday' => $sunday,
+            "mondayBreakfast"=> $MondayBreakfast,
+            "mondayLunch"=> $MondayLunch,
+            "mondayDinner"=> $MondayDinner,
+            "tuesdayBreakfast"=> $TuesdayBreakfast,
+            "tuesdayLunch"=> $TuesdayLunch,
+            "tuesdayDinner"=> $TuesdayDinner,
+            "wednesdayBreakfast"=> $WednesdayBreakfast,
+            "wednesdayLunch"=> $WednesdayLunch,
+            "wednesdayDinner"=> $WednesdayDinner,
+            "thursdayBreakfast"=> $ThursdayBreakfast,
+            "thursdayLunch"=> $ThursdayLunch,
+            "thursdayDinner"=> $ThursdayDinner,
+            "fridayBreakfast"=> $FridayBreakfast,
+            "fridayLunch"=> $FridayLunch,
+            "fridayDinner"=> $FridayDinner,
+            "saturdayBreakfast"=> $SaturdayBreakfast,
+            "saturdayLunch"=> $SaturdayLunch,
+            "saturdayDinner"=> $SaturdayDinner,
+            "sundayBreakfast"=> $SundayBreakfast,
+            "sundayLunch"=> $SundayLunch,
+            "sundayDinner"=> $SundayDinner
 
+            
 
-        ]);
+        ]
+            // 'planners' => $plannerRepository->findAll(),
+            
+        );
     }
 
     #[Route('/planner/{id}', name: 'app_adminplanner_show', methods: ['GET'])]
