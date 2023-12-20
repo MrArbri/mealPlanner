@@ -1,229 +1,445 @@
 <mxfile host="65bd71144e">
     <diagram id="pqY309hfnbzZIOM1RfYN" name="Page-1">
-        <mxGraphModel dx="2066" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1515" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Weekly Planner" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;" vertex="1" parent="1">
+                <mxCell id="2" value="Weekly Planner" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="350" y="90" width="460" height="1110" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="3" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="30" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Monday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="3">
+                <mxCell id="4" value="Monday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="3" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="3">
+                <mxCell id="5" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="3" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="3">
+                <mxCell id="6" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="3" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="7" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="150" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="Tuesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="7">
+                <mxCell id="8" value="Tuesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="7" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="7">
+                <mxCell id="9" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="7" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="10" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="7">
+                <mxCell id="10" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="7" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="270" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="Wednesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="11">
+                <mxCell id="12" value="Wednesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="11" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="11">
+                <mxCell id="13" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="11" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="11">
+                <mxCell id="14" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="11" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="60" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="60" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="390" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="Thursday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="60">
+                <mxCell id="61" value="Thursday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="60" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="62" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="60">
+                <mxCell id="62" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="60" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="63" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="60">
+                <mxCell id="63" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="60" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="64" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="64" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="510" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="Friday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="64">
+                <mxCell id="65" value="Friday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="64" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="66" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="64">
+                <mxCell id="66" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="64" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="67" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="64">
+                <mxCell id="67" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="64" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="68" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="68" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="630" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="Saturday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="68">
+                <mxCell id="69" value="Saturday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="68" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="70" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="68">
+                <mxCell id="70" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="68" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="71" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="68">
+                <mxCell id="71" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="68" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="72" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="72" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="750" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="Sunday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="72">
+                <mxCell id="73" value="Sunday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="72" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="74" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="72">
+                <mxCell id="74" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="72" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="75" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="72">
+                <mxCell id="75" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="72" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="78" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="78" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="870" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="Monday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="78">
+                <mxCell id="79" value="Monday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="78" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="80" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="78">
+                <mxCell id="80" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="78" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="81" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="78">
+                <mxCell id="81" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="78" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="82" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                <mxCell id="82" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="990" width="460" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="Tuesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="82">
+                <mxCell id="83" value="Tuesday" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="82" vertex="1">
                     <mxGeometry width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="84" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="82">
+                <mxCell id="84" value="&lt;span style=&quot;text-align: left;&quot;&gt;Breakfast (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Lunch (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Dinner (Choose Time)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Extra Meal&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="82" vertex="1">
                     <mxGeometry x="153" width="154" height="120" as="geometry">
                         <mxRectangle width="154" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="85" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="82">
+                <mxCell id="85" value="Show&lt;br&gt;Change&lt;br&gt;Delete" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="82" vertex="1">
                     <mxGeometry x="307" width="153" height="120" as="geometry">
                         <mxRectangle width="153" height="120" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="15" target="17">
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="15" target="17" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="ADD MEAL (Show alert)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="15" value="ADD MEAL (Show alert)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="380" y="10" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="Options " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                <mxCell id="17" value="Options " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="40" y="20" width="160" height="86" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="Daily Planner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                <mxCell id="18" value="Daily Planner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="17" vertex="1">
                     <mxGeometry y="26" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="17">
+                <mxCell id="19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="17" vertex="1">
                     <mxGeometry y="52" width="160" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="Weekly Planner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                <mxCell id="20" value="Weekly Planner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="17" vertex="1">
                     <mxGeometry y="60" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="20" target="2">
+                <mxCell id="22" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="20" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="18" target="48">
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="18" target="48" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-20" y="150" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="48" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                <mxCell id="48" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="-170" y="130" width="160" height="156" as="geometry"/>
                 </mxCell>
-                <mxCell id="91" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                <mxCell id="91" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="-10" y="130" width="150" height="156" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" value="Breakfast (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="91">
+                <mxCell id="92" value="Breakfast (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="91" vertex="1">
                     <mxGeometry y="26" width="150" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="93" value="Lunch (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="91">
+                <mxCell id="93" value="Lunch (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="91" vertex="1">
                     <mxGeometry y="52" width="150" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="94" value="Dinner (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="91">
+                <mxCell id="94" value="Dinner (Choose Time)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="91" vertex="1">
                     <mxGeometry y="78" width="150" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="95" value="Extra Meal " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="91">
+                <mxCell id="95" value="Extra Meal " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="91" vertex="1">
                     <mxGeometry y="104" width="150" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="96" value="Extra Meal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="91">
+                <mxCell id="96" value="Extra Meal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="91" vertex="1">
                     <mxGeometry y="130" width="150" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="97" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                <mxCell id="97" value="Daily Planner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="140" y="130" width="150" height="156" as="geometry"/>
                 </mxCell>
-                <mxCell id="103" value="Daily Meal" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="103" value="Daily Meal" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-140" y="205" width="80" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="104" value="&lt;span style=&quot;&quot;&gt;Show&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;Change&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;Delete&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="104" value="&lt;span style=&quot;&quot;&gt;Show&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;Change&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;Delete&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="185" y="180" width="70" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="&lt;p style=&quot;line-height: 120%;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Mobile screen&lt;/font&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="1370" width="240" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="1440" width="400" height="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="Navbar" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="1440" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1530" width="262.5" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="User 1 Planner" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="318.75" y="1490" width="191.25" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="Monday breakfast" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1530" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Monday lunch" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1620" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="Monday dinner" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1710" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="Tuesday breakfast" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1800" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="Tuesday lunch" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1890" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="Tuesday dinner" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="307.5" y="1980" width="262.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="1570" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="1570" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="1570" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1570" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1575" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1585" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1595" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1577.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1587.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1597.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="1660" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="1660" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="1660" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1660" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1665" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1675" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1685" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1667.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1677.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1687.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="1750" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="1750" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="1750" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1750" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1755" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1765" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1775" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1757.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1767.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1777.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="1840" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="1840" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="1840" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1840" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1845" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1855" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="1865" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1847.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1857.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1867.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="318.75" y="1930" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="378.75" y="1930" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="438.75" y="1930" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="508.75" y="1930" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="513.75" y="1935" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="513.75" y="1945" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="174" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="513.75" y="1955" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="175" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="518.75" y="1937.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="518.75" y="1947.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="518.75" y="1957.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="2020" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="2020" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="2020" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="2020" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="2025" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="183" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="2035" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="515" y="2045" width="40" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="Show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="2027.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="2037.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="Delete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="2047.5" width="30" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="188" value="IMG" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="518.75" y="1490" width="30" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
