@@ -21,6 +21,10 @@
 .teamCard {
   border-radius: 20px;
   border: 1px solid rgb(189, 187, 182);
+  transition: all ease-in 0.15s;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
+}
+.teamCard:hover {
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
@@ -55,12 +59,12 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1050px) {
   .teamCards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .teamCards {
     grid-template-columns: 1fr;
   }
