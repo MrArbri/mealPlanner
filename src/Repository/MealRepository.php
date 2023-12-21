@@ -40,11 +40,67 @@ class MealRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+    public function findMealsWithCaloriesUnder300()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 300)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder400()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 400)
+            ->getQuery()
+            ->getResult();
+    }
     public function findMealsWithCaloriesUnder500()
     {
         return $this->createQueryBuilder('m')
             ->andWhere('m.calories < :maxCalories')
             ->setParameter('maxCalories', 500)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder600()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 600)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder700()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 700)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder800()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 800)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder900()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 900)
+            ->getQuery()
+            ->getResult();
+    }
+    public function findMealsWithCaloriesUnder1000()
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.calories < :maxCalories')
+            ->setParameter('maxCalories', 1000)
             ->getQuery()
             ->getResult();
     }

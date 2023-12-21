@@ -35,11 +35,14 @@ class MealController extends AbstractController
     {
         // Fetch only approved meals
         $approvedMeals = $mealRepository->findApprovedMeals();
+        $user = $this->getUser();
 
         return $this->render('meal/index.html.twig', [
             'meals' => $approvedMeals,
+            'user' => $user
         ]);
     }
+
     #[Route('/filter', name: 'app_filter', methods: ['GET'])]
     public function filter(Request $request, mealRepository $mealRepository): Response
     {
@@ -51,8 +54,29 @@ class MealController extends AbstractController
             'meals' => $filteredMeals,
         ]);
     }
-    #[Route('/filter_by_calories', name: 'app_filter_by_calories', methods: ['GET'])]
-    public function filterByCalories(MealRepository $mealRepository): Response
+
+    #[Route('/calories300', name: 'app_filter300', methods: ['GET'])]
+    public function filter300(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 300
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder300();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calories400', name: 'app_filter400', methods: ['GET'])]
+    public function filter400(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder400();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calorie500', name: 'app_filter500', methods: ['GET'])]
+    public function filter500(MealRepository $mealRepository): Response
     {
     // Filter meals with calories under 500
     $filteredMeals = $mealRepository->findMealsWithCaloriesUnder500();
@@ -61,6 +85,57 @@ class MealController extends AbstractController
         'meals' => $filteredMeals,
     ]);
     }
+    #[Route('/calories600', name: 'app_filter600', methods: ['GET'])]
+    public function filter600(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder600();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calories700', name: 'app_filter700', methods: ['GET'])]
+    public function filter700(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder700();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calories800', name: 'app_filter800', methods: ['GET'])]
+    public function filter800(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder800();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calories900', name: 'app_filter900', methods: ['GET'])]
+    public function filter900(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder900();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+    #[Route('/calories1000', name: 'app_filter1000', methods: ['GET'])]
+    public function filter1000(MealRepository $mealRepository): Response
+    {
+    // Filter meals with calories under 500
+    $filteredMeals = $mealRepository->findMealsWithCaloriesUnder1000();
+
+    return $this->render('meal/index.html.twig', [
+        'meals' => $filteredMeals,
+    ]);
+    }
+
     #[Route('/new', name: 'app_meal_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {

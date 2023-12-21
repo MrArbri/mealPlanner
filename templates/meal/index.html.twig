@@ -16,7 +16,7 @@
 
 			<div class="dropdown">
 				<button class="dropdown-toggle dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-					Sort by
+					Sort by Taste
 				</button>
 				<ul class="dropdown-menu">
 					<li>
@@ -28,11 +28,25 @@
 					<li>
 						<a href="{{ path('app_filter', {'type':'Non-Vegetarian'}) }}" class="something mb-4">Non-Vegetarian</a>
 					</li>
-					<li>
-						<a href="{{ path('app_filter_by_calories') }}" class="something mb-4">Calories Under 500</a>
-					</li>
 				</ul>
 			</div>
+
+			<div class="dropdown">
+				<button class="dropdown-toggle dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Sort by calories
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="{{ path('app_filter300') }}" class="something mb-4">Calories Under 300</a></li>
+					<li><a href="{{ path('app_filter400') }}" class="something mb-4">Calories Under 400</a></li>
+					<li><a href="{{ path('app_filter500') }}" class="something mb-4">Calories Under 500</a></li>
+					<li><a href="{{ path('app_filter600') }}" class="something mb-4">Calories Under 600</a></li>
+					<li><a href="{{ path('app_filter700') }}" class="something mb-4">Calories Under 700</a></li>
+					<li><a href="{{ path('app_filter800') }}" class="something mb-4">Calories Under 800</a></li>
+					<li><a href="{{ path('app_filter900') }}" class="something mb-4">Calories Under 900</a></li>
+					<li><a href="{{ path('app_filter1000') }}" class="something mb-4">Calories Under 1000</a></li>
+				</ul>
+			  </div>
+
 		</div>
 
 
@@ -66,7 +80,9 @@
 							{% endif %}
 							<div class="btnHolder">
 								<a class="showBtn" href="{{ path('app_meal_show', {'id': meal.id}) }}">show</a>
-								<a class="editBtn" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+								{% if meal.creator.id == user.id %}
+									<a class="editBtn" href="{{ path('app_meal_edit', {'id': meal.id}) }}">edit</a>
+								{% endif %}
 							</div>
 						</div>
 					</div>
