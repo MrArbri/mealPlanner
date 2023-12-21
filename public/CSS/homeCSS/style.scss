@@ -270,6 +270,8 @@ body{
   .registerText{margin-top: 1rem;}
   .heroBtn{padding: 0.2rem 0.4rem;}
   .heroSection{ font-size: 13.5px; }
+  .welcomeText{font-size: 2.5rem;}
+  .heroLoginProfilePic{height: 80px; width: 80px;}
 }
 
 @media only screen and (max-width: 650px) {
@@ -280,4 +282,5 @@ body{
 
 @media only screen and (max-width: 400px) {
   .heroTitle{font-size: 4rem;}
+  .heroLoginProfilePic{height: 50px; width: 50px;}
 }
