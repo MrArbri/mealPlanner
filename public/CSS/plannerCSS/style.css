@@ -35,9 +35,9 @@ body {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
+  background-color: rgb(245, 228, 215);
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border: 3px solid rgb(189, 187, 182);
+  border: 3px solid rgb(229, 209, 208);
 }
 
 .details {
@@ -48,16 +48,16 @@ body {
 td {
   padding: 5px;
   text-align: center;
-  border: 3px solid rgb(189, 187, 182);
-  background-color: white;
+  border: 3px solid rgb(229, 209, 208);
+  background-color: rgb(245, 228, 215);
 }
 
 th {
   padding: 10px;
   text-align: center;
-  border: 3px solid rgb(189, 187, 182);
+  border: 3px solid rgb(229, 209, 208);
   background-color: rgb(31, 29, 27);
-  color: white;
+  color: rgb(229, 209, 208);
 }
 
 img {
