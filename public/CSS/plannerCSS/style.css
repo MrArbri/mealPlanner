@@ -138,4 +138,8 @@ img {
   background-color: #AF2727;
   border: none;
   color: rgb(245, 228, 215);
+}
+
+.marginBottom {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
