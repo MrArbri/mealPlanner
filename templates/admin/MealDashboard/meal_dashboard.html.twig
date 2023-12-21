@@ -38,6 +38,7 @@
 							{% if meal.creator %}
 								<p class="card-text fw-semibold mt-3">{{ meal.creator.username }}</p>
 							{% endif %}
+							<p class="card-text fw-semibold mt-3">{{ meal.isVerified == 1 ? "Approved": "Not approved" }}</p>
 							<div class="btnHolder">
 								<a class="showBtn" href="{{ path('app_mealDashboard_show', {'id': meal.id}) }}">show</a>
 								<a class="editBtn" href="{{ path('app_mealDashboard_edit', {'id': meal.id}) }}">edit</a>
