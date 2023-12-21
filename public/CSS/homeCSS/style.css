@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.addPaddingtop {
+  padding-top: 2rem;
+}
+
 .heroImgContainer {
   width: 100%;
   height: 80vh;
@@ -27,7 +31,7 @@
   transform: translate(-50%, -50%);
   color: rgb(245, 228, 215);
   text-align: center;
-  max-width: 80%;
+  width: 100%;
 }
 
 .heroTitle {
@@ -105,9 +109,9 @@ body {
 
 .purpleLogo {
   position: absolute;
-  bottom: -100px;
+  bottom: -50px;
   rotate: 30deg;
-  left: 50px;
+  left: 20px;
   width: 300px;
 }
 
@@ -222,13 +226,72 @@ body {
   margin: 1rem 0;
 }
 
+@media only screen and (max-width: 1050px) {
+  .heroTitle {
+    font-size: 7rem;
+  }
+  .registerText {
+    margin-top: 3rem;
+  }
+}
 @media only screen and (max-width: 980px) {
   .foodDisplayCards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .purpleLogo {
+    width: 250px;
+  }
+  .heroTitle {
+    font-size: 7rem;
+  }
+  .registerText {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .purpleLogo {
+    width: 200px;
+    bottom: -30px;
+  }
+  .heroTitle {
+    font-size: 6rem;
+  }
+  .registerText {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .purpleLogo {
+    width: 200px;
+    bottom: -30px;
+  }
+  .heroTitle {
+    font-size: 5rem;
+  }
+  .registerText {
+    margin-top: 1rem;
+  }
+  .heroBtn {
+    padding: 0.2rem 0.4rem;
+  }
+  .heroSection {
+    font-size: 13.5px;
   }
 }
 @media only screen and (max-width: 650px) {
   .foodDisplayCards {
     grid-template-columns: 1fr;
+  }
+  .purpleLogo {
+    width: 150px;
+    bottom: -20px;
+  }
+  .heroTitle {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .heroTitle {
+    font-size: 4rem;
   }
 }/*# sourceMappingURL=style.css.map */
