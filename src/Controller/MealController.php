@@ -169,6 +169,7 @@ class MealController extends AbstractController
     #[Route('/{id}', name: 'app_meal_show', methods: ['GET', 'POST'])]
     public function show(Meal $meal, Request $request, EntityManagerInterface $entityManager): Response
     {
+        $user = $this->getUser();
         // This is for the planner
         $planner = new Planner();
         $plan = $this->createForm(Planner1Type::class, $planner);
@@ -188,6 +189,7 @@ class MealController extends AbstractController
             'meal' => $meal,
             'planner' => $planner,
             'plan' => $plan,
+            'user' => $user
         ]);
     }
 
