@@ -47,54 +47,72 @@
 {% block title %}Meal
 {% endblock %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset("CSS/mealShowCSS/style.css")}}">
+{% endblock %}
+
 {% block body %}
 	<div class="container" style="max-width:900px; min-height:100vh;">
-		<h1 class="text-center m-2">Meal details</h1>
+		<h1 class="text-center mainTitle">Meal details</h1>
 
 		<div class='p-2'>
 			<div class='card1 h-100'>
-				<img src={{ planner.fkMeal.picture }} class='card-img-top object-fit-cover' style='height:30rem;' alt={{ planner.fkMeal.name }}>
+				<img src={{ planner.fkMeal.picture }} class='card-img-top object-fit-cover showImg' style='height:30rem;' alt={{ planner.fkMeal.name }}>
 				<div class='card-body'>
 					<h2 class='card-title my-2'>
 						{{ planner.fkMeal.name }}</h2>
 					{% set maximum_stars = 5 %}
-							{% if planner.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(planner.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (planner.fkMeal.rating) - (planner.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - planner.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
+					{% if planner.fkMeal.rating <= maximum_stars %}
+						{% for star in 0..(planner.fkMeal.rating) %}
+							{% if star != 0 %}
+								<i class="bi bi-star-fill text-warning"></i>
 							{% endif %}
-			
-					<p class='card-text mt-2'>Ingredients:
-						{{ planner.fkMeal.ingredients }}</p>
-					<p class='card-text'>Description:
-						{{ planner.fkMeal.description }}</p>
-					<p class='card-text'>Preparation:
-						{{ planner.fkMeal.preparation }}</p>
-					<p class='card-text'><i class="fa-solid fa-clock"></i> Prep:
-						{{ planner.fkMeal.prepTime ? planner.fkMeal.prepTime|date('H:i') : '' }} h/min</p>
-					{% if planner.fkMeal.creator %}
-						<p class="card-text fw-semibold mt-3">Recipe by: {{ planner.fkMeal.creator.username }}</p>
+						{% endfor %}
+						{% if (planner.fkMeal.rating) - (planner.fkMeal.rating|round(0, 'floor')) != 0 %}
+							<i class="bi bi-star-half text-warning"></i>
+						{% endif %}
+						{% for star in 0..(maximum_stars - planner.fkMeal.rating|round(0, 'ceil')) %}
+							{% if star != 0 %}
+								<i class="bi bi-star emptyStar text-warning"></i>
+							{% endif %}
+						{% endfor %}
 					{% endif %}
-					<p class='card-text'>Calories:
+
+					<p class='card-text mt-3'>
+						<i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+						<b>Ingredients:</b>
+						{{ planner.fkMeal.ingredients }}</p>
+					<p class='card-text'>
+						<i class="bi bi-info-circle-fill"></i>
+						<b>Description:</b>
+						{{ planner.fkMeal.description }}</p>
+					<p class='card-text'>
+						<i class="fa-solid fa-list-check"></i>
+						<b>Preparation:</b>
+						{{ planner.fkMeal.preparation }}</p>
+					<p class='card-text'>
+						<i class="fa-solid fa-clock"></i>
+						<b>Prep time:</b>
+						{{ planner.fkMeal.prepTime ? planner.fkMeal.prepTime|date('H:i') : '' }}
+						h/min</p>
+					{% if planner.fkMeal.creator %}
+						<p class="card-text fw-semibold mt-3">
+							<i class="fa-solid fa-user"></i>
+							<b>Recipe by:</b>
+							{{ planner.fkMeal.creator.username }}</p>
+					{% endif %}
+					<p class='card-text'>
+						<i class="fa-solid fa-fire"></i>
+						<b>Calories:</b>
 						{{ planner.fkMeal.calories }}</p>
-					<p class='card-text'>Meal type:
+					<p class='card-text'>
+						<i class="fa-solid fa-utensils"></i>
+						<b>Meal type:</b>
 						{{ planner.fkMeal.type }}
 					</p>
-					<div class='d-flex justify-content-start'>
-						<a class="backBtn" href="{{ path('app_planner1_index') }}">Back to list</a>
-			
-
-						 {{ include('planner1/_delete_form.html.twig') }}
+					<div class="plannerBtnHolder">
+						{{ include('planner1/_delete_form.html.twig') }}
+						<a class="backButtonPlanner" href="{{ path('app_planner1_index') }}">Back to list</a>
 					</div>
 				</div>
 			</div>

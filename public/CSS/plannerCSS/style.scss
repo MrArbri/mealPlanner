@@ -107,15 +107,15 @@ img{
 .backButton{
   display: inline-block;
   color: white;
-  background-color: $color_cream;
-  background-color: $color_green;
+  background-color: #62b0cf;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.3rem 3rem;
   transition: all 0.15s ease-in;
   &:hover{
-    background-color: $color_darkGreen;
+    background-color: #1e94c2;
+    color: whitesmoke;
     border:none;
   }
 }

@@ -97,8 +97,7 @@ img {
 .backButton {
   display: inline-block;
   color: white;
-  background-color: rgb(245, 228, 215);
-  background-color: rgb(131, 151, 136);
+  background-color: #62b0cf;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
@@ -106,7 +105,8 @@ img {
   transition: all 0.15s ease-in;
 }
 .backButton:hover {
-  background-color: rgb(115, 135, 123);
+  background-color: #1e94c2;
+  color: whitesmoke;
   border: none;
 }
 
