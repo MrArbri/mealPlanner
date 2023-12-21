@@ -1,357 +1,3 @@
-{# {% extends 'base.html.twig' %}
-
-{% block title %}Planner index{% endblock %}
-
-{% block stylesheets %}
-<link rel="stylesheet" href="{{asset("CSS/plannerindexCSS/style.css")}}">
-{% endblock %}
-
-{% block body %}
-
-<div class="mainContainer">
-  <div class="container1">
-    <h1 class="text-center m-4">My weekly planner</h1>
-
-    <table class="tablePlanner">
-            <tr>
-                <th class="text-secondary bg-light">Days/Details</th>
-                <th>Id</th>
-                <th>Time</th>
-                <th>Meal</th>
-                <th>Card</th>
-                <th>Actions</th>    
-            </tr>
-            <tr>
-                <th>Monday</th>
-                {% for day in monday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                </div>
-				</td> 
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Monday</td>
-            
-                {% endfor %}
-                <td></td>
-                </tr>  
-            
-            <tr>
-                <th>Tuesday</th>
-                {% for day in tuesday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                  </div>
-				</td> 
-                
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Tuesday</td>
-            
-                {% endfor %} 
-                <td></td> 
-            </tr>
-            <tr>
-                <th>Wednesday</th>
-                {% for day in wednesday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                  </div>
-				</td> 
-                
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Wednesday</td>
-            
-                {% endfor %}
-                <td></td>  
-            </tr>
-            <tr>
-                <th>Thursday</th>
-                {% for day in thursday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                  </div>
-				</td> 
-                
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Thursday</td>
-            
-                {% endfor %}
-                <td></td>  
-            </tr>
-            <tr>
-                <th>Friday</th>
-                {% for day in friday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                  </div>
-				</td> 
-                
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Friday</td>
-            
-                {% endfor %}
-                <td></td>  
-            </tr>
-            <tr>
-                <th>Saturday</th>
-                {% for day in saturday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                  </div>
-				</td> 
-                
-                
-                {% else %}
-            
-                <td colspan="4">No records found for Saturday</td>
-            
-                {% endfor %} 
-                <td></td>
-            </tr>
-        
-        
-         <tr>
-         <th>Sunday</th>
-          {% for day in sunday %}
-            <td>{{ day.id }}</td>
-            <td>{{ day.time }}</td>
-            <td><img width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" alt="{{ day.fkMeal.name }}"></td>
-            <td>
-                  <div class="col">
-                    <div class="card1">
-						<div class="card-body">
-							<div>
-								<img class="picture" width="50px;" height="50px;" src="{{ day.fkMeal.picture }}" class="card-img-top" alt="meal Image">
-							</div>
-							<h3 class="card-title mb-2">{{ day.fkMeal.name }}</h3>
-							{% set maximum_stars = 5 %}
-							{% if day.fkMeal.rating <= maximum_stars %}
-								{% for star in 0..(day.fkMeal.rating) %}
-									{% if star != 0 %}
-										<i class="bi bi-star-fill text-warning"></i>
-									{% endif %}
-								{% endfor %}
-								{% if (day.fkMeal.rating) - (day.fkMeal.rating|round(0, 'floor')) != 0 %}
-									<i class="bi bi-star-half text-warning"></i>
-								{% endif %}
-								{% for star in 0..(maximum_stars - day.fkMeal.rating|round(0, 'ceil')) %}
-									{% if star != 0 %}
-										<i class="bi bi-star emptyStar text-warning"></i>
-									{% endif %}
-								{% endfor %}
-							{% endif %}
-							{% if day.fkMeal.creator %}
-								<p class="card-text fw-semibold mt-3">{{ day.fkMeal.creator.username }}</p>
-							{% endif %}
-						</div>
-					</div>
-                </div>
-                </td> 
-            
-                {% else %}
-            
-                <td colspan="4">No records found for Sunday</td>
-            
-                {% endfor %}
-                
-         <td></td> 
-        </tr>
-        </tbody>
-    </table>
-  </div>
-</div>
-{% endblock %} #}
-
-
 
  {% extends 'base.html.twig' %}
 
@@ -386,8 +32,8 @@
             {% if mondayBreakfast|length > 0 %}
             {% for val in mondayBreakfast %}
               <td>
-			{# <img width="100px;" height="60px;" src="{{ val.fkUser.avatar }}" ><br>  #}
-			{{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+			<img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
 		
 			
@@ -407,11 +53,10 @@
             {% if mondayLunch|length > 0 %}
             {% for val in mondayLunch %}
             <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
-			<td >
-           {{ val.fkUser.username }}
-           </td>
+			
             
             
             {% endfor %}
@@ -426,7 +71,8 @@
             {% if mondayDinner|length > 0 %}
             {% for val in mondayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
            
             {% endfor %}
@@ -449,7 +95,8 @@
             {% if tuesdayBreakfast|length > 0 %}
             {% for val in tuesdayBreakfast %}
               <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+           <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -465,7 +112,8 @@
             {% if tuesdayLunch|length > 0 %}
             {% for val in tuesdayLunch %}
             <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -480,7 +128,8 @@
             {% if tuesdayDinner|length > 0 %}
             {% for val in tuesdayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+           <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
               
             {% endfor %}
@@ -499,7 +148,8 @@
             {% if wednesdayBreakfast|length > 0 %}
             {% for val in wednesdayBreakfast %}
               <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -515,12 +165,13 @@
             {% if wednesdayLunch|length > 0 %}
             {% for val in wednesdayLunch %}
             <td>
-           {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+           <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
             {% else %}
-            <td colspan="5">
+            <td colspan="6">
             no data
             </td>
             {% endif %}
@@ -530,7 +181,8 @@
             {% if wednesdayDinner|length > 0 %}
             {% for val in wednesdayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+           <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
              
             {% endfor %}
@@ -549,7 +201,8 @@
             {% if thursdayBreakfast|length > 0 %}
             {% for val in thursdayBreakfast %}
               <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -565,7 +218,8 @@
             {% if thursdayLunch|length > 0 %}
             {% for val in thursdayLunch %}
             <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -580,7 +234,8 @@
             {% if thursdayDinner|length > 0 %}
             {% for val in thursdayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+          <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             <td>
                
@@ -603,7 +258,8 @@
             {% if fridayBreakfast|length > 0 %}
             {% for val in fridayBreakfast %}
               <td>
-          {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+          <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -619,7 +275,8 @@
             {% if fridayLunch|length > 0 %}
             {% for val in fridayLunch %}
             <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -634,7 +291,8 @@
             {% if fridayDinner|length > 0 %}
             {% for val in fridayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
           
             {% endfor %}
@@ -654,7 +312,8 @@
             {% if saturdayBreakfast|length > 0 %}
             {% for val in saturdayBreakfast %}
               <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+          <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -670,7 +329,8 @@
             {% if saturdayLunch|length > 0 %}
             {% for val in saturdayLunch %}
             <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -685,7 +345,8 @@
             {% if saturdayDinner|length > 0 %}
             {% for val in saturdayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
               
             {% endfor %}
@@ -705,12 +366,13 @@
             {% if sundayBreakfast|length > 0 %}
             {% for val in sundayBreakfast %}
               <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
             {% else %}
-           <td colspan="5">
+           <td colspan="6">
            no data
            </td>
            {% endif %}
@@ -721,7 +383,8 @@
             {% if sundayLunch|length > 0 %}
             {% for val in sundayLunch %}
             <td>
-           {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+           <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
             
             {% endfor %}
@@ -736,7 +399,8 @@
             {% if sundayDinner|length > 0 %}
             {% for val in sundayDinner %}
              <td>
-            {{ val.fkMeal.name }}<br> {{ val.fkUser.username }}<br>
+            <img  width="30px;" height="30px;" src="{{ val.fkUser.avatar }}">   
+			 {{ val.fkUser.username }} <br> {{ val.fkMeal.name }} 
             </td> 
               
             {% endfor %}
