@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,7 +18,7 @@ class ContactType extends AbstractType
 
             ->add('email', null, ['attr' => ['class' => 'form-control', 'placeholder' => 'Please enter your email'],])
 
-            ->add('message', null, ['attr' => ['class' => 'form-control', 'placeholder' => 'Please type your message here'],]);
+            ->add('message', TextareaType::class, ['attr' => ['class' => 'form-control', 'placeholder' => 'Please type your message here'],]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
