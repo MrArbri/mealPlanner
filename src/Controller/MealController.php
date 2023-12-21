@@ -230,13 +230,13 @@ class MealController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_meal_delete', methods: ['POST'])]
-    public function delete(Request $request, Meal $meal, EntityManagerInterface $entityManager): Response
+    #[Route('/delete/{id}', name: 'app_meal_delete', methods: ['GET'])]
+    public function delete(Meal $meal, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete' . $meal->getId(), $request->request->get('_token'))) {
-            $entityManager->remove($meal);
-            $entityManager->flush();
-        }
+        
+        $entityManager->remove($meal);
+        $entityManager->flush();
+        
 
         return $this->redirectToRoute('app_meal_index', [], Response::HTTP_SEE_OTHER);
     }
@@ -246,22 +246,23 @@ class MealController extends AbstractController
 
     // }
 
-    public function approveMeal(Meal $meal, EntityManagerInterface $entityManager)
-    {
-        // Handle approval logic
-        $meal->setIsVerified(true);
-        $entityManager->persist($meal);
-        $entityManager->flush();
+    // public function approveMeal(Meal $meal, EntityManagerInterface $entityManager)
+    // {
+    //     // Handle approval logic
+    //     $meal->setIsVerified(true);
+    //     $entityManager->persist($meal);
+    //     $entityManager->flush();
 
-        // Redirect or return a response
-    }
+    //     // Redirect or return a response
+    // }
 
-    public function removeMeal(Meal $meal, EntityManagerInterface $entityManager)
-    {
-        // Handle removal logic
-        $entityManager->remove($meal);
-        $entityManager->flush();
 
-        // Redirect or return a response
-    }
+    // public function removeMeal(Meal $meal, EntityManagerInterface $entityManager)
+    // {
+    //     // Handle removal logic
+    //     $entityManager->remove($meal);
+    //     $entityManager->flush();
+
+    //     // Redirect or return a response
+    // }
 }
