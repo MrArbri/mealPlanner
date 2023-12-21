@@ -1,20 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset("CSS/editMealCSS/style.css")}}">
+	<link rel="stylesheet" href="{{asset("CSS/editMealCSS/style.css")}}">
 {% endblock %}
 
-{% block title %}Edit Meal{% endblock %}
+{% block title %}Edit Meal
+{% endblock %}
 
 {% block body %}
-<div class="container1">
- <div class="form1">
-    <h1 class="text-center">Edit Meal</h1>
+	<div class="container1">
+		<div class="form1">
+			<h1 class="text-center">Edit Meal</h1>
 
-    {{ include('meal/_form.html.twig', {'button_label': 'Update'}) }}
+			{{ include('meal/_form.html.twig', {'button_label': 'Save changes'}) }}
 
-    <a href="{{ path('app_meal_index') }}">back to list</a>
+			<div class="editBtnHolder">
+				{{ include('meal/_delete_form.html.twig') }}
+				<a class="backButton" href="{{ path('app_meal_index') }}">back to list</a>
+			</div>
 
-    {{ include('meal/_delete_form.html.twig') }}
- </div>
-</div>
+		</div>
+	</div>
 {% endblock %}

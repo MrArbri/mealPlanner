@@ -10,7 +10,7 @@ $color_purpleHover:rgb(191, 170, 169);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 .teamCards{
   display: grid;
@@ -29,6 +29,7 @@ $color_purpleHover:rgb(191, 170, 169);
 .teamCard{
   border-radius: 20px;
   border: 1px solid $color_silver;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
 .teamCardContent{

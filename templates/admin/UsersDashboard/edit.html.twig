@@ -7,12 +7,13 @@
 {% endblock %}
 {% block body %}
 	<div class="container">
-		<h1>Update Profile</h1>
+		<h1 class="mainTitle">Update Profile</h1>
 
-		{{ include('admin/UsersDashboard/_form.html.twig', {'button_label': 'Update'}) }}
+		{{ include('admin/UsersDashboard/_form.html.twig', {'button_label': 'Update profile'}) }}
 
-		<a class="btn btn-primary" href="{{ path('app_admin_index') }}">Back to list</a>
-
-		{{ include('admin/UsersDashboard/_delete_form.html.twig') }}
+		<div class="updateBtnHolder">
+			{{ include('admin/UsersDashboard/_delete_form.html.twig') }}
+			<a class="backButton" href="{{ path('app_admin_index') }}">Back to list</a>
+		</div>
 	</div>
 {% endblock %}

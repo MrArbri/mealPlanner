@@ -1,15 +1,20 @@
-*, *::before, *::after {
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+
+.container{
   min-height: 100vh;
 }
-
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: whitesmoke;
   color: #333;
   margin: 0;
@@ -23,7 +28,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-  border: 1px solid rgb(189, 187, 182);
+  border: 1px solid $color_silver;
 }
 
 h1 {
@@ -46,7 +51,7 @@ input, button {
   box-sizing: border-box;
 }
 
-.backButton {
+.backButton{
   display: inline-block;
   color: white;
   background-color: #62b0cf;
@@ -55,57 +60,57 @@ input, button {
   text-decoration: none;
   padding: 0.3rem 1rem;
   transition: all 0.15s ease-in;
-}
-.backButton:hover {
-  background-color: #1e94c2;
-  border: none;
-  color: whitesmoke;
+  &:hover{
+    background-color: #1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
 }
 
-.deleteButton {
+.deleteButton{
   border: none;
   display: inline-block;
-  color: rgb(245, 228, 215);
+  color: $color_cream;
   background-color: #D74C4C;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.3rem 1rem;
   transition: all 0.15s ease-in;
-}
-.deleteButton:hover {
-  background-color: #AF2727;
-  border: none;
-  color: rgb(245, 228, 215);
+  &:hover{
+    background-color: #AF2727;
+    border:none;
+    color: $color_cream;
+  }
 }
 
-.saveButton {
+.saveButton{
   border: none;
   width: 200px;
-  color: rgb(245, 228, 215);
-  background-color: rgb(131, 151, 136);
+  color: $color_cream;
+  background-color: $color_green;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.3rem 1rem;
   transition: all 0.15s ease-in;
   margin-bottom: 1rem;
-}
-.saveButton:hover {
-  background-color: rgb(115, 135, 123);
-  border: none;
-  color: rgb(245, 228, 215);
+  &:hover{
+    background-color: $color_darkGreen;
+    border:none;
+    color: $color_cream;
+  }
 }
 
-.updateBtnHolder {
+.updateBtnHolder{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.saveBtnHolder {
+.saveBtnHolder{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 0.5rem 0;
-}/*# sourceMappingURL=style.css.map */
+}

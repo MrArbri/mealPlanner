@@ -15,6 +15,10 @@ body{
   background-color: whitesmoke;
 }
 
+.showImg{
+  border-radius: 20px;
+}
+
 .bi-star-fill, .bi-star-half {
   filter: drop-shadow(0 0 2px rgb(255,193,7));
   animation: blink 1s infinite;
@@ -34,3 +38,103 @@ body{
   color: #474F57;
 }
 
+.backButton{
+  display: inline-block;
+  color: white;
+  background-color: #62b0cf;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem 3rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color: #1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
+}
+
+.editButton{
+    display: inline-block;
+    color: $color_cream;
+    background-color: $color_green;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    transition: all 0.15s ease-in;
+    margin-bottom: 1rem;
+    &:hover{
+      background-color: $color_darkGreen;
+      border:none;
+      color: $color_cream;
+    }
+}
+
+.deleteButton{
+  border: none;
+  display: inline-block;
+  color: $color_cream;
+  background-color: #D74C4C;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color: #AF2727;
+    border:none;
+    color: $color_cream;
+  }
+}
+
+.addToPlannerBtn{
+  display: inline-block;
+  border: none;
+  color: white;
+  background-color: #62b0cf;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color:#1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
+}
+
+.addToPlannerBtnHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.mainTitle{
+  margin: 2rem 0;
+}
+
+.mealPlanner{
+  border: $color_silver solid 1px;
+  padding:0 2rem;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  margin: 3rem 0;
+
+}
+
+.showBtnHolder{
+  display: block;
+}
+
+.backBtnHolder{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

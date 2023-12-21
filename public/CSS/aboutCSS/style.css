@@ -21,6 +21,7 @@
 .teamCard {
   border-radius: 20px;
   border: 1px solid rgb(189, 187, 182);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
 .teamCardContent {

@@ -144,7 +144,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgb(131, 151, 136);
+  background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 10px;
   padding: 10px;
@@ -153,7 +153,6 @@ body {
 
 .dropdown-menu a {
   display: block;
-  color: #343a40;
-  padding: 10px;
+  color: whitesmoke;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

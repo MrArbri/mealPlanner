@@ -9,18 +9,20 @@
 
 {% block body %}
 	<div class="mainContainer">
-		<p class="mainTitle">Contact us</p>
-		<div class="container">
+		<div class="contactOutline">
+			<p class="mainTitle">Contact us</p>
+			<div class="container">
 
-			{{ form_start(form) }}
-			{{ form_widget(form) }}
-			<div class="submitBtnHolder">
-				<button class="sendButton">
-					<i class="fa-solid fa-paper-plane"></i>
-					{{ button_label|default('Send') }}</button>
+				{{ form_start(form) }}
+				{{ form_widget(form) }}
+				<div class="submitBtnHolder">
+					<button class="sendButton">
+						<i class="fa-solid fa-paper-plane"></i>
+						{{ button_label|default('Send') }}</button>
+				</div>
+				{{ form_end(form) }}
+
 			</div>
-			{{ form_end(form) }}
-
 		</div>
 	</div>
 {% endblock %}

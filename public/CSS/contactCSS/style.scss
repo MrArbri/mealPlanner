@@ -19,7 +19,7 @@ $color_purpleHover:rgb(191, 170, 169);
   align-items: center;
   margin: 2rem 0;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 // SUBMIT BUTTON
@@ -56,7 +56,7 @@ $color_purpleHover:rgb(191, 170, 169);
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   transition: all 0.15s ease-in;
   margin-bottom: 1rem;
   border: none;
@@ -65,4 +65,16 @@ $color_purpleHover:rgb(191, 170, 169);
     border:none;
     color: whitesmoke;
   }
+}
+
+.contactOutline{
+  border: 1px solid $color_silver;
+  background-color: white;
+  margin: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+body{
+  background-color: whitesmoke;
 }

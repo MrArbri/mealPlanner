@@ -1,22 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Planner{% endblock %}
+{% block title %}Edit Planner
+{% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset("CSS/plannerCSS/style.css")}}">
+	<link rel="stylesheet" href="{{asset("CSS/plannerCSS/style.css")}}">
 {% endblock %}
 
 {% block body %}
-<div class="mainContainer">
-  <div class="editContainer">
- 
-    <h1 class="text-center m-4">Edit Planner</h1>
+	<div class="mainContainer">
+		<div class="editContainer">
 
-    {{ include('meal/_plan.html.twig', {'button_label': 'Update'}) }}
+			<h1 class="mainTitle">Edit Planner</h1>
 
-    <a class="btn btn-outline-primary my-1" href="{{ path('app_planner1_index') }}">Back to my planner</a>
+			{{ include('meal/_plan.html.twig', {'button_label': 'Update meal plan'}) }}
 
-    {{ include('planner1/_delete_form.html.twig') }}
-  </div>
-</div>
+			<div class="editPlannerBtnHolder">
+				{{ include('planner1/_delete_form.html.twig') }}
+				<a class="backButton" href="{{ path('app_planner1_index') }}">Back to my planner</a>
+			</div>
+		</div>
+	</div>
 {% endblock %}

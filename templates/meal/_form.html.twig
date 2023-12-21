@@ -1,4 +1,8 @@
+<link rel="stylesheet" href="{{asset("CSS/createCSS/style.css")}}">
+
 {{ form_start(form) }}
 {{ form_widget(form) }}
-<button class="btn btn-light">{{ button_label|default('Save') }}</button>
+<div class="saveButtonHolder">
+	<button class="saveButton">{{ button_label|default('Create meal') }}</button>
+</div>
 {{ form_end(form) }}

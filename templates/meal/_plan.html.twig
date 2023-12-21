@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="{{asset("CSS/mealShowCSS/style.css")}}">
 
 {{ form_start(plan) }}
 
-    {{ form_widget(plan) }}
-    
-  <button class="btn addBtn">{{ button_label|default('Add to Planner') }}</button> 
+{{ form_widget(plan) }}
+<div class="addToPlannerBtnHolder">
+	<button class="addToPlannerBtn">
+		{{ button_label|default('Add to Planner') }}</button>
+</div>
+
 
 {{ form_end(plan) }}
-
- 

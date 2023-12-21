@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register
+{% block title %}Sign up
 {% endblock %}
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{ asset("CSS/registerCSS/style.css") }}">
@@ -9,7 +9,7 @@
 
 
 	<div class="container">
-		<h1>Register</h1>
+		<h1 class="mainTitleRegister">Sign up</h1>
 
 		{{ form_errors(registrationForm) }}
 
@@ -30,7 +30,10 @@
 		{{ form_row(registrationForm.avatar, {'attr': {'placeholder': 'Enter URL for your avatar'}}) }}
 		{{ form_row(registrationForm.agreeTerms) }}
 
-		<button type="submit" class="btn btn-primary">Register</button>
+		<div class="signUpBtnHolder">
+			<button type="submit" class="signUpBtn">Sign up</button>
+		</div>
+
 		{{ form_end(registrationForm) }}
 	</div>
 

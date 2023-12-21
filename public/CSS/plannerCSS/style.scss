@@ -1,27 +1,36 @@
-*, *::before, *::after {
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container1 {
-  margin: 10px 40px;
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+
+
+.container1{
+  margin:10px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.editContainer {
-  margin: 20px 140px;
+.editContainer{
+  margin:20px 140px;
   padding: 30px;
   background-color: white;
-  border: rgb(189, 187, 182) 1px solid;
+  border: $color_silver 1px solid;
   border-radius: 10px;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+
 }
 
-.editContainer > input {
+.editContainer>input{
   background-color: #fff;
+
 }
 
 .tablePlanner {
@@ -34,12 +43,12 @@
   border: 3px solid rgb(229, 209, 208);
 }
 
-.details {
+.details{
   background-color: rgb(31, 29, 27);
   color: grey;
 }
 
-td {
+ td {
   padding: 5px;
   text-align: center;
   border: 3px solid rgb(229, 209, 208);
@@ -49,17 +58,18 @@ td {
 th {
   padding: 10px;
   text-align: center;
-  border: 3px solid rgb(229, 209, 208);
+  border: 3px solid rgb(229, 209, 208); 
   background-color: rgb(31, 29, 27);
-  color: rgb(229, 209, 208);
+  color: rgb(229, 209, 208) ;
 }
 
-img {
-  -o-object-fit: cover;
-     object-fit: cover;
+img{
+  object-fit: cover;
   border-radius: 10px;
   filter: drop-shadow(5px 5px rgb(164, 161, 161));
+
 }
+
 
 .showBtn {
   display: inline-block;
@@ -70,56 +80,57 @@ img {
   text-decoration: none;
   padding: 0.2rem 0.5rem;
   transition: all 0.15s ease-in;
+  &:hover{
+    border: 2px solid #1e94c2;
+    background-color: #1e94c2;
+    color: white;
+  }
 }
-.showBtn:hover {
-  border: 2px solid #1e94c2;
-  background-color: #1e94c2;
-  color: white;
-}
+
 
 .editBtn {
   display: inline-block;
   color: black;
-  border: 2px solid rgb(131, 151, 136);
+  border: 2px solid $color_green;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.2rem 0.5rem;
   transition: all 0.15s ease-in;
-  margin: 5px 0;
-}
-.editBtn:hover {
-  background-color: rgb(115, 135, 123);
-  border: 2px solid rgb(115, 135, 123);
-  color: rgb(245, 228, 215);
+  margin:5px 0;
+  &:hover{
+    background-color: $color_darkGreen;
+    border: 2px solid $color_darkGreen;
+    color: $color_cream;
+  }
 }
 
-.backButton {
+.backButton{
   display: inline-block;
   color: white;
-  background-color: rgb(245, 228, 215);
-  background-color: rgb(131, 151, 136);
+  background-color: $color_cream;
+  background-color: $color_green;
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.3rem 3rem;
   transition: all 0.15s ease-in;
-}
-.backButton:hover {
-  background-color: rgb(115, 135, 123);
-  border: none;
+  &:hover{
+    background-color: $color_darkGreen;
+    border:none;
+  }
 }
 
-.editPlannerBtnHolder {
+.editPlannerBtnHolder{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.deleteButton {
+.deleteButton{
   border: none;
   display: inline-block;
-  color: rgb(245, 228, 215);
+  color: $color_cream;
   background-color: #D74C4C;
   border-radius: 10px;
   text-transform: uppercase;
@@ -127,9 +138,9 @@ img {
   padding: 0.3rem 1rem;
   transition: all 0.15s ease-in;
   margin-bottom: 1rem;
+  &:hover{
+    background-color: #AF2727;
+    border:none;
+    color: $color_cream;
+  }
 }
-.deleteButton:hover {
-  background-color: #AF2727;
-  border: none;
-  color: rgb(245, 228, 215);
-}/*# sourceMappingURL=style.css.map */

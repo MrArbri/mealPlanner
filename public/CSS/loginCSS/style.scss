@@ -1,35 +1,41 @@
-*, *::before, *::after {
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
+$color_darkGreen: rgb(115, 135, 123);
+$color_green: rgb(131, 151, 136);
+$color_silver: rgb(189, 187, 182);
+$color_purple: rgb(229, 209, 208);
+$color_cream: rgb(245, 228, 215);
+
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
 
-body {
+body{
   background-color: whitesmoke;
 }
 
-.form1 {
+.form1{
   min-width: 90%;
   padding: 25px 35px 45px;
   background-color: white;
   border-radius: 10px;
-  border: 1px solid rgb(189, 187, 182);
+  border: 1px solid $color_silver;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
   margin: 2rem 0;
 }
 
-input {
+input{
   background-color: #fff;
 }
 
-.signInBtn {
+.signInBtn{
   border: none;
   display: inline-block;
   color: white;
@@ -40,26 +46,26 @@ input {
   padding: 0.3rem 2.5rem;
   transition: all 0.15s ease-in;
   margin-bottom: 1rem;
-}
-.signInBtn:hover {
-  background-color: #1e94c2;
-  border: none;
-  color: whitesmoke;
+  &:hover{
+    background-color: #1e94c2;
+    border:none;
+    color: whitesmoke;
+  }
 }
 
-.signInBtnHolder {
+.signInBtnHolder{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 0;
 }
 
-.logInTitle {
+.logInTitle{
   margin: 2rem 0;
   font-size: 4rem;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Dancing Script", cursive;
-}/*# sourceMappingURL=style.css.map */
+  font-family: 'Dancing Script', cursive;
+}

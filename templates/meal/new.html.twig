@@ -1,19 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset("CSS/createCSS/style.css")}}">
+	<link rel="stylesheet" href="{{asset("CSS/createCSS/style.css")}}">
 {% endblock %}
 
 
-{% block title %}New Meal{% endblock %}
+{% block title %}New Meal
+{% endblock %}
 
 {% block body %}
-<div class="container1">
-  <div class="form1" style="width:60%">
-    <h1 class="new text-center">Create new meal</h1>
+	<div class="container1">
+		<div class="form1" style="width:60%">
+			<h1 class="new text-center">Create new meal</h1>
 
-    {{ include('meal/_form.html.twig') }}
-
-    <a class="btn btn-primary mt-1" href="{{ path('app_meal_index') }}">Back to list</a>
-  </div>
-</div>
+			{{ include('meal/_form.html.twig') }}
+			<div class="backButtonHolder">
+				<a class="backButton" href="{{ path('app_meal_index') }}">Back to list</a>
+			</div>
+		</div>
+	</div>
 {% endblock %}
